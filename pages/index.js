@@ -1,3 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 
-export default () => <div>Hi</div>;
+export default () => (
+  <Link href="/about">
+    <a>About</a>
+  </Link>
+);
