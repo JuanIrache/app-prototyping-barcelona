@@ -1,0 +1,51 @@
+[
+  {
+    "title": "GoPro Telemetry Extractor",
+    "tags": [
+      "JavaScript",
+      "NPM",
+      "Java",
+      "Processing",
+      "Binary",
+      "Hardware",
+      "Data Visualization",
+      "Sensors",
+      "D3.js",
+      "Node.js",
+      "GPS",
+      "Video",
+      "Test-driven development",
+      "Open source",
+      "CSS",
+      "HTML"
+    ],
+    "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
+    "images": [{ "src": "", "title": "" }],
+    "links": [
+      { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
+      {
+        "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
+        "title": "Community: GoPro Metadata Visualization Forum"
+      },
+      {
+        "src": "https://www.npmjs.com/package/gpmf-extract",
+        "title": "Accessory NPM Package"
+      },
+      {
+        "src": "https://www.npmjs.com/package/d3-svg-to-png",
+        "title": "d3-svg-to-png NPM Package"
+      },
+      {
+        "src": "https://github.com/JuanIrache/gopro-utils",
+        "title": "GoLang extraction tools (fork)"
+      },
+      {
+        "src": "https://github.com/JuanIrache/gyrocam",
+        "title": "Processing sketch: Gyrocam"
+      }
+    ],
+    "github": "https://github.com/JuanIrache/gopro-telemetry",
+    "youtube": "https://www.youtube.com/watch?v=bg8B0Hl_au0",
+    "npm": "https://www.npmjs.com/package/gopro-telemetry"
+  }
+]
