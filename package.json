@@ -1,0 +1,19 @@
+{
+  "name": "app-prototyping-barcelona",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanIrache/app-prototyping-barcelona.git"
+  },
+  "author": "Juan Irache Duesca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanIrache/app-prototyping-barcelona/issues"
+  },
+  "homepage": "https://github.com/JuanIrache/app-prototyping-barcelona#readme"
+}
