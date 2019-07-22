@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/JuanIrache/app-prototyping-barcelona/issues"
   },
-  "homepage": "https://github.com/JuanIrache/app-prototyping-barcelona#readme"
+  "homepage": "https://github.com/JuanIrache/app-prototyping-barcelona#readme",
+  "dependencies": {
+    "next": "^9.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
