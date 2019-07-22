@@ -16,8 +16,8 @@
       "Video",
       "Test-driven development",
       "Open source",
-      "CSS",
-      "HTML"
+      "HTML",
+      "Sass"
     ],
     "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
     "images": [{ "src": "", "title": "" }],
