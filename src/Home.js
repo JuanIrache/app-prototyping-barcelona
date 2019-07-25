@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import initialProjects from './projects.json';
 import './Home.scss';
 
@@ -8,14 +8,23 @@ const Home = () => {
     initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []).map(t => ({ name: t, active: false }))
   );
   const filterProjects = () => {
-    if (tags.filter(t => t.active).length) setProjects(initialProjects.map(p => ({ ...p, active: true })));
-    else setProjects(initialProjects.map(p => ({ ...p, active: true })));
+    const activeTags = tags.filter(t => t.active).map(t => t.name);
+    if (!activeTags.length) setProjects(initialProjects.map(p => ({ ...p, active: true })));
+    else
+      setProjects(
+        initialProjects.map(p => ({
+          ...p,
+          active: p.tags.some(t => activeTags.includes(t))
+        }))
+      );
   };
+  useEffect(filterProjects, [tags]);
   const toggleTag = e => {
     setTags(tags.map(t => ({ ...t, active: t.name === e.target.name ? !t.active : t.active })));
   };
+
   return (
-    <div>
+    <div className="Home">
       <div>
         {tags.map(t => (
           <a href="#!" key={t.name} name={t.name} className={`Home-tag${t.active ? ' active' : ''}`} onClick={toggleTag}>
@@ -24,12 +33,14 @@ const Home = () => {
         ))}
       </div>
       <div>
-        {projects.map(t => (
-          <div key={t.title} className="Home-project">
-            <h3>{t.title}</h3>
-            <p>{t.description}</p>
-          </div>
-        ))}
+        {projects
+          .filter(p => p.active)
+          .map(t => (
+            <div key={t.title} className="Home-project">
+              <h3>{t.title}</h3>
+              <p>{t.description}</p>
+            </div>
+          ))}
       </div>
     </div>
   );
