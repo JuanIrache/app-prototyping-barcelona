@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const About = () => {
-  let user, repos;
+  const [user, setUser] = useState({});
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
     let githubClientId, githubClientSecret;
-
+    setLoading(true);
     if (process.env.NODE_ENV !== 'production') {
       githubClientId = process.env.REACT_APP_GITHUB_ID;
       githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
@@ -22,32 +24,36 @@ const About = () => {
     };
     console.log('requesting');
 
-    const { data: userData } = await axios.get(
+    const userData = axios.get(
       `https://api.github.com/users/juanirache?client_id=${githubClientId}&client_secret=${githubClientSecret}`,
       config
     );
-    const { data: reposData } = await axios.get(
+    const reposData = axios.get(
       `https://api.github.com/users/juanirache/repos?per_page=100&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
       config
     );
 
-    repos = reposData;
-    user = userData;
-
-    repos = repos.sort((a, b) => b.forks_count - a.forks_count);
-    repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 10);
+    Promise.all([userData, reposData]).then(result => {
+      setUser(result[0].data);
+      let newRepos = result[1].data;
+      newRepos = newRepos.sort((a, b) => b.forks_count - a.forks_count);
+      newRepos = newRepos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 10);
+      setRepos(newRepos);
+      setLoading(false);
+    });
   }, []);
 
-  console.log(user);
-
-  return (
+  console.log(repos);
+  return loading ? (
+    <div>Loading</div>
+  ) : (
     <div>
       <div>{user.login + ' ' + user.public_repos}</div>
       <div>
         {repos.map(r => (
-          <div>
+          <div key={r.id}>
             <p>
-              <a href={r.url}>{`${r.name} (${r.language}):`}</a> {`${r.description}`}
+              <a href={r.url}>{`${r.name}${r.language ? ` (${r.language})` : ''}:`}</a> {`${r.description}`}
             </p>
             <p>{`stars: ${r.stargazers_count}| forks: ${r.forks_count}`}</p>
           </div>
