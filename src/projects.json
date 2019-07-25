@@ -174,5 +174,24 @@
     "github": "https://github.com/JuanIrache/modern-react-bootcamp-exercises/tree/master/s24-colors-app",
     "youtube": "",
     "npm": ""
+  },
+  {
+    "id": 10,
+    "title": "Creative Coding",
+    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data visualization", "AI", "Machine Learning"],
+    "description": "This is a series of small experiments around coding, data visualization and AI",
+    "images": [{ "src": "", "title": "" }],
+    "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
+    "links": [
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes", "title": "Dad Jokes App" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee", "title": "Yatzee! Dice Game" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/", "title": "Dog Gallery Concept" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/", "title": "Login page" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out", "title": "Light Out mini-game" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s15-todo-list", "title": "CRUD To-Do List" }
+    ],
+    "github": "https://github.com/JuanIrache/modern-react-bootcamp-exercises/tree/master/s24-colors-app",
+    "youtube": "",
+    "npm": ""
   }
 ]
