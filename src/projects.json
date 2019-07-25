@@ -22,8 +22,8 @@
     ],
     "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
     "images": [{ "src": "", "title": "" }],
+    "link": { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
     "links": [
-      { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
       {
         "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
         "title": "Community: GoPro Metadata Visualization Forum"
@@ -48,5 +48,33 @@
     "github": "https://github.com/JuanIrache/gopro-telemetry",
     "youtube": "https://www.youtube.com/watch?v=bg8B0Hl_au0",
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
+  },
+  {
+    "id": 2,
+    "title": "DJI SRT Viewer",
+    "tags": [
+      "JavaScript",
+      "NPM",
+      "Processing",
+      "Hardware",
+      "Data Visualization",
+      "Sensors",
+      "GPS",
+      "Video",
+      "Test-driven development",
+      "Open source",
+      "Drones"
+    ],
+    "description": "Visualization tool for SRT flight logs of DJI drones. Along with modules for creating GUI elements in P5js and interacting with Mapbox's static API",
+    "images": [{ "src": "", "title": "" }],
+    "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
+    "links": [
+      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy" },
+      { "src": "https://www.npmjs.com/package/mapbox_static_helper", "title": "mapbox_static_helper" },
+      { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui" }
+    ],
+    "github": "https://github.com/JuanIrache/dji-srt-viewer",
+    "youtube": "",
+    "npm": "https://www.npmjs.com/package/dji_srt_parser"
   }
 ]

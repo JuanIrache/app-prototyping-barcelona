@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './About.scss';
 
 const About = () => {
   const [user, setUser] = useState({});
@@ -43,7 +44,6 @@ const About = () => {
     });
   }, []);
 
-  console.log(repos);
   return loading ? (
     <div>Loading</div>
   ) : (
@@ -53,7 +53,8 @@ const About = () => {
         {repos.map(r => (
           <div key={r.id}>
             <p>
-              <a href={r.url}>{`${r.name}${r.language ? ` (${r.language})` : ''}:`}</a> {`${r.description}`}
+              <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}:`}</a>{' '}
+              {`${r.description}`}
             </p>
             <p>{`stars: ${r.stargazers_count}| forks: ${r.forks_count}`}</p>
           </div>
