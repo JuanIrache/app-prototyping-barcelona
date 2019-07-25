@@ -159,7 +159,7 @@
   {
     "id": 9,
     "title": "React Examples",
-    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "React-router", "API", "REST", "Hooks", "Context"],
+    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "React-router", "API", "REST", "Hooks", "Context", "Game"],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React",
     "images": [{ "src": "", "title": "" }],
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
@@ -178,7 +178,7 @@
   {
     "id": 10,
     "title": "Creative Coding",
-    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data visualization", "AI", "Machine Learning"],
+    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "AI", "Machine Learning"],
     "description": "This is a series of small experiments around coding, data visualization and AI",
     "images": [{ "src": "", "title": "" }],
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
