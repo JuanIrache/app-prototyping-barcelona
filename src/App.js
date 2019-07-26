@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Projects from './Projects';
+import Tags from './Tags';
 import About from './About';
 import initialProjects from './projects.json';
 import './App.scss';
@@ -36,7 +37,10 @@ const App = () => {
         </header>
       </section>
       <section>
-        <Projects projects={projects} tags={tags} toggleTag={toggleTag} />
+        <Tags tags={tags} toggleTag={toggleTag} />
+      </section>
+      <section>
+        <Projects projects={projects} />
       </section>
       <section>
         <About />
