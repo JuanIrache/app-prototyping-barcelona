@@ -25,7 +25,7 @@
       "Bootstrap"
     ],
     "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
-    "images": [{ "src": "", "title": "" }],
+    "images": "gte",
     "link": { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
     "links": [
       {
@@ -74,7 +74,7 @@
       "Drones"
     ],
     "description": "Visualization tool for SRT flight logs of DJI drones. Along with modules for creating GUI elements in P5js and interacting with Mapbox's static API",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
     "links": [
       { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy" },
@@ -90,7 +90,7 @@
     "title": "Starry Analytics",
     "tags": ["JavaScript", "Processing", "API", "Data Visualization", "GPS", "Open source"],
     "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
     "links": [],
     "github": "https://github.com/JuanIrache/StarryAnalytics",
@@ -102,7 +102,7 @@
     "title": "Audio-Assisted Sensory Photography for the Blind",
     "tags": ["Java", "Processing", "Hardware", "Data Visualization", "Open source", "Video"],
     "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Article" },
     "links": [],
     "github": "https://github.com/JuanIrache/a3rDi",
@@ -114,7 +114,7 @@
     "title": "Orbit Simulator",
     "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics"],
     "description": "With just the use of your fingers and the accelerometer, you can produce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.gravity_playground", "title": "Orbit Simulator" },
     "links": [
       { "src": "https://www.instagram.com/orbitsimulator", "title": "Fan-art gallery" },
@@ -129,7 +129,7 @@
     "title": "Octagon. The Flying Squirrel",
     "tags": ["Java", "Processing", "Android", "Game", "Sensors", "3D"],
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
     "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
     "github": "",
@@ -141,7 +141,7 @@
     "title": "Websites about Chinese culture translated to Spanish",
     "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST"],
     "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
-    "images": [{ "src": "", "title": "" }],
+    "images": "txicc",
     "link": { "src": "", "title": "" },
     "links": [],
     "github": "",
@@ -151,9 +151,9 @@
   {
     "id": 8,
     "title": "Dropped My Phone",
-    "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics", "Data-visualization"],
+    "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics", "Data Visualization"],
     "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
     "links": [],
     "github": "",
@@ -165,7 +165,7 @@
     "title": "React Examples",
     "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "React-router", "API", "REST", "Hooks", "Context", "Game"],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
     "links": [
       { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes", "title": "Dad Jokes App" },
@@ -185,7 +185,7 @@
     "title": "Creative Coding",
     "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "AI", "Machine Learning"],
     "description": "This is a series of small experiments around coding, data visualization and AI",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
     "links": [
       { "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth", "title": "Depth First Search Labyrinth" },
@@ -205,7 +205,7 @@
     "title": "App Prototyping Barcelona",
     "tags": ["JavaScript", "HTML", "Sass", "React"],
     "description": "The website you are in right now",
-    "images": [{ "src": "", "title": "" }],
+    "images": "",
     "link": {},
     "links": [],
     "github": "",

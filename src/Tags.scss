@@ -1,21 +1,24 @@
 .Tags {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  grid-template-rows: minmax();
-  margin: -1rem 0 0 0;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .Tags-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: -1rem 0 0 0;
+    @media (max-width: 767.99px) {
+      margin: 0;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 575.99px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-  @media (max-width: 767.99px) {
-    margin: 0;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: 575.99px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
   text-align: center;
   .Tags-tag {
-    // background-color: rgb(238, 238, 238);
     margin-top: 1rem;
     @media (max-width: 767.99px) {
       margin-top: 0;
@@ -24,6 +27,7 @@
   a {
     text-decoration: none;
     color: darkslategray;
+    cursor: pointer;
     &.active {
       color: red;
     }

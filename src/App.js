@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Projects from './Projects';
+import ProjectTitle from './ProjectTitle';
 import Tags from './Tags';
 import About from './About';
 import initialProjects from './projects.json';
@@ -8,10 +8,7 @@ import './App.scss';
 const App = () => {
   const [projects, setProjects] = useState(initialProjects.map(p => ({ ...p, active: true })));
   const [tags, setTags] = useState(
-    initialProjects
-      .reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), [])
-      .sort()
-      .map(t => ({ name: t, active: false }))
+    initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []).map(t => ({ name: t, active: false }))
   );
   const filterProjects = () => {
     const activeTags = tags.filter(t => t.active).map(t => t.name);
@@ -40,7 +37,7 @@ const App = () => {
         <Tags tags={tags} toggleTag={toggleTag} />
       </section>
       <section>
-        <Projects projects={projects} />
+        <ProjectTitle project={projects.filter(p => p.active)[0]} />
       </section>
       <section>
         <About />
