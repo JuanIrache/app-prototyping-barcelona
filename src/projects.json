@@ -41,6 +41,10 @@
         "title": "d3-svg-to-png NPM Package"
       },
       {
+        "src": "https://www.npmjs.com/package/d3-proportional-ranges",
+        "title": "d3-proportional-ranges NPM Package"
+      },
+      {
         "src": "https://github.com/JuanIrache/gopro-utils",
         "title": "GoLang extraction tools (fork)"
       },
@@ -148,7 +152,7 @@
     "id": 8,
     "title": "Dropped My Phone",
     "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics"],
-    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies ona very simple physics model and the fact that smartphones carry an accelerometer",
+    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
     "images": [{ "src": "", "title": "" }],
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
     "links": [],
@@ -166,9 +170,10 @@
     "links": [
       { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes", "title": "Dad Jokes App" },
       { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee", "title": "Yatzee! Dice Game" },
+      { "src": "https://githubfinder23542352.netlify.com/", "title": "GitHub Finder" },
       { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/", "title": "Dog Gallery Concept" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/", "title": "Login page" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out", "title": "Light Out mini-game" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/", "title": "Material-UI Login page" },
+      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out", "title": "Lights Out mini-game" },
       { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s15-todo-list", "title": "CRUD To-Do List" }
     ],
     "github": "https://github.com/JuanIrache/modern-react-bootcamp-exercises/tree/master/s24-colors-app",
@@ -181,16 +186,29 @@
     "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "AI", "Machine Learning"],
     "description": "This is a series of small experiments around coding, data visualization and AI",
     "images": [{ "src": "", "title": "" }],
-    "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
+    "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
     "links": [
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes", "title": "Dad Jokes App" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee", "title": "Yatzee! Dice Game" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/", "title": "Dog Gallery Concept" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/", "title": "Login page" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out", "title": "Light Out mini-game" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s15-todo-list", "title": "CRUD To-Do List" }
+      { "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth", "title": "Depth First Search Labyrinth" },
+      { "src": "https://juanirache.github.io/coding-fun/color-picking-game", "title": "Color Picking Game" },
+      { "src": "https://juanirache.github.io/coding-fun/travelling-salesman-ai", "title": "Travelling Salesman AI" }
+      { "src": "https://juanirache.github.io/coding-fun/falling-color-squares/", "title": "Falling Color Squares" },
+      { "src": "https://juanirache.github.io/coding-fun/perlin-noise-butterfly", "title": "Perlin Noise Butterfly" },
+      { "src": "https://juanirache.github.io/coding-fun/music-circles", "title": "Music Circles" },
+      { "src": "https://juanirache.github.io/coding-fun/dancing-sliders", "title": "Dancing Sliders" }
     ],
-    "github": "https://github.com/JuanIrache/modern-react-bootcamp-exercises/tree/master/s24-colors-app",
+    "github": "https://github.com/JuanIrache/coding-fun",
+    "youtube": "",
+    "npm": ""
+  },
+  {
+    "id": 11,
+    "title": "App Prototyping Barcelona",
+    "tags": ["JavaScript", "HTML", "Sass", "React", "React-router"],
+    "description": "The website you are in right now",
+    "images": [{ "src": "", "title": "" }],
+    "link": {},
+    "links": [],
+    "github": "",
     "youtube": "",
     "npm": ""
   }
