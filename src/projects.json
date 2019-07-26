@@ -139,7 +139,7 @@
   {
     "id": 7,
     "title": "Websites about Chinese culture translated to Spanish",
-    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB"],
+    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST"],
     "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
     "images": [{ "src": "", "title": "" }],
     "link": { "src": "", "title": "" },
@@ -151,7 +151,7 @@
   {
     "id": 8,
     "title": "Dropped My Phone",
-    "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics"],
+    "tags": ["Java", "Processing", "Android", "Game", "Sensors", "Physics", "Data-visualization"],
     "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
     "images": [{ "src": "", "title": "" }],
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
@@ -190,7 +190,7 @@
     "links": [
       { "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth", "title": "Depth First Search Labyrinth" },
       { "src": "https://juanirache.github.io/coding-fun/color-picking-game", "title": "Color Picking Game" },
-      { "src": "https://juanirache.github.io/coding-fun/travelling-salesman-ai", "title": "Travelling Salesman AI" }
+      { "src": "https://juanirache.github.io/coding-fun/travelling-salesman-ai", "title": "Travelling Salesman AI" },
       { "src": "https://juanirache.github.io/coding-fun/falling-color-squares/", "title": "Falling Color Squares" },
       { "src": "https://juanirache.github.io/coding-fun/perlin-noise-butterfly", "title": "Perlin Noise Butterfly" },
       { "src": "https://juanirache.github.io/coding-fun/music-circles", "title": "Music Circles" },
@@ -203,7 +203,7 @@
   {
     "id": 11,
     "title": "App Prototyping Barcelona",
-    "tags": ["JavaScript", "HTML", "Sass", "React", "React-router"],
+    "tags": ["JavaScript", "HTML", "Sass", "React"],
     "description": "The website you are in right now",
     "images": [{ "src": "", "title": "" }],
     "link": {},
