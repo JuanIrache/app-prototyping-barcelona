@@ -1,8 +1,28 @@
 import React from 'react';
 import './ProjectDetails.scss';
 
-export default ({ project, images }) => (
-  <div key={project.title} className="ProjectDetails">
+export default ({ project, images, changeProject }) => (
+  <div className="ProjectDetails">
+    <div className="ProjectDetails-title">
+      <div className="ProjectDetails-titleBg" style={{ backgroundImage: `url(${images[0]})` }} />
+      <div className="ProjectDetails-titleContainer">
+        <a href="#!">
+          <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} />
+        </a>
+        <h2>
+          {project.link ? (
+            <a href={project.link.src} target="_blank" rel="noopener noreferrer">
+              {project.title}
+            </a>
+          ) : (
+            <span>{project.title}</span>
+          )}
+        </h2>
+        <a href="#!">
+          <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} />
+        </a>
+      </div>
+    </div>
     <div className="ProjectDetails-descAndLlinks">
       <div className="ProjectDetails-description">{project.description}</div>
       <div className="ProjectDetails-links">

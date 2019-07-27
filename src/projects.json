@@ -17,7 +17,7 @@
       "Node.js",
       "GPS",
       "Video",
-      "Test-driven development",
+      "Test-Driven Development",
       "Open source",
       "HTML",
       "Sass",
@@ -70,7 +70,7 @@
       "Sensors",
       "GPS",
       "Video",
-      "Test-driven development",
+      "Test-Driven Development",
       "Open source",
       "Drones"
     ],
@@ -139,7 +139,7 @@
   },
   {
     "id": 7,
-    "title": "Websites about Chinese culture translated to Spanish",
+    "title": "Chinese culture databases",
     "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack"],
     "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
     "images": "txicc",

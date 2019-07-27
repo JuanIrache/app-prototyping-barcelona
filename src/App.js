@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
-import ProjectTitle from './ProjectTitle';
 import ProjectDetails from './ProjectDetails';
 import Tags from './Tags';
 import About from './About';
@@ -16,6 +15,7 @@ const App = () => {
   const [tags, setTags] = useState(
     initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []).map(t => ({ name: t, active: false }))
   );
+  const [selected, setSelected] = useState(0);
 
   const filterProjects = () => {
     const activeTags = tags.filter(t => t.active).map(t => t.name);
@@ -27,20 +27,19 @@ const App = () => {
           active: p.tags.some(t => activeTags.includes(t))
         }))
       );
+    setSelected(0);
   };
 
   useEffect(filterProjects, [tags]);
+
   const toggleTag = e => {
     setTags(tags.map(t => ({ ...t, active: t.name === e.target.name ? !t.active : false })));
   };
 
-  const findCover = project => {
-    if (project.images)
-      return images.find(i => {
-        const regex = new RegExp(`/${project.images}\\d+\\.`);
-        return regex.test(i);
-      });
-    return null;
+  const changeProject = up => {
+    let newIndex = (selected + 1 * up) % projects.length;
+    if (newIndex < 0) newIndex += projects.length;
+    setSelected(newIndex);
   };
 
   const findImages = project => {
@@ -56,8 +55,11 @@ const App = () => {
     <div className="App">
       <Header />
       <Tags tags={tags} toggleTag={toggleTag} />
-      <ProjectTitle project={projects.filter(p => p.active)[0]} cover={findCover(projects.filter(p => p.active)[0])} />
-      <ProjectDetails project={projects.filter(p => p.active)[0]} images={findImages(projects.filter(p => p.active)[0])} />
+      <ProjectDetails
+        project={projects.filter(p => p.active)[selected]}
+        images={findImages(projects.filter(p => p.active)[selected])}
+        changeProject={changeProject}
+      />
       <About />
     </div>
   );

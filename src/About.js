@@ -58,11 +58,11 @@ const About = () => {
           </p>
           <p>
             I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My
-            background outside the IT industry gives me perspective different from what you usually find among developers. A naivety of
+            background outside the IT industry gives me a perspective different from what you usually find among developers. A naivety of
             sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a
             reality through hard work.
           </p>
-          <p>Send me an email if you want your ideas turned into code.</p>
+          <p>If you want your idea turned into code, send me an email.</p>
           <p className="About-signature">Juan Irache</p>
         </div>
       </section>
@@ -76,7 +76,7 @@ const About = () => {
           <table>
             <tbody>
               {repos.map(r => (
-                <tr>
+                <tr key={r.id}>
                   <td>
                     <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}`}</a>
                   </td>

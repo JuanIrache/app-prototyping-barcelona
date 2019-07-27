@@ -18,6 +18,10 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 3rem;
     margin-bottom: 0;
+    padding: 1rem;
+    @media (max-width: 767.99px) {
+      font-size: 2rem;
+    }
   }
   h2 {
     font-family: 'Roboto Slab', serif;
