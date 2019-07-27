@@ -1,0 +1,55 @@
+.ProjectDetails {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .ProjectDetails-info {
+    .ProjectDetails-description {
+      padding: 0 2rem;
+      display: inline-block;
+      width: calc(50% - 4rem);
+      vertical-align: middle;
+    }
+    .ProjectDetails-links {
+      padding: 0 2rem;
+      vertical-align: middle;
+      font-size: 0.8rem;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      display: inline-block;
+      text-align: center;
+      list-style-type: none;
+      width: calc(50% - 4rem);
+    }
+  }
+  .ProjectDetails-buttons {
+    display: flex;
+    justify-content: center;
+    a {
+      padding: 1rem;
+      margin: auto 1rem;
+      border: 1px dashed teal;
+      transition: all 0.3s ease;
+      &:hover {
+        color: white;
+        background-color: teal;
+      }
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .ProjectDetails-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    img {
+      height: 40vh;
+      margin: 1rem;
+      box-shadow: 1px 3px 4px black;
+    }
+  }
+}
