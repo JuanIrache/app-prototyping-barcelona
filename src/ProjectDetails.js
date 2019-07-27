@@ -65,7 +65,7 @@ export default ({ project, images, changeProject }) => (
           .slice(1)
           .concat(images[0])
           .map(i => (
-            <img key={i} src={i} alt={`${project.title} screenshot`} />
+            <span key={i} style={{ backgroundImage: `url(${i})` }} alt={`${project.title} screenshot`} />
           ))}
       </div>
     )}

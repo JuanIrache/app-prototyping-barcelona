@@ -37,12 +37,13 @@ const App = () => {
   };
 
   const changeProject = up => {
-    let newIndex = (selected + 1 * up) % projects.length;
+    let newIndex = (selected + 1 * up) % projects.filter(p => p.active).length;
     if (newIndex < 0) newIndex += projects.length;
     setSelected(newIndex);
   };
 
-  const findImages = project => {
+  const findImages = index => {
+    const project = projects.filter(p => p.active)[index];
     if (project.images)
       return images.filter(i => {
         const regex = new RegExp(`/${project.images}\\d+\\.`);
@@ -55,11 +56,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Tags tags={tags} toggleTag={toggleTag} />
-      <ProjectDetails
-        project={projects.filter(p => p.active)[selected]}
-        images={findImages(projects.filter(p => p.active)[selected])}
-        changeProject={changeProject}
-      />
+      <ProjectDetails project={projects.filter(p => p.active)[selected]} images={findImages(selected)} changeProject={changeProject} />
       <About />
     </div>
   );
