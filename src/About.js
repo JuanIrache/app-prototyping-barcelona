@@ -34,7 +34,7 @@ const About = () => {
       setUser(result[0].data);
       let newRepos = result[1].data;
       newRepos = newRepos.sort((a, b) => b.forks_count - a.forks_count);
-      newRepos = newRepos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 10);
+      newRepos = newRepos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 7);
       setRepos(newRepos);
       setLoading(false);
     });
@@ -45,16 +45,22 @@ const About = () => {
   ) : (
     <div className="About">
       <div className="About-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis eius voluptatum doloremque, quod blanditiis temporibus
-        deserunt veniam ipsam facere, excepturi, repellendus eos. Minima, eligendi. Beatae dolorum non quam sunt.
+        <p>Hey, I'm Juan.</p> <p>I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as
+        a hobby, then for a living. I started my career in the cinema/video industry, but at some point, while living in Australia, my interest shifted towards creating
+        things with code. Since I spent most of my spare time developing programs, I decided I might as well do it professionally.</p>
+        <p>I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My background outside the IT industry gives me perspective different from what you usually find among developers. A naivety of sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a reality through hard work.</p>
+        <p>Send me an email if you want your ideas turned into code.</p>
+        <p className="About-signature">Juan Irache</p>
       </div>
-
+      <div className="About-photo">
+        <img src={juan} alt="" />
+      </div>
       <div className="About-github">
-        {/* <h4>
+        <h4>
           <a href={user.html_url} target="_blank" rel="noopener noreferrer">
-            Juan Irache Duesca
+            On GiThub
           </a>
-        </h4> */}
+        </h4>
         <div className="About-repos">
           {repos.map(r => (
             <div key={r.id} className="About-repo">
@@ -77,14 +83,12 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div className="About-photo">
-        <img src={juan} alt="" />
-      </div>
       <div className="About-mail">
         <h3>
           <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
         </h3>
       </div>
+      
     </div>
   );
 };

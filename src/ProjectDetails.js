@@ -19,7 +19,7 @@ export default ({ project, images }) => (
     </div>
     <div className="ProjectDetails-buttons">
       {!!project.link && (
-        <a href={project.link.src} target="_blank" rel="noopener noreferrer">
+        <a className="ProjectDetails-mainLink" href={project.link.src} target="_blank" rel="noopener noreferrer">
           {project.link.title}
         </a>
       )}
