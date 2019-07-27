@@ -3,48 +3,51 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  .ProjectDetails-info {
-    padding: 2rem 0;
+  .ProjectDetails-descAndLlinks {
+    display: flex;
+    // padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (max-width: 767.99px) {
+      flex-direction: column;
+    }
     .ProjectDetails-description {
-      padding: 0 2rem;
-      display: inline-block;
-      width: calc(50% - 4rem);
-      vertical-align: middle;
-      @media (max-width: 575.99px) {
-        width: 100%;
+      width: 60%;
+      padding: 2rem 2rem 1rem 2rem;
+      @media (max-width: 767.99px) {
+        width: auto;
       }
     }
     .ProjectDetails-links {
-      padding: 0 2rem;
-      vertical-align: middle;
       font-size: 0.8rem;
-      display: inline-block;
       text-align: center;
       list-style-type: none;
-      width: calc(50% - 4rem);
-              ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-              }
-              @media (max-width: 575.99px) {
-                width: 100%;
-              }
+      padding: 2rem 2rem 1rem 2rem;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      @media (max-width: 767.99px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
     }
   }
   .ProjectDetails-buttons {
-    padding:1rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     a {
       padding: 1rem;
-      margin: auto 1rem;
+      margin: 0.5rem 1rem;
       border: 1px dashed teal;
       transition: all 0.3s ease;
       &.ProjectDetails-mainLink {
         @media (max-width: 575.99px) {
           flex-basis: 100%;
+          text-align: center;
         }
       }
       &:hover {

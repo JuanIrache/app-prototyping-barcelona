@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
 import ProjectTitle from './ProjectTitle';
 import ProjectDetails from './ProjectDetails';
 import Tags from './Tags';
@@ -53,24 +54,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <section>
-        <header>
-          <h1>App Prototyping Barcelona</h1>
-          <h3>Focused on functionality, not just looks. Like having your own technical co-founder</h3>
-        </header>
-      </section>
-      <section>
-        <Tags tags={tags} toggleTag={toggleTag} />
-      </section>
-      <section>
-        <ProjectTitle project={projects.filter(p => p.active)[0]} cover={findCover(projects.filter(p => p.active)[0])} />
-      </section>
-      <section>
-        <ProjectDetails project={projects.filter(p => p.active)[0]} images={findImages(projects.filter(p => p.active)[0])} />
-      </section>
-      <section>
-        <About />
-      </section>
+      <Header />
+      <Tags tags={tags} toggleTag={toggleTag} />
+      <ProjectTitle project={projects.filter(p => p.active)[0]} cover={findCover(projects.filter(p => p.active)[0])} />
+      <ProjectDetails project={projects.filter(p => p.active)[0]} images={findImages(projects.filter(p => p.active)[0])} />
+      <About />
     </div>
   );
 };

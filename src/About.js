@@ -44,51 +44,70 @@ const About = () => {
     <div>Loading</div>
   ) : (
     <div className="About">
-      <div className="About-description">
-        <p>Hey, I'm Juan.</p> <p>I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as
-        a hobby, then for a living. I started my career in the cinema/video industry, but at some point, while living in Australia, my interest shifted towards creating
-        things with code. Since I spent most of my spare time developing programs, I decided I might as well do it professionally.</p>
-        <p>I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My background outside the IT industry gives me perspective different from what you usually find among developers. A naivety of sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a reality through hard work.</p>
-        <p>Send me an email if you want your ideas turned into code.</p>
-        <p className="About-signature">Juan Irache</p>
-      </div>
-      <div className="About-photo">
-        <img src={juan} alt="" />
-      </div>
-      <div className="About-github">
-        <h4>
-          <a href={user.html_url} target="_blank" rel="noopener noreferrer">
-            On GiThub
-          </a>
-        </h4>
-        <div className="About-repos">
-          {repos.map(r => (
-            <div key={r.id} className="About-repo">
-              <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}`}</a>
-              <span>
-                {!!r.stargazers_count && (
-                  <span>
-                    <i className="fas fa-star" />
-                    {r.stargazers_count}
-                  </span>
-                )}
-                {!!r.forks_count && (
-                  <span>
-                    <i className="fas fa-code-branch" />
-                    {r.forks_count}
-                  </span>
-                )}
-              </span>
-            </div>
-          ))}
+      <section>
+        <div className="About-photo">
+          <img src={juan} alt="Juan Irache" />
         </div>
-      </div>
-      <div className="About-mail">
-        <h3>
-          <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
-        </h3>
-      </div>
-      
+        <div className="About-description">
+          <p>Hey, I'm Juan.</p>{' '}
+          <p>
+            I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as a hobby,
+            then for a living. I started my career in the cinema/video industry, but at some point, while living in Australia, my interest
+            shifted towards creating things with code. Since I spent most of my spare time developing programs, I decided I might as well do
+            it professionally.
+          </p>
+          <p>
+            I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My
+            background outside the IT industry gives me perspective different from what you usually find among developers. A naivety of
+            sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a
+            reality through hard work.
+          </p>
+          <p>Send me an email if you want your ideas turned into code.</p>
+          <p className="About-signature">Juan Irache</p>
+        </div>
+      </section>
+      <section>
+        <div className="About-github">
+          <h4>
+            <a href={user.html_url} target="_blank" rel="noopener noreferrer">
+              On GitHub
+            </a>
+          </h4>
+          <table>
+            <tbody>
+              {repos.map(r => (
+                <tr>
+                  <td>
+                    <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}`}</a>
+                  </td>
+                  <td>
+                    {!!r.stargazers_count && (
+                      <span className="About-githubStats">
+                        <i className="fas fa-star" />
+                        {r.stargazers_count}
+                      </span>
+                    )}
+                  </td>
+                  <td>
+                    {!!r.forks_count && (
+                      <span className="About-githubStats">
+                        <i className="fas fa-code-branch" />
+                        {r.forks_count}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="About-repos" />
+        </div>
+        <div className="About-mail">
+          <h3>
+            <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
+          </h3>
+        </div>
+      </section>
     </div>
   );
 };
