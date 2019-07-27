@@ -11,6 +11,7 @@
 - Simplify app with usereducer and context
 - Analytics
 - Improve texts
+- Spell/grammar check
 
 - Publish
 - Link everywhere

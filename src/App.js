@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import ProjectDetails from './ProjectDetails';
 import Tags from './Tags';
@@ -9,44 +9,31 @@ import './App.scss';
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`./media/`, false, /\.(png|jpe?g|svg)$/);
 const images = importAll(ctxt);
+const initialTags = initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []);
 
 const App = () => {
-  const [projects, setProjects] = useState(initialProjects.map(p => ({ ...p, active: true })));
-  const [tags, setTags] = useState(
-    initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []).map(t => ({ name: t, active: false }))
-  );
+  const [projects, setProjects] = useState(initialProjects);
+  const [tag, setTag] = useState('');
   const [selected, setSelected] = useState(0);
 
-  const filterProjects = () => {
-    const activeTags = tags.filter(t => t.active).map(t => t.name);
-    if (!activeTags.length) setProjects(initialProjects.map(p => ({ ...p, active: true })));
-    else
-      setProjects(
-        initialProjects.map(p => ({
-          ...p,
-          active: p.tags.some(t => activeTags.includes(t))
-        }))
-      );
+  const toggleTag = e => {
+    const newTag = e.target.name !== tag ? e.target.name : '';
+    setTag(newTag);
+    if (!newTag) setProjects(initialProjects);
+    else setProjects(initialProjects.filter(p => p.tags.includes(newTag)));
     setSelected(0);
   };
 
-  useEffect(filterProjects, [tags]);
-
-  const toggleTag = e => {
-    setTags(tags.map(t => ({ ...t, active: t.name === e.target.name ? !t.active : false })));
-  };
-
   const changeProject = up => {
-    let newIndex = (selected + 1 * up) % projects.filter(p => p.active).length;
+    let newIndex = (selected + 1 * up) % projects.length;
     if (newIndex < 0) newIndex += projects.length;
     setSelected(newIndex);
   };
 
   const findImages = index => {
-    const project = projects.filter(p => p.active)[index];
-    if (project.images)
+    if (projects[index].images)
       return images.filter(i => {
-        const regex = new RegExp(`/${project.images}\\d+\\.`);
+        const regex = new RegExp(`/${projects[index].images}\\d+\\.`);
         return regex.test(i);
       });
     return null;
@@ -55,8 +42,10 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Tags tags={tags} toggleTag={toggleTag} />
-      <ProjectDetails project={projects.filter(p => p.active)[selected]} images={findImages(selected)} changeProject={changeProject} />
+      <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />
+      <section id="projects">
+        <ProjectDetails project={projects[selected]} images={findImages(selected)} changeProject={changeProject} />
+      </section>
       <About />
     </div>
   );

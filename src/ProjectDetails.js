@@ -48,8 +48,17 @@ export default ({ project, images, changeProject }) => (
       </div>
       <div className="ProjectDetails-buttons">
         {!!project.link && (
-          <a className="ProjectDetails-mainLink" href={project.link.src} target="_blank" rel="noopener noreferrer">
-            {project.link.title}
+          <a
+            className="ProjectDetails-mainLink"
+            title="Main project link"
+            href={project.link.src}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="ProjectDetails-longTitle">{project.link.title}</span>
+            <span className="ProjectDetails-shortTitle" style={{ display: 'none' }}>
+              <i className="fas fa-external-link-square-alt" />
+            </span>
           </a>
         )}
         {!!project.youtube && (
