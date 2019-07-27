@@ -23,43 +23,53 @@ export default ({ project, images, changeProject }) => (
         </a>
       </div>
     </div>
-    <div className="ProjectDetails-descAndLlinks">
+    <div className="ProjectDetails-upper">
       <div className="ProjectDetails-description">{project.description}</div>
       <div className="ProjectDetails-links">
-        <ul>
-          {project.links.map(l => (
-            <li key={l.src}>
-              <a href={l.src} target="_blank" rel="noopener noreferrer">
-                {l.title}
-              </a>
+        {!!project.links.length && (
+          <ul>
+            <li>
+              <strong>See more</strong>
             </li>
-          ))}
-        </ul>
+            {project.links.map(l => (
+              <li key={l.src}>
+                <a href={l.src} target="_blank" rel="noopener noreferrer">
+                  {l.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
-    <div className="ProjectDetails-buttons">
-      {!!project.link && (
-        <a className="ProjectDetails-mainLink" href={project.link.src} target="_blank" rel="noopener noreferrer">
-          {project.link.title}
-        </a>
-      )}
-      {!!project.youtube && (
-        <a href={project.youtube} target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-youtube" title="Youtube example" />
-        </a>
-      )}
-      {!!project.github && (
-        <a href={project.github} target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github" title="GitHub repo" />
-        </a>
-      )}
-      {!!project.npm && (
-        <a href={project.npm} target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-npm" title="NPM Package" />
-        </a>
-      )}
+    <div className="ProjectDetails-lower">
+      <div className="ProjectDetails-tags">
+        <strong>Made with:</strong> {project.tags.join(', ')}
+      </div>
+      <div className="ProjectDetails-buttons">
+        {!!project.link && (
+          <a className="ProjectDetails-mainLink" href={project.link.src} target="_blank" rel="noopener noreferrer">
+            {project.link.title}
+          </a>
+        )}
+        {!!project.youtube && (
+          <a href={project.youtube} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube" title="Youtube example" />
+          </a>
+        )}
+        {!!project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github" title="GitHub repo" />
+          </a>
+        )}
+        {!!project.npm && (
+          <a href={project.npm} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-npm" title="NPM Package" />
+          </a>
+        )}
+      </div>
     </div>
-    {!!images && !!images.length && (
+    {!!images && !!images.length ? (
       <div className="ProjectDetails-images">
         {images
           .slice(1)
@@ -67,6 +77,10 @@ export default ({ project, images, changeProject }) => (
           .map(i => (
             <span key={i} style={{ backgroundImage: `url(${i})` }} alt={`${project.title} screenshot`} />
           ))}
+      </div>
+    ) : (
+      <div className="ProjectDetails-images">
+        <span />
       </div>
     )}
   </div>
