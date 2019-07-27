@@ -4,8 +4,14 @@
 - Transitions
 - Fill all images
 - Image gallery
+- Videos in gallery
+- Swiping
 - Font testing
 - Optimise loading time
+- Simplify app with usereducer and context
+- Analytics
+- Improve texts
+
 - Publish
 - Link everywhere
 - Open source

@@ -4,10 +4,10 @@ import './ProjectDetails.scss';
 export default ({ project, images, changeProject }) => (
   <div className="ProjectDetails">
     <div className="ProjectDetails-title">
-      <div className="ProjectDetails-titleBg" style={{ backgroundImage: `url(${images[0]})` }} />
+      {!!images && !!images.length && <div className="ProjectDetails-titleBg" style={{ backgroundImage: `url(${images[0]})` }} />}
       <div className="ProjectDetails-titleContainer">
         <a href="#!">
-          <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} />
+          <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} title="Previous project" />
         </a>
         <h2>
           {project.link ? (
@@ -19,7 +19,7 @@ export default ({ project, images, changeProject }) => (
           )}
         </h2>
         <a href="#!">
-          <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} />
+          <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} title="Next project" />
         </a>
       </div>
     </div>
@@ -59,13 +59,15 @@ export default ({ project, images, changeProject }) => (
         </a>
       )}
     </div>
-    <div className="ProjectDetails-images">
-      {images
-        .slice(1)
-        .concat(images[0])
-        .map(i => (
-          <img key={i} src={i} alt={`${project.title} screenshot`} />
-        ))}
-    </div>
+    {!!images && !!images.length && (
+      <div className="ProjectDetails-images">
+        {images
+          .slice(1)
+          .concat(images[0])
+          .map(i => (
+            <img key={i} src={i} alt={`${project.title} screenshot`} />
+          ))}
+      </div>
+    )}
   </div>
 );

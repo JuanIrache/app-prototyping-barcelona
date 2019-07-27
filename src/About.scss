@@ -1,4 +1,8 @@
 .About {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   section {
     display: flex;
     justify-content: space-evenly;
