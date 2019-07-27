@@ -1,8 +1,11 @@
 import React from 'react';
 import './ProjectTitle.scss';
 
-export default ({ project }) => (
+export default ({ project, cover }) => (
   <div key={project.title} className="ProjectTitle">
-    <h3>{project.title}</h3>
+    <div className="ProjectTitle-bg" style={{ backgroundImage: `url(${cover})` }} />
+    <div className="ProjectTitle-title">
+      <h2>{project.title}</h2>
+    </div>
   </div>
 );

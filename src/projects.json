@@ -22,7 +22,8 @@
       "HTML",
       "Sass",
       "Physics",
-      "Bootstrap"
+      "Bootstrap",
+      "Webpack"
     ],
     "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
     "images": "gte",
@@ -74,12 +75,12 @@
       "Drones"
     ],
     "description": "Visualization tool for SRT flight logs of DJI drones. Along with modules for creating GUI elements in P5js and interacting with Mapbox's static API",
-    "images": "",
+    "images": "dji",
     "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
     "links": [
-      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy" },
-      { "src": "https://www.npmjs.com/package/mapbox_static_helper", "title": "mapbox_static_helper" },
-      { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui" }
+      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy NPM Module" },
+      { "src": "https://www.npmjs.com/package/mapbox_static_helper", "title": "mapbox_static_helper NPM Module" },
+      { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui NPM Module" }
     ],
     "github": "https://github.com/JuanIrache/dji-srt-viewer",
     "youtube": "",
@@ -139,10 +140,9 @@
   {
     "id": 7,
     "title": "Websites about Chinese culture translated to Spanish",
-    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST"],
+    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack"],
     "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
     "images": "txicc",
-    "link": { "src": "", "title": "" },
     "links": [],
     "github": "",
     "youtube": "",
@@ -163,7 +163,7 @@
   {
     "id": 9,
     "title": "React Examples",
-    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "React-router", "API", "REST", "Hooks", "Context", "Game"],
+    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "React-router", "API", "REST", "Hooks", "Context", "Game", "Webpack"],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React",
     "images": "",
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
@@ -203,8 +203,8 @@
   {
     "id": 11,
     "title": "App Prototyping Barcelona",
-    "tags": ["JavaScript", "HTML", "Sass", "React"],
-    "description": "The website you are in right now",
+    "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack"],
+    "description": "The website you are looking at",
     "images": "",
     "link": {},
     "links": [],

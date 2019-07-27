@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './About.scss';
+import juan from './juan.jpg';
 
 const About = () => {
   const [user, setUser] = useState({});
@@ -42,18 +43,47 @@ const About = () => {
   return loading ? (
     <div>Loading</div>
   ) : (
-    <div>
-      <div>{user.login + ' ' + user.public_repos}</div>
-      <div>
-        {repos.map(r => (
-          <div key={r.id}>
-            <p>
-              <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}:`}</a>{' '}
-              {`${r.description}`}
-            </p>
-            <p>{`stars: ${r.stargazers_count}| forks: ${r.forks_count}`}</p>
-          </div>
-        ))}
+    <div className="About">
+      <div className="About-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis eius voluptatum doloremque, quod blanditiis temporibus
+        deserunt veniam ipsam facere, excepturi, repellendus eos. Minima, eligendi. Beatae dolorum non quam sunt.
+      </div>
+
+      <div className="About-github">
+        {/* <h4>
+          <a href={user.html_url} target="_blank" rel="noopener noreferrer">
+            Juan Irache Duesca
+          </a>
+        </h4> */}
+        <div className="About-repos">
+          {repos.map(r => (
+            <div key={r.id} className="About-repo">
+              <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}`}</a>
+              <span>
+                {!!r.stargazers_count && (
+                  <span>
+                    <i className="fas fa-star" />
+                    {r.stargazers_count}
+                  </span>
+                )}
+                {!!r.forks_count && (
+                  <span>
+                    <i className="fas fa-code-branch" />
+                    {r.forks_count}
+                  </span>
+                )}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="About-photo">
+        <img src={juan} alt="" />
+      </div>
+      <div className="About-mail">
+        <h3>
+          <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
+        </h3>
       </div>
     </div>
   );

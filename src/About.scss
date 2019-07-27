@@ -1,2 +1,45 @@
 .About {
+  padding: 2rem 0;
+  .About-description {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 1rem;
+    width: calc(50% - 2rem);
+  }
+  .About-github {
+    vertical-align: middle;
+    padding: 0 1rem;
+    display: inline-block;
+    width: calc(50% - 2rem);
+    h4 {
+      text-align: center;
+    }
+    .About-repos {
+      .About-repo {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .About-photo {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 1rem;
+    width: calc(50% - 2rem);
+    text-align: center;
+    img {
+      width: 20rem;
+      border-radius: 50%;
+      box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.185);
+    }
+  }
+  .About-mail {
+    vertical-align: middle;
+    padding: 0 1rem;
+    display: inline-block;
+    width: calc(50% - 2rem);
+    h3 {
+      font-weight: 700;
+    }
+  }
 }
