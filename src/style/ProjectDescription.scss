@@ -2,7 +2,7 @@
   div {
     margin: 0.2rem 0;
   }
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.2rem 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -21,7 +21,6 @@
     font-size: 0.8rem;
     text-align: center;
     list-style-type: none;
-    align-self: flex-end;
     ul {
       margin: 0;
       padding: 0;
@@ -42,7 +41,7 @@
   div {
     margin: 0.2rem 0;
   }
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem 0.5rem 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -68,7 +67,7 @@
       padding: 1rem;
       margin: 0.1rem 0.1rem;
       border: 1px dashed teal;
-      @media (max-width: 575.99px) {
+      @media (max-width: 1199.99px) {
         padding: 0.5rem;
       }
       &.mainLink {
