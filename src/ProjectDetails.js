@@ -2,8 +2,6 @@ import React, { memo } from 'react';
 import './ProjectDetails.scss';
 
 const ProjectDetails = ({ project, projects, images, changeProject, selected, transition, i, getValidIndex }) => {
-  console.log(projects);
-
   const position = () => {
     if (selected === i) {
       if (transition > 0) return 'left transitioning';
