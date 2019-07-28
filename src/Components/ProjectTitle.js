@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectTitle.scss';
+import '../style/ProjectTitle.scss';
 
 const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight }) => (
   <div className="ProjectTitle">

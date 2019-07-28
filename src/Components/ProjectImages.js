@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectImages.scss';
+import '../style/ProjectImages.scss';
 
 const ProjectImages = ({ images, title }) =>
   !!images && !!images.length ? (

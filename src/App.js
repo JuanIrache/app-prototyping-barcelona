@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Tags from './Tags';
-import Projects from './Projects';
-import About from './About';
-import initialProjects from './projects.json';
+import Header from './Components/Header';
+import Tags from './Components/Tags';
+import Projects from './Components/Projects';
+import About from './Components/About';
+import initialProjects from './other/projects.json';
 import './App.scss';
 
 const initialTags = initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []);

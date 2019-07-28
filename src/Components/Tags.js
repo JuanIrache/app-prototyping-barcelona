@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tags.scss';
+import '../style/Tags.scss';
 
 const Projects = ({ tags, tag, toggleTag }) => (
   <div className="Tags">

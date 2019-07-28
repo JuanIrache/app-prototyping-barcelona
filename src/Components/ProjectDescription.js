@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './ProjectDescription.scss';
+import '../style/ProjectDescription.scss';
 
 const ProjectDescription = ({ project }) => (
   <Fragment>

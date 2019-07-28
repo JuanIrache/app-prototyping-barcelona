@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import ProjectTitle from './ProjectTitle';
 import ProjectDescription from './ProjectDescription';
 import ProjectImages from './ProjectImages';
-import './ProjectDetails.scss';
+import '../style/ProjectDetails.scss';
 
 const ProjectDetails = ({ project, projects, images, i, goLeft, goRight }) => {
   const existsLeft = i > 0;
