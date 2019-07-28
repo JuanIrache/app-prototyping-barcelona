@@ -1,7 +1,8 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import ProjectTitle from './ProjectTitle';
 import ProjectDescription from './ProjectDescription';
 import ProjectImages from './ProjectImages';
+import swipe from './util/swipe';
 import './ProjectDetails.scss';
 
 const ProjectDetails = ({ project, projects, images, changeProject, selected, transition, i, getValidIndex }) => {
@@ -18,6 +19,10 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
     if (existsLeft && selected === getValidIndex(i + 1)) return transition < 0 ? 'center transitioning' : 'left';
     if (existsRight && selected === getValidIndex(i - 1)) return transition > 0 ? 'center transitioning' : 'right';
   };
+
+  useEffect(() => {
+    if (selected === i) swipe('.ProjectDetails', () => changeProject(-1), () => changeProject(+1));
+  }, []);
 
   return (
     !!position() && (
