@@ -19,6 +19,9 @@
       background-position: center;
       z-index: -1;
       filter: blur(4px);
+      @media (max-width: 767.99px) {
+        filter: blur(2px);
+      }
     }
     .ProjectDetails-titleContainer {
       height: 100%;

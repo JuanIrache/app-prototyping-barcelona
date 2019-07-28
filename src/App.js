@@ -34,17 +34,20 @@ const App = () => {
   const changeProject = up => {
     setTransition(up);
     setTimeout(() => {
-      let newIndex = (selected + 1 * up) % projects.length;
+      let newIndex = selected + 1 * up;
       setSelected(getValidIndex(newIndex));
     }, 500);
   };
 
   const getValidIndex = num => {
+    num = num % projects.length;
     if (num < 0) return num + projects.length;
     return num;
   };
 
   const findImages = index => {
+    console.log(index);
+
     if (projects[index].images)
       return images.filter(i => {
         const regex = new RegExp(`/${projects[index].images}\\d+\\.`);
@@ -60,7 +63,7 @@ const App = () => {
       <section id="App-projects">
         <div
           className={`App-projs App-leftProj${transition < 0 ? ' becomeCenter' : ''}`}
-          id={`App-${projects[getValidIndex(selected - 1)].title}`}
+          // id={`App-${projects[getValidIndex(selected - 1)].title}`}
         >
           <ProjectDetails
             project={projects[getValidIndex(selected - 1)]}
@@ -70,7 +73,7 @@ const App = () => {
         </div>
         <div
           className={`App-projs App-rightProj${transition > 0 ? ' becomeCenter' : ''}`}
-          id={`App-${projects[getValidIndex(selected + 1)].title}`}
+          // id={`App-${projects[getValidIndex(selected + 1)].title}`}
         >
           <ProjectDetails
             project={projects[getValidIndex(selected + 1)]}
@@ -80,7 +83,7 @@ const App = () => {
         </div>
         <div
           className={`App-projs App-proj${transition > 0 ? ' becomeLeft' : ''}${transition < 0 ? ' becomeRight' : ''}`}
-          id={`App-${projects[selected].title}`}
+          // id={`App-${projects[selected].title}`}
         >
           <ProjectDetails project={projects[selected]} images={findImages(selected)} changeProject={changeProject} />
         </div>
