@@ -1,0 +1,57 @@
+.ProjectTitle {
+  height: 50vh;
+  @media (max-width: 767.99px) {
+    height: 30vh;
+  }
+  position: relative;
+  .titleBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(4px);
+    @media (max-width: 767.99px) {
+      filter: blur(2px);
+    }
+  }
+  .titleContainer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    a {
+      color: white;
+      &:hover {
+        border: 0;
+      }
+    }
+    i {
+      transition: opacity 0.3s ease;
+      text-shadow: 1px 2px 4px black;
+      padding: 0 1rem;
+      font-size: 2rem;
+      @media (max-width: 767.99px) {
+        font-size: 1.3rem;
+      }
+      &.hidden {
+        opacity: 0;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 1px 2px 4px black;
+      @media (max-width: 767.99px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

@@ -1,8 +1,7 @@
 # ToDo
 
-- Move project functions to proj and restructure
-- Don't hide all i on transition, only chevron
 - Swiping
+- Specify fullstack, front or backend in tags
 - Photos of Barcelona, coding bits and myself in the apb project?
 - Image gallery
 - Videos in gallery
