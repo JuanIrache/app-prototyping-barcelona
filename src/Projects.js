@@ -1,30 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ReactSwipe from 'react-swipe';
 import ProjectDetails from './ProjectDetails';
-import './App.scss';
+import './Projects.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`./media/`, false, /\.(png|jpe?g|svg)$/);
 const images = importAll(ctxt);
 
 const Projects = ({ projects }) => {
-  const [selected, setSelected] = useState(0);
-  const [transition, setTransition] = useState(0);
-
-  const changeProject = up => {
-    setTransition(up);
-    setTimeout(() => {
-      let newIndex = selected + 1 * up;
-      setTransition(0);
-      setSelected(getValidIndex(newIndex));
-    }, 500);
-  };
-
-  const getValidIndex = num => {
-    let newNum = num % projects.length;
-    if (num < 0) return newNum + projects.length;
-    return newNum;
-  };
-
   const findImages = index => {
     return images.filter(i => {
       const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
@@ -32,21 +15,31 @@ const Projects = ({ projects }) => {
     });
   };
 
+  const goToAnchor = () => {
+    //Source: https://stackoverflow.com/a/13736194/3362074
+    const url = window.location.href; //Save down the URL without hash.
+    window.location.href = '#projects'; //Go to the target element.
+    window.history.replaceState(null, null, url);
+  };
+
+  let reactSwipeEl;
+
   return (
-    <section id="App-projects">
-      {projects.map((p, i) => (
-        <ProjectDetails
-          key={p.id}
-          i={i}
-          project={p}
-          projects={projects.length}
-          images={findImages(getValidIndex(i))}
-          changeProject={changeProject}
-          selected={selected}
-          transition={transition}
-          getValidIndex={getValidIndex}
-        />
-      ))}
+    <section className="Projects" id="projects">
+      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: goToAnchor, continuous: false }}>
+        {projects.map((p, i) => (
+          <div className="test" key={p.id}>
+            <ProjectDetails
+              project={p}
+              i={i}
+              projects={projects.length}
+              images={findImages(i)}
+              goRight={() => reactSwipeEl.next()}
+              goLeft={() => reactSwipeEl.prev()}
+            />
+          </div>
+        ))}
+      </ReactSwipe>
     </section>
   );
 };

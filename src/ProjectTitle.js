@@ -1,13 +1,13 @@
 import React from 'react';
 import './ProjectTitle.scss';
 
-const ProjectTitle = ({ images, existsLeft, existsRight, project, changeProject }) => (
+const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight }) => (
   <div className="ProjectTitle">
     {!!images && !!images.length && <div className="titleBg" style={{ backgroundImage: `url(${images[0]})` }} />}
     <div className="titleContainer">
       {existsLeft ? (
-        <a href="#App-projects">
-          <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} title="Previous project" />
+        <a href="#projects">
+          <i className="fas fa-chevron-left" onClick={goLeft} title="Previous project" />
         </a>
       ) : (
         <i className="fas fa-chevron-left hidden" />
@@ -22,8 +22,8 @@ const ProjectTitle = ({ images, existsLeft, existsRight, project, changeProject 
         )}
       </h2>
       {existsRight ? (
-        <a href="#App-projects">
-          <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} title="Next project" />
+        <a href="#projects">
+          <i className="fas fa-chevron-right" onClick={goRight} title="Next project" />
         </a>
       ) : (
         <i className="fas fa-chevron-right hidden" />

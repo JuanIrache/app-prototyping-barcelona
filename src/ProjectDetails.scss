@@ -4,26 +4,5 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  &.transitioning {
-    transition: margin-left 0.5s ease;
-    opacity: 1 !important;
-    i {
-      opacity: 0;
-    }
-  }
-  &.center {
-    margin-left: 0;
-  }
-  &.left {
-    position: absolute;
-    top: 0;
-    margin-left: -100%;
-    opacity: 0;
-  }
-  &.right {
-    position: absolute;
-    top: 0;
-    margin-left: 100%;
-    opacity: 0;
-  }
+  overflow: hidden;
 }
