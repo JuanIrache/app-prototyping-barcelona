@@ -10,6 +10,7 @@
 - Simplify app with usereducer and context?
 - Analytics
 - Improve texts
+- Fewer tags?
 - Spell/grammar check
 
 - Publish
