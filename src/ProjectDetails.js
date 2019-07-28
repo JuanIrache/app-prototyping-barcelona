@@ -23,11 +23,11 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
           {!!images && !!images.length && <div className="ProjectDetails-titleBg" style={{ backgroundImage: `url(${images[0]})` }} />}
           <div className="ProjectDetails-titleContainer">
             {existsLeft ? (
-              <a href="#!">
+              <a href="#App-projects">
                 <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} title="Previous project" />
               </a>
             ) : (
-              <i className="fas fa-chevron-left hidden"/>
+              <i className="fas fa-chevron-left hidden" />
             )}
             <h2>
               {project.link ? (
@@ -39,11 +39,11 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
               )}
             </h2>
             {existsRight ? (
-              <a href="#!">
+              <a href="#App-projects">
                 <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} title="Next project" />
               </a>
             ) : (
-              <i className="fas fa-chevron-right hidden"/>
+              <i className="fas fa-chevron-right hidden" />
             )}
           </div>
         </div>

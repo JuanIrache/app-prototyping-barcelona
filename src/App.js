@@ -41,12 +41,10 @@ const App = () => {
   };
 
   const findImages = index => {
-    if (projects[index].images)
-      return images.filter(i => {
-        const regex = new RegExp(`/${projects[index].images}\\d+\\.`);
-        return regex.test(i);
-      });
-    return null;
+    return images.filter(i => {
+      const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
+      return regex.test(i);
+    });
   };
 
   return (
