@@ -35,9 +35,9 @@ const App = () => {
   };
 
   const getValidIndex = num => {
-    num = num % projects.length;
-    if (num < 0) return num + projects.length;
-    return num;
+    let newNum = num % projects.length;
+    if (num < 0) return newNum + projects.length;
+    return newNum;
   };
 
   const findImages = index => {

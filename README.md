@@ -2,6 +2,7 @@
 
 - Move project functions to proj and restructure
 - Color scheme
+- Photos of Barcelona and myself in the apb project?
 - Transitions
 - Fill all images
 - Image gallery

@@ -2,6 +2,9 @@ import React, { memo } from 'react';
 import './ProjectDetails.scss';
 
 const ProjectDetails = ({ project, projects, images, changeProject, selected, transition, i, getValidIndex }) => {
+  const existsLeft = selected > 0;
+  const existsRight = selected < projects - 1;
+
   const position = () => {
     if (selected === i) {
       if (transition > 0) return 'left transitioning';
@@ -9,8 +12,8 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
       return 'center';
     }
 
-    if (selected === getValidIndex(i + 1)) return transition < 0 ? 'center transitioning' : 'left';
-    if (selected === getValidIndex(i - 1)) return transition > 0 ? 'center transitioning' : 'right';
+    if (existsLeft && selected === getValidIndex(i + 1)) return transition < 0 ? 'center transitioning' : 'left';
+    if (existsRight && selected === getValidIndex(i - 1)) return transition > 0 ? 'center transitioning' : 'right';
   };
 
   return (
@@ -19,12 +22,12 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
         <div className="ProjectDetails-title">
           {!!images && !!images.length && <div className="ProjectDetails-titleBg" style={{ backgroundImage: `url(${images[0]})` }} />}
           <div className="ProjectDetails-titleContainer">
-            {projects > 1 ? (
+            {existsLeft ? (
               <a href="#!">
                 <i className="fas fa-chevron-left" onClick={() => changeProject(-1)} title="Previous project" />
               </a>
             ) : (
-              <span />
+              <i className="fas fa-chevron-left hidden"/>
             )}
             <h2>
               {project.link ? (
@@ -35,12 +38,12 @@ const ProjectDetails = ({ project, projects, images, changeProject, selected, tr
                 <span>{project.title}</span>
               )}
             </h2>
-            {projects > 1 ? (
+            {existsRight ? (
               <a href="#!">
                 <i className="fas fa-chevron-right" onClick={() => changeProject(+1)} title="Next project" />
               </a>
             ) : (
-              <span />
+              <i className="fas fa-chevron-right hidden"/>
             )}
           </div>
         </div>
