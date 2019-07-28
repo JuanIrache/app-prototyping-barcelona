@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import ProjectDetails from './ProjectDetails';
 import Tags from './Tags';
@@ -25,16 +25,11 @@ const App = () => {
     setSelected(0);
   };
 
-  useEffect(() => {
-    return () => {
-      setTransition(0);
-    };
-  }, [selected]);
-
   const changeProject = up => {
     setTransition(up);
     setTimeout(() => {
       let newIndex = selected + 1 * up;
+      setTransition(0);
       setSelected(getValidIndex(newIndex));
     }, 500);
   };
@@ -46,8 +41,6 @@ const App = () => {
   };
 
   const findImages = index => {
-    console.log(index);
-
     if (projects[index].images)
       return images.filter(i => {
         const regex = new RegExp(`/${projects[index].images}\\d+\\.`);
@@ -61,32 +54,19 @@ const App = () => {
       <Header />
       <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />
       <section id="App-projects">
-        <div
-          className={`App-projs App-leftProj${transition < 0 ? ' becomeCenter' : ''}`}
-          // id={`App-${projects[getValidIndex(selected - 1)].title}`}
-        >
+        {projects.map((p, i) => (
           <ProjectDetails
-            project={projects[getValidIndex(selected - 1)]}
-            images={findImages(getValidIndex(selected - 1))}
+            key={p.id}
+            i={i}
+            project={p}
+            projects={projects.length}
+            images={findImages(getValidIndex(i))}
             changeProject={changeProject}
+            selected={selected}
+            transition={transition}
+            getValidIndex={getValidIndex}
           />
-        </div>
-        <div
-          className={`App-projs App-rightProj${transition > 0 ? ' becomeCenter' : ''}`}
-          // id={`App-${projects[getValidIndex(selected + 1)].title}`}
-        >
-          <ProjectDetails
-            project={projects[getValidIndex(selected + 1)]}
-            images={findImages(getValidIndex(selected + 1))}
-            changeProject={changeProject}
-          />
-        </div>
-        <div
-          className={`App-projs App-proj${transition > 0 ? ' becomeLeft' : ''}${transition < 0 ? ' becomeRight' : ''}`}
-          // id={`App-${projects[selected].title}`}
-        >
-          <ProjectDetails project={projects[selected]} images={findImages(selected)} changeProject={changeProject} />
-        </div>
+        ))}
       </section>
       <About />
     </div>

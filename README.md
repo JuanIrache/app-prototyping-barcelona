@@ -1,5 +1,6 @@
 # ToDo
 
+- Move project functions to proj and restructure
 - Color scheme
 - Transitions
 - Fill all images
