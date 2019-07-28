@@ -1,7 +1,6 @@
 # ToDo
 
 - Swiping
-- Reorder some images for mobile
 - Photos of Barcelona, coding bits and myself in the apb project?
 - Image gallery
 - Videos in gallery
