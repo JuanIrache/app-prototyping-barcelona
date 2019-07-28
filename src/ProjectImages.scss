@@ -1,0 +1,18 @@
+.ProjectImages {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: 0.1rem 0;
+  span {
+    height: 20vh;
+    min-width: 16.7vw;
+    background-size: cover;
+    background-position: center;
+    @media (max-width: 767.99px) {
+      min-width: 25vw;
+    }
+    @media (max-width: 576.99px) {
+      min-width: 33.4vw;
+    }
+  }
+}
