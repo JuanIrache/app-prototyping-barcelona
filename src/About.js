@@ -19,7 +19,6 @@ const About = () => {
         Accept: 'application/vnd.github.v3+json'
       }
     };
-    console.log('requesting');
 
     const userData = axios.get(
       `https://api.github.com/users/juanirache?client_id=${githubClientId}&client_secret=${githubClientSecret}`,
@@ -53,8 +52,8 @@ const About = () => {
           <p>
             I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as a hobby,
             then for a living. I started my career in the cinema/video industry, but at some point, while living in Australia, my interest
-            shifted towards creating things with code. Since I spent most of my spare time developing programs, I decided I might as well do
-            it professionally.
+            shifted towards creating things with code. Since I was spending most of my spare time developing programs, I decided I might as
+            well do it professionally.
           </p>
           <p>
             I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My

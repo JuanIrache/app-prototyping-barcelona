@@ -6,7 +6,7 @@ const Projects = ({ tags, tag, toggleTag }) => (
     <div className="Tags-container">
       {tags.map(t => (
         <div key={t} className="Tags-tag">
-          <a href="#projects" name={t} className={t === tag ? 'active' : ''} onClick={toggleTag}>
+          <a href="#App-projects" name={t} className={t === tag ? 'active' : ''} onClick={toggleTag}>
             {t}
           </a>{' '}
         </div>
