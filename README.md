@@ -1,6 +1,5 @@
 # ToDo
 
-- Specify fullstack, front or backend in tags
 - Photos of Barcelona, coding bits and myself in the apb project?
 - Image gallery
 - Videos in gallery
