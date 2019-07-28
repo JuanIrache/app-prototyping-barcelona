@@ -195,8 +195,8 @@
   {
     "title": "App Prototyping Barcelona",
     "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End"],
-    "description": "The website you are looking at",
-    "id": "",
+    "description": "The website you are looking at. Scroll down for more information and contact details",
+    "id": "apb",
     "link": null,
     "links": [],
     "github": "https://github.com/JuanIrache/app-prototyping-barcelona",

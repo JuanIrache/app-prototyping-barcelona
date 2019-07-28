@@ -4,7 +4,7 @@ import ProjectDetails from './ProjectDetails';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
-const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/);
+const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
 const Projects = ({ projects }) => {
