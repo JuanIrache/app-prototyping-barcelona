@@ -1,6 +1,7 @@
 # ToDo
 
 - Move project functions to proj and restructure
+- Don't hide all i on transition, only chevron
 - Swiping
 - Photos of Barcelona, coding bits and myself in the apb project?
 - Image gallery
