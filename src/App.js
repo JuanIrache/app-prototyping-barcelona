@@ -16,7 +16,7 @@ const App = () => {
     const newTag = e.target.name !== tag ? e.target.name : '';
     setTag(newTag);
     if (!newTag) setProjects(initialProjects);
-    else setProjects(initialProjects.filter(p => p.tags.includes(newTag)));
+    else setProjects(initialProjects.filter(p => p.tags.includes(newTag)).sort(() => Math.random() - 0.5));
   };
 
   return (
