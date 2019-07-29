@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem 1rem;
-  .Tags-container {
+  .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -18,7 +18,7 @@
   }
 
   text-align: center;
-  .Tags-tag {
+  .tag {
     margin-top: 1rem;
     @media (max-width: 767.99px) {
       margin-top: 0;

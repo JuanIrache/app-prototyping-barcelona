@@ -16,7 +16,8 @@ const App = () => {
   const [video, setVideo] = useState({ visible: false, src: '', title: '' });
 
   const toggleTag = e => {
-    const newTag = e.target.name !== tag ? e.target.name : '';
+    let newTag = '';
+    if (e && e.target) newTag = e.target.name !== tag ? e.target.name : '';
     setTag(newTag);
     if (!newTag) setProjects(initialProjects);
     else setProjects(initialProjects.filter(p => p.tags.includes(newTag)).sort(() => Math.random() - 0.5));

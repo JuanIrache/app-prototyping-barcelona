@@ -1,6 +1,6 @@
 # ToDo
 
-- Filter by tag or see all projects
+- load first image better when filtering by tag
 - Image gallery
 - Transitions
 - Color scheme
