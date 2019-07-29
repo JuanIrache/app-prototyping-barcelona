@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ReactSwipe from 'react-swipe';
 import Project from './Project';
+
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, setVideo }) => {
   const findImages = index => {
     return images.filter(i => {
       const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
@@ -23,6 +24,7 @@ const Projects = ({ projects }) => {
   };
 
   let reactSwipeEl;
+  console.log('rendering projects');
 
   return (
     <section className="Projects" id="projects">
@@ -36,6 +38,7 @@ const Projects = ({ projects }) => {
               images={findImages(i)}
               goRight={() => reactSwipeEl.next()}
               goLeft={() => reactSwipeEl.prev()}
+              setVideo={setVideo}
             />
           </div>
         ))}
@@ -44,4 +47,4 @@ const Projects = ({ projects }) => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

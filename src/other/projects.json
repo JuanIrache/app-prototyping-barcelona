@@ -50,7 +50,7 @@
       }
     ],
     "github": "https://github.com/JuanIrache/gopro-telemetry",
-    "youtube": "https://www.youtube.com/watch?v=bg8B0Hl_au0",
+    "youtube": "bg8B0Hl_au0",
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
   },
   {
@@ -89,7 +89,7 @@
     "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
     "links": [],
     "github": "https://github.com/JuanIrache/StarryAnalytics",
-    "youtube": "https://www.youtube.com/watch?v=w3-hyALXagU",
+    "youtube": "w3-hyALXagU",
     "npm": ""
   },
   {
@@ -100,7 +100,7 @@
     "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
     "links": [],
     "github": "https://github.com/JuanIrache/a3rDi",
-    "youtube": "https://www.youtube.com/watch?v=w3Fl9vFYzts",
+    "youtube": "w3Fl9vFYzts",
     "npm": ""
   },
   {
@@ -114,7 +114,7 @@
       { "src": "https://www.youtube.com/watch?v=74RotdYL3y4&list=PLgoeWSWqXedLeMwjXC1LAo_5NuIuT4Ccb", "title": "Fan Reviews" }
     ],
     "github": "",
-    "youtube": "https://www.youtube.com/watch?v=pn6HvwvhSGE",
+    "youtube": "pn6HvwvhSGE",
     "npm": ""
   },
   {
@@ -125,7 +125,7 @@
     "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
     "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
     "github": "",
-    "youtube": "https://www.youtube.com/watch?v=r_p5u_CX9UI",
+    "youtube": "r_p5u_CX9UI",
     "npm": ""
   },
   {
@@ -146,7 +146,7 @@
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
     "links": [],
     "github": "",
-    "youtube": "https://www.youtube.com/watch?v=bRqkhVt6VRU",
+    "youtube": "bRqkhVt6VRU",
     "npm": ""
   },
   {

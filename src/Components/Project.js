@@ -4,13 +4,13 @@ import ProjectDescription from './ProjectDescription';
 import ProjectImages from './ProjectImages';
 import '../style/Project.scss';
 
-const Project = ({ project, projects, images, i, goLeft, goRight }) => {
+const Project = ({ project, projects, images, i, goLeft, goRight, setVideo }) => {
   const existsLeft = i > 0;
   const existsRight = i + 1 < projects;
   return (
     <div className="Project">
       <ProjectTitle {...{ images, existsLeft, existsRight, project, goLeft, goRight }} />
-      <ProjectDescription project={project} />
+      <ProjectDescription project={project} setVideo={setVideo} />
       <ProjectImages images={images} title={project.title} />
     </div>
   );
