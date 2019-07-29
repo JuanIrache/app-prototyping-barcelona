@@ -1,6 +1,8 @@
 # ToDo
 
+- Recover swipe
 - Image gallery
+- Delete title in gallery?
 - Tags to h5?
 - Transitions
 - Color scheme

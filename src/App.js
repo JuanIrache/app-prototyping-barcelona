@@ -15,7 +15,11 @@ const App = () => {
   const [tag, setTag] = useState('');
   const [projects, setProjects] = useState(initialProjects);
   const [video, setVideo] = useState({ visible: false, src: '', title: '' });
-  const [gallery, setGallery] = useState({ visible: true, index: 0, title: 'GoPro Telemetry Extractor' });
+  const [gallery, setGallery] = useState({ visible: false, index: 0, title: 'GoPro Telemetry Extractor', selected: 0 });
+
+  const softSetGallery = obj => {
+    setGallery({ ...gallery, ...obj });
+  };
 
   const toggleTag = e => {
     let newTag = '';
@@ -27,11 +31,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <GalleryOverlay {...gallery} setGallery={setGallery} projects={projects} />
+      <GalleryOverlay {...gallery} softSetGallery={softSetGallery} projects={projects} />
       <VideoOverlay {...video} setVideo={setVideo} />
       <Header />
       <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />
-      <Projects projects={projects} setVideo={setVideo} />
+      <Projects projects={projects} setVideo={setVideo} softSetGallery={softSetGallery} />
       <About />
     </div>
   );

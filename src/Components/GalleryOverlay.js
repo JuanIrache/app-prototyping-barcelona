@@ -7,9 +7,9 @@ const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const GalleryOverlay = ({ visible, index, title, setGallery, projects }) => {
+const GalleryOverlay = ({ visible, index, title, softSetGallery, projects, selected }) => {
   const closeGallery = () => {
-    setGallery({ visible: false, index, title });
+    softSetGallery({ visible: false });
   };
 
   const findImages = index => {
@@ -40,12 +40,15 @@ const GalleryOverlay = ({ visible, index, title, setGallery, projects }) => {
 
   return (
     <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery}>
-      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)}>
-        {projectImages.map((img, i) => (
-          <div key={img}>
-            <GallerySlide img={img} images={projectImages.length} i={i} goRight={goRight} goLeft={goLeft} title={title} />
-          </div>
-        ))}
+      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected, continuous: false }}>
+        {projectImages
+          .slice(1)
+          .concat(projectImages[0])
+          .map((img, i) => (
+            <div key={img}>
+              <GallerySlide img={img} images={projectImages.length} i={i} goRight={goRight} goLeft={goLeft} title={title} />
+            </div>
+          ))}
       </ReactSwipe>
       <h4 className="title">{title}</h4>
     </div>
