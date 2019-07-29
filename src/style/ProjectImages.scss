@@ -6,13 +6,13 @@
     height: 20vh;
     $between: 0.2rem;
     min-width: calc(16.5vw - #{$between} - #{$between});
-    margin: $between;
+    margin: 0 $between;
     border-radius: 0.5rem;
     background-size: cover;
     background-position: center;
     @media (max-width: 767.99px) {
       $between: 0.1rem;
-      margin: $between;
+      margin: 0 $between;
       min-width: calc(25vw - #{$between} - #{$between});
     }
     @media (max-width: 576.99px) {
