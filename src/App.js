@@ -15,7 +15,7 @@ const App = () => {
   const [tag, setTag] = useState('');
   const [projects, setProjects] = useState(initialProjects);
   const [video, setVideo] = useState({ visible: false, src: '', title: '' });
-  const [gallery, setGallery] = useState({ visible: true, src: '', title: 'Gallery title' });
+  const [gallery, setGallery] = useState({ visible: true, index: 0, title: 'GoPro Telemetry Extractor' });
 
   const toggleTag = e => {
     let newTag = '';
@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <GalleryOverlay {...gallery} setGallery={setGallery} />
+      <GalleryOverlay {...gallery} setGallery={setGallery} projects={projects} />
       <VideoOverlay {...video} setVideo={setVideo} />
       <Header />
       <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />

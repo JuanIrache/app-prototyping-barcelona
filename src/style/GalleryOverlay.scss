@@ -9,41 +9,12 @@
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s ease, z-index 0s ease 0.5s;
+  display: flex;
+  align-items: center;
   &.visible {
     opacity: 1;
     z-index: 1;
     transition: opacity 0.5s ease;
-  }
-  .slider {
-    z-index: inherit;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    a {
-      z-index: inherit;
-      color: white;
-      &:hover {
-        border: 0;
-      }
-      i {
-        z-index: inherit;
-        text-shadow: 1px 2px 4px black;
-        padding: 0 1rem;
-        font-size: 2rem;
-        @media (max-width: 767.99px) {
-          font-size: 1.3rem;
-        }
-        &.hidden {
-          opacity: 0;
-        }
-      }
-    }
-    img {
-      z-index: inherit;
-      max-height: 80vh;
-      max-width: 80vw;
-    }
   }
   .title {
     font-size: 1.9rem;
