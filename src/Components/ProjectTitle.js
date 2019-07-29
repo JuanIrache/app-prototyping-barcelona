@@ -1,11 +1,22 @@
 import React from 'react';
 import '../style/ProjectTitle.scss';
 
-const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight, i }) => (
+const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight, i }) => {
+  
+  const preLoad = images && images.length && i < 2;
+  if (preLoad) {
+    const img = new Image();
+    img.onload = () => {
+      document.querySelector(`#titleBg-${i}`).classList.add('visible');
+    }
+    img.src = images[i];
+  }
+  
+  return (
   <div className="ProjectTitle">
     {// Preload header of first 2 slides, lazy load the res
       !!images && !!images.length && (
-      <div className="titleBg" style={i < 2 ? { backgroundImage: `url(${images[0]})` } : {}} data-background={i > 1 ? `url(${images[0]})` : ''} />
+      <div className={`titleBg${!preLoad ? ' visible':''}`} id={`titleBg-${i}`} style={preLoad ? { backgroundImage: `url(${images[0]})` } : {}} data-background={!preLoad ? `url(${images[0]})` : ''} />
     )}
     <div className="titleContainer">
       {existsLeft ? (
@@ -33,6 +44,6 @@ const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRigh
       )}
     </div>
   </div>
-);
+)};
 
 export default ProjectTitle;

@@ -17,6 +17,11 @@
     @media (max-width: 767.99px) {
       filter: blur(2px);
     }
+    opacity:0;
+    transition: opacity .5s ease;
+    &.visible {
+      opacity:1;
+    }
   }
   .titleContainer {
     height: 100%;

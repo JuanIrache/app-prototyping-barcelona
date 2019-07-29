@@ -1,6 +1,5 @@
 # ToDo
 
-- load first image better when filtering by tag
 - Image gallery
 - Transitions
 - Color scheme
