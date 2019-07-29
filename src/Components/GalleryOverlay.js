@@ -51,7 +51,6 @@ const GalleryOverlay = ({ gallery, index, setGallery, projects }) => {
             </div>
           ))}
       </ReactSwipe>
-      <h4 className="title">{title}</h4>
     </div>
   );
 };
