@@ -8,6 +8,7 @@ const ProjectDescription = ({ project, setVideo }) => {
       document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     }, 500);
   };
+
   return (
     <Fragment>
       <div className="ProjectDescription-upper">

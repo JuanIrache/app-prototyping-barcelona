@@ -8,6 +8,7 @@ const VideoOverlay = ({ visible, src, title, setVideo }) => {
       document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     }, 500);
   };
+
   return (
     <div className={`VideoOverlay${visible ? ' visible' : ''}`} onClick={closeVideo}>
       <iframe
