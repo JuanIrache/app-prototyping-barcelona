@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactSwipe from 'react-swipe';
-import ProjectDetails from './ProjectDetails';
+import Project from './Project';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
@@ -29,7 +29,7 @@ const Projects = ({ projects }) => {
       <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: goToAnchor, continuous: false }}>
         {projects.map((p, i) => (
           <div className="test" key={p.id}>
-            <ProjectDetails
+            <Project
               project={p}
               i={i}
               projects={projects.length}

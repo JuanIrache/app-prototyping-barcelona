@@ -24,7 +24,7 @@ const ProjectDescription = ({ project }) => (
     </div>
     <div className="ProjectDescription-lower">
       <div className="tags">
-        <strong>Made with:</strong> {project.tags.join(', ')}
+        <strong>Tech involved:</strong> {project.tags.join(', ')}
       </div>
       <div className="buttons">
         {!!project.link && (
