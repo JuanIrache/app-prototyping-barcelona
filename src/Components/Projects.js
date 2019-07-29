@@ -8,7 +8,7 @@ const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const Projects = ({ projects, setVideo, softSetGallery }) => {
+const Projects = ({ projects, setVideo, setGalleryIndex, setGallery }) => {
   const findImages = index => {
     return images.filter(i => {
       const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
@@ -26,7 +26,7 @@ const Projects = ({ projects, setVideo, softSetGallery }) => {
     /////
     // Preload video
     const project = projects[i];
-    // setVideo({ title: project.title, src: project.youtube, visible: false });
+    setVideo({ title: project.title, src: project.youtube, visible: false });
     // Load images
     const checkAndLoad = proj => {
       const loadImg = img => {
@@ -43,11 +43,11 @@ const Projects = ({ projects, setVideo, softSetGallery }) => {
     checkAndLoad(document.querySelector(`.Projects #Project-${i}`));
     if (i + 1 < projects.length) checkAndLoad(document.querySelector(`.Projects #Project-${i + 1}`));
     if (i > 0) checkAndLoad(document.querySelector(`.Projects #Project-${i - 1}`));
-    // softSetGallery({ index: i });
+    setGalleryIndex(i);
   };
 
   //Preload first video
-  // setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
+  setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
 
   return (
     <section className="Projects" id="projects">
@@ -62,7 +62,7 @@ const Projects = ({ projects, setVideo, softSetGallery }) => {
               goRight={() => reactSwipeEl.next()}
               goLeft={() => reactSwipeEl.prev()}
               setVideo={setVideo}
-              softSetGallery={softSetGallery}
+              setGallery={setGallery}
             />
           </div>
         ))}

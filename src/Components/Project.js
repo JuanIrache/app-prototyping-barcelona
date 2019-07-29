@@ -5,14 +5,14 @@ import ProjectImages from './ProjectImages';
 import '../style/Project.scss';
 
 const Project = props => {
-  const { project, setVideo, images, i, projects, softSetGallery } = props;
+  const { project, setVideo, images, i, projects, setGallery } = props;
   const existsLeft = i > 0;
   const existsRight = i + 1 < projects;
   return (
     <div className="Project" id={`Project-${i}`}>
       <ProjectTitle {...props} existsLeft={existsLeft} existsRight={existsRight} />
       <ProjectDescription project={project} setVideo={setVideo} />
-      <ProjectImages images={images} title={project.title} i={i} softSetGallery={softSetGallery} />
+      <ProjectImages images={images} title={project.title} i={i} setGallery={setGallery} />
     </div>
   );
 };

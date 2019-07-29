@@ -7,9 +7,10 @@ const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const GalleryOverlay = ({ visible, index, title, softSetGallery, projects, selected }) => {
+const GalleryOverlay = ({ gallery, index, setGallery, projects }) => {
+  const { visible, title, selected } = gallery;
   const closeGallery = () => {
-    softSetGallery({ visible: false });
+    setGallery({ ...gallery, visible: false });
   };
 
   const findImages = index => {

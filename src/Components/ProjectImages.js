@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/ProjectImages.scss';
 
-const ProjectImages = ({ images, title, i, softSetGallery }) => {
+const ProjectImages = ({ images, title, i, setGallery }) => {
   const preLoad = images && images.length && i < 2;
   if (preLoad) {
     const img = new Image();
@@ -12,7 +12,7 @@ const ProjectImages = ({ images, title, i, softSetGallery }) => {
   }
 
   const handleSetGallery = idx => {
-    softSetGallery({ visible: true, selected: idx });
+    setGallery({ visible: true, selected: idx, title });
   };
 
   return !!images && !!images.length ? (

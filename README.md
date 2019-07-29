@@ -1,6 +1,6 @@
 # ToDo
 
-- Recover swipe
+- Larger iframe on portrait
 - Image gallery
 - Delete title in gallery?
 - Tags to h5?
