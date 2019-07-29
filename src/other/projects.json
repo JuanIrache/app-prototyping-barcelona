@@ -54,6 +54,16 @@
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
   },
   {
+    "title": "Chinese culture databases",
+    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack", "Full Stack", "APIs"],
+    "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
+    "id": "txicc",
+    "links": [],
+    "github": "",
+    "youtube": "",
+    "npm": ""
+  },
+  {
     "title": "DJI SRT Viewer",
     "tags": [
       "JavaScript",
@@ -82,28 +92,6 @@
     "npm": "https://www.npmjs.com/package/dji_srt_parser"
   },
   {
-    "title": "Starry Analytics",
-    "tags": ["JavaScript", "Processing", "APIs", "Data Visualization", "GPS", "Open source", "Front End"],
-    "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions",
-    "id": "starry",
-    "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
-    "links": [],
-    "github": "https://github.com/JuanIrache/StarryAnalytics",
-    "youtube": "w3-hyALXagU",
-    "npm": ""
-  },
-  {
-    "title": "Audio-Assisted Sensory Photography for the Blind",
-    "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
-    "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
-    "id": "a3di",
-    "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
-    "links": [],
-    "github": "https://github.com/JuanIrache/a3rDi",
-    "youtube": "w3Fl9vFYzts",
-    "npm": ""
-  },
-  {
     "title": "Orbit Simulator",
     "tags": ["Processing", "Android", "Gamification", "Sensors"],
     "description": "With just the use of your fingers and the accelerometer, you can produce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns",
@@ -118,35 +106,14 @@
     "npm": ""
   },
   {
-    "title": "Octagon. The Flying Squirrel",
-    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
-    "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape",
-    "id": "octagon",
-    "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
-    "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
-    "github": "",
-    "youtube": "r_p5u_CX9UI",
-    "npm": ""
-  },
-  {
-    "title": "Chinese culture databases",
-    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack", "Full Stack", "APIs"],
-    "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
-    "id": "txicc",
+    "title": "Starry Analytics",
+    "tags": ["JavaScript", "Processing", "APIs", "Data Visualization", "GPS", "Open source", "Front End"],
+    "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions",
+    "id": "starry",
+    "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
     "links": [],
-    "github": "",
-    "youtube": "",
-    "npm": ""
-  },
-  {
-    "title": "Dropped My Phone",
-    "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
-    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
-    "id": "dmp",
-    "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
-    "links": [],
-    "github": "",
-    "youtube": "bRqkhVt6VRU",
+    "github": "https://github.com/JuanIrache/StarryAnalytics",
+    "youtube": "w3-hyALXagU",
     "npm": ""
   },
   {
@@ -169,6 +136,28 @@
     "npm": ""
   },
   {
+    "title": "Octagon. The Flying Squirrel",
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
+    "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape",
+    "id": "octagon",
+    "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
+    "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
+    "github": "",
+    "youtube": "r_p5u_CX9UI",
+    "npm": ""
+  },
+  {
+    "title": "Audio-Assisted Sensory Photography for the Blind",
+    "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
+    "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
+    "id": "a3di",
+    "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
+    "links": [],
+    "github": "https://github.com/JuanIrache/a3rDi",
+    "youtube": "w3Fl9vFYzts",
+    "npm": ""
+  },
+  {
     "title": "Creative Coding",
     "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "AI", "Front End", "Gamification"],
     "description": "This is a series of small experiments around coding, data visualization and AI",
@@ -185,6 +174,17 @@
     ],
     "github": "https://github.com/JuanIrache/coding-fun",
     "youtube": "",
+    "npm": ""
+  },
+  {
+    "title": "Dropped My Phone",
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
+    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
+    "id": "dmp",
+    "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
+    "links": [],
+    "github": "",
+    "youtube": "bRqkhVt6VRU",
     "npm": ""
   },
   {
