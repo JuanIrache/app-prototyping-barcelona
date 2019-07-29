@@ -51,7 +51,7 @@ const Projects = ({ projects, setVideo, setGalleryIndex, setGallery }) => {
 
   return (
     <section className="Projects" id="projects">
-      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>
+      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>
         {projects.map((p, i) => (
           <div key={p.id}>
             <Project

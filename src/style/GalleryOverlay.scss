@@ -1,5 +1,5 @@
 .GalleryOverlay {
-  background: rgba(0, 0, 0, 0.171);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   position: fixed;
   height: 100vh;
@@ -28,5 +28,9 @@
     @media (max-width: 767.99px) {
       font-size: 1.2rem;
     }
+  }
+  .react-swipe-container > div {
+    // width: 100% !important;
+    margin: 0 !important;
   }
 }
