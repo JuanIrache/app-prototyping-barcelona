@@ -5,9 +5,7 @@
       "JavaScript",
       "NPM",
       "Express",
-      "Java",
       "Processing",
-      "GoLang",
       "Data Visualization",
       "Sensors",
       "D3.js",
@@ -96,7 +94,7 @@
   },
   {
     "title": "Audio-Assisted Sensory Photography for the Blind",
-    "tags": ["Java", "Processing", "Data Visualization", "Open source", "Video", "3D"],
+    "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
     "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
     "id": "a3di",
     "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
@@ -107,7 +105,7 @@
   },
   {
     "title": "Orbit Simulator",
-    "tags": ["Java", "Processing", "Android", "Gamification", "Sensors"],
+    "tags": ["Processing", "Android", "Gamification", "Sensors"],
     "description": "With just the use of your fingers and the accelerometer, you can produce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns",
     "id": "os",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.gravity_playground", "title": "Orbit Simulator" },
@@ -121,7 +119,7 @@
   },
   {
     "title": "Octagon. The Flying Squirrel",
-    "tags": ["Java", "Processing", "Android", "Gamification", "Sensors", "3D"],
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape",
     "id": "octagon",
     "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
@@ -142,7 +140,7 @@
   },
   {
     "title": "Dropped My Phone",
-    "tags": ["Java", "Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
     "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
     "id": "dmp",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
