@@ -4,6 +4,9 @@ import '../style/ProjectDescription.scss';
 const ProjectDescription = ({ project, setVideo }) => {
   const handleSetVideo = () => {
     setVideo({ src: project.youtube, title: project.title, visible: true });
+    setTimeout(() => {
+      document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }, 500);
   };
   return (
     <Fragment>
