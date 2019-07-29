@@ -38,15 +38,14 @@
   }
 }
 .ProjectDescription-lower {
-  div {
-    margin: 0.2rem 0;
-  }
   padding: 0.2rem 1rem 0.5rem 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex: 1 0 auto; // Grow, don't shrink
-
+  div {
+    margin: 0.2rem 0;
+  }
   @media (max-width: 767.99px) {
     flex-direction: column-reverse;
   }
