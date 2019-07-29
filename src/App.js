@@ -4,6 +4,7 @@ import Tags from './Components/Tags';
 import Projects from './Components/Projects';
 import About from './Components/About';
 import VideoOverlay from './Components/VideoOverlay';
+import GalleryOverlay from './Components/GalleryOverlay';
 import initialProjects from './other/projects.json';
 
 import './App.scss';
@@ -14,6 +15,7 @@ const App = () => {
   const [tag, setTag] = useState('');
   const [projects, setProjects] = useState(initialProjects);
   const [video, setVideo] = useState({ visible: false, src: '', title: '' });
+  const [gallery, setGallery] = useState({ visible: true, src: '', title: 'Gallery title' });
 
   const toggleTag = e => {
     let newTag = '';
@@ -25,6 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <GalleryOverlay {...gallery} setGallery={setGallery} />
       <VideoOverlay {...video} setVideo={setVideo} />
       <Header />
       <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />

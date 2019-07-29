@@ -1,0 +1,60 @@
+.GalleryOverlay {
+  background: rgba(0, 0, 0, 0.171);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease, z-index 0s ease 0.5s;
+  &.visible {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+  .slider {
+    z-index: inherit;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      z-index: inherit;
+      color: white;
+      &:hover {
+        border: 0;
+      }
+      i {
+        z-index: inherit;
+        text-shadow: 1px 2px 4px black;
+        padding: 0 1rem;
+        font-size: 2rem;
+        @media (max-width: 767.99px) {
+          font-size: 1.3rem;
+        }
+        &.hidden {
+          opacity: 0;
+        }
+      }
+    }
+    img {
+      z-index: inherit;
+      max-height: 80vh;
+      max-width: 80vw;
+    }
+  }
+  .title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.637);
+    position: absolute;
+    top: 83vh;
+    text-align: center;
+    width: 100%;
+    @media (max-width: 767.99px) {
+      font-size: 1.2rem;
+    }
+  }
+}

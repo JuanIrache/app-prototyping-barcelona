@@ -1,6 +1,5 @@
 # ToDo
 
-- Avoid scrolling on galleries?
 - Image gallery
 - Tags to h5?
 - Transitions
