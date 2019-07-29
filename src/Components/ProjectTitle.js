@@ -1,9 +1,12 @@
 import React from 'react';
 import '../style/ProjectTitle.scss';
 
-const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight }) => (
+const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight, i }) => (
   <div className="ProjectTitle">
-    {!!images && !!images.length && <div className="titleBg" style={{ backgroundImage: `url(${images[0]})` }} />}
+    {// Preload header of first 2 slides, lazy load the res
+      !!images && !!images.length && (
+      <div className="titleBg" style={i < 2 ? { backgroundImage: `url(${images[0]})` } : {}} data-background={i > 1 ? `url(${images[0]})` : ''} />
+    )}
     <div className="titleContainer">
       {existsLeft ? (
         <a href="#projects">

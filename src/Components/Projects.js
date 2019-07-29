@@ -18,15 +18,31 @@ const Projects = ({ projects, setVideo }) => {
 
   let reactSwipeEl;
 
-  const onChangeSlide = () => {
+  const onChangeSlide = i => {
     //Source: https://stackoverflow.com/a/13736194/3362074
     const url = window.location.href; //Save down the URL without hash.
     window.location.href = '#projects'; //Go to the target element.
     window.history.replaceState(null, null, url);
     /////
     // Preload video
-    const project = projects[reactSwipeEl.getPos()];
+    const project = projects[i];
     setVideo({ title: project.title, src: project.youtube, visible: false });
+    // Load images
+    const checkAndLoad = proj => {
+      const loadImg = img => {
+        if (img) {
+          if (img.dataset.background) {
+            img.setAttribute('style', `background-image:${img.dataset.background}`);
+            delete img.dataset.background;
+          }
+        }
+      };
+      loadImg(proj.querySelector('.titleBg'));
+      proj.querySelectorAll('.ProjectImages .image').forEach(loadImg);
+    };
+    checkAndLoad(document.querySelector(`.Projects #Project-${i}`));
+    if (i + 1 < projects.length) checkAndLoad(document.querySelector(`.Projects #Project-${i + 1}`));
+    if (i > 0) checkAndLoad(document.querySelector(`.Projects #Project-${i - 1}`));
   };
 
   //Preload first video
@@ -36,7 +52,7 @@ const Projects = ({ projects, setVideo }) => {
     <section className="Projects" id="projects">
       <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>
         {projects.map((p, i) => (
-          <div className="test" key={p.id}>
+          <div key={p.id}>
             <Project
               project={p}
               i={i}

@@ -1,7 +1,7 @@
 # ToDo
 
+- Filter by tag or see all projects
 - Image gallery
-- Videos in gallery
 - Transitions
 - Color scheme
 - Font testing

@@ -4,14 +4,15 @@ import ProjectDescription from './ProjectDescription';
 import ProjectImages from './ProjectImages';
 import '../style/Project.scss';
 
-const Project = ({ project, projects, images, i, goLeft, goRight, setVideo }) => {
+const Project = props => {
+  const { project, setVideo, images, i, projects } = props;
   const existsLeft = i > 0;
   const existsRight = i + 1 < projects;
   return (
-    <div className="Project">
-      <ProjectTitle {...{ images, existsLeft, existsRight, project, goLeft, goRight }} />
+    <div className="Project" id={`Project-${i}`}>
+      <ProjectTitle {...props} existsLeft={existsLeft} existsRight={existsRight} />
       <ProjectDescription project={project} setVideo={setVideo} />
-      <ProjectImages images={images} title={project.title} />
+      <ProjectImages images={images} title={project.title} i={i} />
     </div>
   );
 };
