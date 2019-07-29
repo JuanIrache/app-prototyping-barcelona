@@ -16,19 +16,25 @@ const Projects = ({ projects, setVideo }) => {
     });
   };
 
-  const goToAnchor = () => {
+  let reactSwipeEl;
+
+  const onChangeSlide = () => {
     //Source: https://stackoverflow.com/a/13736194/3362074
     const url = window.location.href; //Save down the URL without hash.
     window.location.href = '#projects'; //Go to the target element.
     window.history.replaceState(null, null, url);
+    /////
+    // Preload video
+    const project = projects[reactSwipeEl.getPos()];
+    setVideo({ title: project.title, src: project.youtube, visible: false });
   };
 
-  let reactSwipeEl;
-  console.log('rendering projects');
+  //Preload first video
+  setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
 
   return (
     <section className="Projects" id="projects">
-      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: goToAnchor, continuous: false }}>
+      <ReactSwipe className="caroussel" ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>
         {projects.map((p, i) => (
           <div className="test" key={p.id}>
             <Project
