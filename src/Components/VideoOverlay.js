@@ -14,7 +14,7 @@ const VideoOverlay = ({ visible, src, title, setVideo }) => {
       <iframe
         id="videoPlayer"
         title={title + ' video'}
-        src={`https://www.youtube.com/embed/${src}?enablejsapi=1`}
+        src={`https://www.youtube.com/embed/${src}?enablejsapi=1&rel=0`}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
