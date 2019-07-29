@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../style/VideoOverlay.scss';
 
 const VideoOverlay = ({ visible, src, title, setVideo }) => {
@@ -8,6 +8,11 @@ const VideoOverlay = ({ visible, src, title, setVideo }) => {
       document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     }, 500);
   };
+
+  useEffect(() => {
+    const fixed = document.querySelector('.VideoOverlay');
+    fixed.addEventListener('touchmove', e => e.preventDefault(), false);
+  }, []);
 
   return (
     <div className={`VideoOverlay${visible ? ' visible' : ''}`} onClick={closeVideo}>
