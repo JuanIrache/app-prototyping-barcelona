@@ -1,6 +1,9 @@
 # ToDo
 
-- Color scheme
+- Larger drop my phone first image?
+- mobile with top bar
+- white line on projects, mobile
+- Better alignment on desktops for proj description
 - Filter by tag fails to show images some times
 - Transitions
 - Fonts
