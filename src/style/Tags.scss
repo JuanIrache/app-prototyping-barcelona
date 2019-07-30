@@ -1,14 +1,10 @@
-$light: #f0e5d1;
-$green: #016450;
-$dark: #323f48;
-$gold: #b88953;
+@import './colors';
 
 .Tags {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 2rem 1rem;
-  background-color: $light;
   color: $dark;
   .container {
     display: grid;

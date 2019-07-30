@@ -1,3 +1,5 @@
+@import './colors';
+
 .GallerySlide {
   height: 100%;
   width: 100%;
@@ -5,13 +7,13 @@
   justify-content: space-between;
   align-items: center;
   a {
-    color: white;
+    color: $light;
     &:hover {
       border: 0;
     }
   }
   i {
-    text-shadow: 1px 2px 4px black;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.425);
     padding: 0 0.2rem;
     font-size: 2rem;
     @media (max-width: 767.99px) {

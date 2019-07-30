@@ -7,7 +7,7 @@
 - memoize more stuff?
 - Optimise loading time
 - Simplify app with usereducer and context
-  - Unduplicate initialtags?
+  - Unduplicate initialprojects?
   - Improve implementation of setVideo, setGalleryIndex (still passing props down)
   - Avoid setimmediate hack
 - Analytics

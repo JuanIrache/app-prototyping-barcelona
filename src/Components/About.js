@@ -43,7 +43,7 @@ const About = () => {
     <div>Loading</div>
   ) : (
     <div className="About">
-      <section>
+      <section className="upper">
         <div className="photo">
           <img src={juan} alt="Juan Irache" />
         </div>
@@ -65,7 +65,7 @@ const About = () => {
           <p className="signature">Juan Irache</p>
         </div>
       </section>
-      <section>
+      <section className="lower">
         <div className="github">
           <h4>
             <a href={user.html_url} target="_blank" rel="noopener noreferrer">

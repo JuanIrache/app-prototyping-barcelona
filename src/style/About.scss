@@ -1,14 +1,10 @@
-$light: #f0e5d1;
-$green: #016450;
-$dark: #323f48;
-$gold: #b88953;
+@import './colors';
 
 .About {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: $light;
   color: $dark;
   a {
     color: $green;
@@ -23,68 +19,84 @@ $gold: #b88953;
     @media (max-width: 767.99px) {
       flex-direction: column;
     }
-    .description {
-      padding: 2rem 2rem 1rem 2rem;
-      width: 60%;
-      text-align: justify;
-      .signature {
-        text-align: right;
-      }
-      @media (max-width: 767.99px) {
-        width: auto;
-        padding-top: 0.5rem;
-      }
-    }
-    .photo {
-      padding: 4rem 2rem 1rem 2rem;
-      text-align: center;
-      @media (max-width: 767.99px) {
-        margin-top: 3rem;
-        padding-top: 2rem;
-      }
-      img {
+    &.upper {
+      .description {
+        padding: 2rem 2rem 1rem 2rem;
+        width: 60%;
+        text-align: justify;
+        .signature {
+          text-align: right;
+        }
         @media (max-width: 767.99px) {
-          max-width: 90%;
+          width: auto;
+          padding-top: 0.5rem;
         }
-        width: 20rem;
-        border-radius: 50%;
       }
-    }
-    .github {
-      padding: 0.5rem 2rem 3rem 2rem;
-      font-size: 0.9rem;
-      @media (max-width: 767.99px) {
-        padding: 0.5rem 0.8rem 2rem 0.8rem;
-      }
-      h4 {
+      .photo {
+        padding: 4rem 2rem 1rem 2rem;
         text-align: center;
-      }
-      span {
-        margin-left: 0.5rem;
-        color: darkslategray;
-        i {
-          padding: 0 0.4rem;
+        @media (max-width: 767.99px) {
+          margin-top: 3rem;
+          padding-top: 2rem;
+        }
+        img {
+          @media (max-width: 767.99px) {
+            max-width: 90%;
+          }
+          width: 20rem;
+          border-radius: 50%;
         }
       }
+      flex: 1;
     }
-
-    .mail {
-      text-align: center;
-      @media (max-width: 767.99px) {
-        padding: 0.5rem;
+    &.lower {
+      background-color: $dark;
+      color: $light;
+      flex: 1;
+      a {
+        color: $gold;
+        &:hover {
+          border-bottom: 2px dotted $gold;
+        }
       }
-      h3 {
-        a {
+      .github {
+        padding: 0.5rem 2rem 3rem 2rem;
+        font-size: 0.9rem;
+        @media (max-width: 767.99px) {
+          padding: 0.5rem 0.8rem 2rem 0.8rem;
+        }
+        h4 {
+          text-align: center;
           font-weight: 700;
-          padding: 1rem;
-          border: 1px dashed teal;
-          &:hover {
-            background: $green;
-            color: $light;
+        }
+        span {
+          margin-left: 0.5rem;
+          color: $light;
+          i {
+            padding: 0 0.4rem;
           }
         }
+      }
+
+      .mail {
+        text-align: center;
         @media (max-width: 767.99px) {
-          font-size: 1rem;
+          padding: 0.5rem;
+        }
+        h3 {
+          a {
+            font-weight: 700;
+            padding: 1rem;
+            border: 1px dashed $gold;
+            &:hover {
+              background: $gold;
+              color: $dark;
+            }
+          }
+          @media (max-width: 767.99px) {
+            margin-bottom: 3rem;
+            font-size: 1rem;
+          }
         }
       }
     }

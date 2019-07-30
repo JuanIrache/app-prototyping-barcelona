@@ -1,11 +1,8 @@
-$light: #f0e5d1;
-$green: #016450;
-$dark: #323f48;
-$gold: #b88953;
+@import './colors';
 
 .Header {
   background-color: $dark;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
