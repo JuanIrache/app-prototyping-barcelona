@@ -55,8 +55,6 @@ const Projects = ({ setVideo, setGalleryIndex }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log('rerender');
-
   return (
     <section className="Projects" id="projects">
       <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>

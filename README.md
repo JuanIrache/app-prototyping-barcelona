@@ -1,6 +1,5 @@
 # ToDo
 
-- Tags to h5?
 - Color scheme
 - Transitions
 - Fonts

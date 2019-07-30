@@ -8,11 +8,11 @@ const Projects = ({ toggleTag }) => {
     <div className="Tags">
       <div className="container">
         {tags.map(t => (
-          <div key={t} className="tag">
+          <h4 key={t} className="tag">
             <a href="#projects" name={t} className={t === tag ? 'active' : ''} onClick={toggleTag}>
               {t}
             </a>
-          </div>
+          </h4>
         ))}
       </div>
       <p className="separator">
