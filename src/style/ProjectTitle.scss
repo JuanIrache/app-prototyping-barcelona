@@ -55,13 +55,20 @@
       font-size: 5rem;
       font-weight: 700;
       text-align: center;
-      text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.596);
+      background-color: #323f4888;
+      padding: 1rem;
       @media (max-width: 1199.99px) {
         font-size: 3rem;
       }
       @media (max-width: 767.99px) {
+        padding: 0.5rem;
         font-size: 1.7rem;
       }
     }
   }
 }
+
+$light: #f8f3ea;
+$green: #016450;
+$dark: #323f4870;
+$gold: rgb(250, 192, 126);
