@@ -19,8 +19,6 @@ const GalleryOverlay = () => {
   };
 
   const findImages = i => {
-    console.log(projects, i);
-
     return images.filter(img => {
       const regex = new RegExp(`/${projects[i].id}\\d+\\.`);
       return regex.test(img);

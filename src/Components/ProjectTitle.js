@@ -10,9 +10,10 @@ const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRigh
         document.querySelector(`#titleBg-${i}`).classList.add('visible');
       };
       img.src = images[i];
+      if (img.naturalWidth === 0) document.querySelector(`#titleBg-${i}`).classList.add('visible');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [images]);
 
   return (
     <div className="ProjectTitle">
