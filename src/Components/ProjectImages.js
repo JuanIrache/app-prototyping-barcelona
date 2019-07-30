@@ -16,9 +16,9 @@ const ProjectImages = ({ images, title, i }) => {
 
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: 1 });
-    setTimeout(() => {
-      setGallery({ ...gallery, title, index: i, selected: idx, visible: true });
-    }, 0);
+    setImmediate(() => {
+      setGallery({ ...gallery, selected: idx, title, index: i, visible: true });
+    });
   };
 
   return !!images && !!images.length ? (
@@ -34,7 +34,7 @@ const ProjectImages = ({ images, title, i }) => {
             alt={`${title} screenshot`}
             style={preLoad ? { backgroundImage: `url(${img})` } : {}}
             data-background={i > 1 ? `url(${img})` : ''}
-            onClick={() => handleSetGallery()}
+            onClick={() => handleSetGallery(idx)}
           />
         ))}
     </div>

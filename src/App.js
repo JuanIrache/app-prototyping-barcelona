@@ -8,6 +8,7 @@ import GalleryOverlay from './Components/GalleryOverlay';
 import TagContext from './contexts/TagContext';
 import ProjectContext from './contexts/ProjectContext';
 import VideoContext from './contexts/VideoContext';
+import GalleryContext from './contexts/GalleryContext';
 import initialProjects from './other/projects.json';
 
 import './App.scss';
@@ -16,6 +17,7 @@ const App = () => {
   const { tag, setTag } = useContext(TagContext);
   const { setProjects } = useContext(ProjectContext);
   const { setVideo } = useContext(VideoContext);
+  const { setIndex } = useContext(GalleryContext);
 
   const toggleTag = e => {
     let newTag = '';

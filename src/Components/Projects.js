@@ -45,6 +45,8 @@ const Projects = ({ setVideo }) => {
     checkAndLoad(document.querySelector(`.Projects #Project-${i}`));
     if (i + 1 < projects.length) checkAndLoad(document.querySelector(`.Projects #Project-${i + 1}`));
     if (i > 0) checkAndLoad(document.querySelector(`.Projects #Project-${i - 1}`));
+
+    // setGalleryIndex(1);
   };
 
   //Preload first video
@@ -52,6 +54,8 @@ const Projects = ({ setVideo }) => {
     setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  console.log('rerender');
 
   return (
     <section className="Projects" id="projects">
