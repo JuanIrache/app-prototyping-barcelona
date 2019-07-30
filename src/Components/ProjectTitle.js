@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../style/ProjectTitle.scss';
 
 const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight, i }) => {
   const preLoad = images && images.length && i < 2;
-  if (preLoad) {
-    const img = new Image();
-    img.onload = () => {
-      document.querySelector(`#titleBg-${i}`).classList.add('visible');
-    };
-    img.src = images[i];
-  }
+  useEffect(() => {
+    if (preLoad) {
+      const img = new Image();
+      img.onload = () => {
+        document.querySelector(`#titleBg-${i}`).classList.add('visible');
+      };
+      img.src = images[i];
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="ProjectTitle">

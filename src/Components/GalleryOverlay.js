@@ -2,15 +2,17 @@ import React, { useEffect, useContext } from 'react';
 import ReactSwipe from 'react-swipe';
 import GallerySlide from './GallerySlide';
 import ProjectContext from '../contexts/ProjectContext';
+import GalleryContext from '../contexts/GalleryContext';
 import '../style/GalleryOverlay.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const GalleryOverlay = ({ gallery, index, setGallery }) => {
-  const { visible, title, selected } = gallery;
+const GalleryOverlay = () => {
+  const { gallery, setGallery, galleryIndex } = useContext(GalleryContext);
   const { projects } = useContext(ProjectContext);
+  const { visible, title, selected } = gallery;
 
   const closeGallery = () => {
     setGallery({ ...gallery, visible: false });
@@ -30,7 +32,7 @@ const GalleryOverlay = ({ gallery, index, setGallery }) => {
     fixed.addEventListener('touchmove', e => e.preventDefault(), false);
   }, []);
 
-  const projectImages = findImages(index);
+  const projectImages = findImages(galleryIndex);
 
   const goLeft = e => {
     e.stopPropagation();

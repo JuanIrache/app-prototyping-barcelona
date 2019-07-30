@@ -1,17 +1,15 @@
-import React, { memo, useContext } from 'react';
+import React, { memo, useContext, useEffect } from 'react';
 import ReactSwipe from 'react-swipe';
 import Project from './Project';
 import ProjectContext from '../contexts/ProjectContext';
-import VideoContext, { withVideoContext } from '../contexts/VideoContext';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const Projects = ({ setGalleryIndex, setGallery, setVideo }) => {
+const Projects = ({ setVideo, setGalleryIndex }) => {
   const { projects } = useContext(ProjectContext);
-  // const { setVideo } = useContext(VideoContext);
 
   const findImages = index => {
     return images.filter(i => {
@@ -51,7 +49,10 @@ const Projects = ({ setGalleryIndex, setGallery, setVideo }) => {
   };
 
   //Preload first video
-  setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
+  useEffect(() => {
+    setVideo({ title: projects[0].title, src: projects[0].youtube, visible: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="Projects" id="projects">
@@ -66,7 +67,6 @@ const Projects = ({ setGalleryIndex, setGallery, setVideo }) => {
               goRight={() => reactSwipeEl.next()}
               goLeft={() => reactSwipeEl.prev()}
               setVideo={setVideo}
-              setGallery={setGallery}
             />
           </div>
         ))}
@@ -75,4 +75,4 @@ const Projects = ({ setGalleryIndex, setGallery, setVideo }) => {
   );
 };
 
-export default memo(withVideoContext(Projects));
+export default memo(Projects);

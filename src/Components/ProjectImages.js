@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import GalleryContext from '../contexts/GalleryContext';
 import '../style/ProjectImages.scss';
 
-const ProjectImages = ({ images, title, i, setGallery }) => {
+const ProjectImages = ({ images, title, i }) => {
+  const { setGallery } = useContext(GalleryContext);
+
   const preLoad = images && images.length && i < 2;
   if (preLoad) {
     const img = new Image();

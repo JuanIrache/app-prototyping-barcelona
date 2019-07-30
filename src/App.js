@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Header from './Components/Header';
 import Tags from './Components/Tags';
 import Projects from './Components/Projects';
@@ -7,17 +7,17 @@ import VideoOverlay from './Components/VideoOverlay';
 import GalleryOverlay from './Components/GalleryOverlay';
 import TagContext from './contexts/TagContext';
 import ProjectContext from './contexts/ProjectContext';
-import { VideoContextProvider } from './contexts/VideoContext';
+import VideoContext from './contexts/VideoContext';
+import GalleryContext from './contexts/GalleryContext';
 import initialProjects from './other/projects.json';
 
 import './App.scss';
 
 const App = () => {
-  const [gallery, setGallery] = useState({ visible: false, title: '', selected: 0 });
-  const [galleryIndex, setGalleryIndex] = useState(0);
-
   const { tag, setTag } = useContext(TagContext);
   const { setProjects } = useContext(ProjectContext);
+  const { setVideo } = useContext(VideoContext);
+  const { setGalleryIndex } = useContext(GalleryContext);
 
   const toggleTag = e => {
     let newTag = '';
@@ -29,13 +29,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <GalleryOverlay gallery={gallery} index={galleryIndex} setGallery={setGallery} />
-      <VideoContextProvider>
-        <VideoOverlay />
-        <Header />
-        <Tags toggleTag={toggleTag} />
-        <Projects setGalleryIndex={setGalleryIndex} setGallery={setGallery} />
-      </VideoContextProvider>
+      <GalleryOverlay />
+      <VideoOverlay />
+      <Header />
+      <Tags toggleTag={toggleTag} />
+      <Projects setVideo={setVideo} setGalleryIndex={setGalleryIndex} />
       <About />
     </div>
   );
