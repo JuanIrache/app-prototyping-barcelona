@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400,700&display=swap');
 
+$light: #f0e5d1;
+$green: #016450;
+$dark: #323f48;
+$gold: #b88953;
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,12 +12,7 @@ html {
 body {
   margin: 0;
   a {
-    color: teal;
     text-decoration: none;
-    border-bottom: 1px dotted transparent;
-    &:hover {
-      border-bottom: 1px dotted teal;
-    }
   }
 }
 

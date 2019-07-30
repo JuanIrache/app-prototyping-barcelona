@@ -44,10 +44,10 @@ const About = () => {
   ) : (
     <div className="About">
       <section>
-        <div className="About-photo">
+        <div className="photo">
           <img src={juan} alt="Juan Irache" />
         </div>
-        <div className="About-description">
+        <div className="description">
           <p>Hey, I'm Juan.</p>{' '}
           <p>
             I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as a hobby,
@@ -62,11 +62,11 @@ const About = () => {
             reality through hard work.
           </p>
           <p>If you want your idea turned into code, send me an email.</p>
-          <p className="About-signature">Juan Irache</p>
+          <p className="signature">Juan Irache</p>
         </div>
       </section>
       <section>
-        <div className="About-github">
+        <div className="github">
           <h4>
             <a href={user.html_url} target="_blank" rel="noopener noreferrer">
               On GitHub
@@ -81,7 +81,7 @@ const About = () => {
                   </td>
                   <td>
                     {!!r.stargazers_count && (
-                      <span className="About-githubStats">
+                      <span className="githubStats">
                         <i className="fas fa-star" />
                         {r.stargazers_count}
                       </span>
@@ -89,7 +89,7 @@ const About = () => {
                   </td>
                   <td>
                     {!!r.forks_count && (
-                      <span className="About-githubStats">
+                      <span className="githubStats">
                         <i className="fas fa-code-branch" />
                         {r.forks_count}
                       </span>
@@ -99,9 +99,9 @@ const About = () => {
               ))}
             </tbody>
           </table>
-          <div className="About-repos" />
+          <div className="repos" />
         </div>
-        <div className="About-mail">
+        <div className="mail">
           <h3>
             <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
           </h3>

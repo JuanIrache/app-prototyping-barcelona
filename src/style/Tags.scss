@@ -1,8 +1,15 @@
+$light: #f0e5d1;
+$green: #016450;
+$dark: #323f48;
+$gold: #b88953;
+
 .Tags {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 2rem 1rem;
+  background-color: $light;
+  color: $dark;
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -25,9 +32,15 @@
     }
   }
   a {
-    cursor: pointer;
+    color: $green;
+    &:hover {
+      border-bottom: 2px dotted $green;
+    }
+
+    // font-weight: 700;
     &.active {
-      color: red;
+      // color: $green;
+      font-weight: 700;
     }
   }
 }

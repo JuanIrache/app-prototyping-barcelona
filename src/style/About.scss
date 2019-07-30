@@ -1,8 +1,21 @@
+$light: #f0e5d1;
+$green: #016450;
+$dark: #323f48;
+$gold: #b88953;
+
 .About {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background: $light;
+  color: $dark;
+  a {
+    color: $green;
+    &:hover {
+      border-bottom: 2px dotted $green;
+    }
+  }
   section {
     display: flex;
     justify-content: space-evenly;
@@ -10,11 +23,11 @@
     @media (max-width: 767.99px) {
       flex-direction: column;
     }
-    .About-description {
+    .description {
       padding: 2rem 2rem 1rem 2rem;
       width: 60%;
       text-align: justify;
-      .About-signature {
+      .signature {
         text-align: right;
       }
       @media (max-width: 767.99px) {
@@ -22,7 +35,7 @@
         padding-top: 0.5rem;
       }
     }
-    .About-photo {
+    .photo {
       padding: 4rem 2rem 1rem 2rem;
       text-align: center;
       @media (max-width: 767.99px) {
@@ -37,7 +50,7 @@
         border-radius: 50%;
       }
     }
-    .About-github {
+    .github {
       padding: 0.5rem 2rem 3rem 2rem;
       font-size: 0.9rem;
       @media (max-width: 767.99px) {
@@ -55,17 +68,24 @@
       }
     }
 
-    .About-mail {
+    .mail {
       text-align: center;
-      padding: 0.5rem 2rem 3rem 2rem;
       @media (max-width: 767.99px) {
-        padding: 0.5rem 0.8rem 2rem 0.8rem;
+        padding: 0.5rem;
       }
       h3 {
+        a {
+          font-weight: 700;
+          padding: 1rem;
+          border: 1px dashed teal;
+          &:hover {
+            background: $green;
+            color: $light;
+          }
+        }
         @media (max-width: 767.99px) {
           font-size: 1rem;
         }
-        font-weight: 700;
       }
     }
   }
