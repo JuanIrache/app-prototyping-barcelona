@@ -44,8 +44,6 @@ const GalleryOverlay = () => {
     reactSwipeEl.next();
   };
 
-  console.log('rendering', index, visible, selected);
-
   return (
     <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery}>
       <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected || 0, continuous: false }}>
