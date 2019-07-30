@@ -8,6 +8,7 @@ const Project = props => {
   const { project, setVideo, images, i, projects } = props;
   const existsLeft = i > 0;
   const existsRight = i + 1 < projects;
+
   return (
     <div className="Project" id={`Project-${i}`}>
       <ProjectTitle {...props} existsLeft={existsLeft} existsRight={existsRight} />

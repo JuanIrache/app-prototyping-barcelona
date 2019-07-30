@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Header from './Components/Header';
 import Tags from './Components/Tags';
 import Projects from './Components/Projects';
@@ -10,6 +10,7 @@ import ProjectContext from './contexts/ProjectContext';
 import VideoContext from './contexts/VideoContext';
 import GalleryContext from './contexts/GalleryContext';
 import initialProjects from './other/projects.json';
+import setListeners from './other/listeners';
 
 import './App.scss';
 
@@ -26,6 +27,8 @@ const App = () => {
     if (!newTag) setProjects(initialProjects);
     else setProjects(initialProjects.filter(p => p.tags.includes(newTag)).sort(() => Math.random() - 0.5));
   };
+
+  useEffect(() => setListeners(), []);
 
   return (
     <div className="App">
