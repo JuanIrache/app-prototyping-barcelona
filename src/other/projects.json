@@ -159,7 +159,7 @@
   },
   {
     "title": "Creative Coding",
-    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "AI", "Front End", "Gamification"],
+    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "Front End", "Gamification"],
     "description": "This is a series of small experiments around coding, data visualization and AI",
     "id": "creative",
     "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
