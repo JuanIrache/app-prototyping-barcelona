@@ -1,6 +1,5 @@
 # ToDo
 
-- white line on projects, mobile
 - Filter by tag fails to show images some times
 - Transitions
 - Fonts
