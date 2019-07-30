@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Header from './Components/Header';
 import Tags from './Components/Tags';
 import Projects from './Components/Projects';
 import About from './Components/About';
 import VideoOverlay from './Components/VideoOverlay';
 import GalleryOverlay from './Components/GalleryOverlay';
+import TagContext from './contexts/TagContext';
+import ProjectContext from './contexts/ProjectContext';
+import { VideoContextProvider } from './contexts/VideoContext';
 import initialProjects from './other/projects.json';
 
 import './App.scss';
 
-const initialTags = initialProjects.reduce((acc, cur) => acc.concat(cur.tags.filter(t => !acc.includes(t))), []);
-
 const App = () => {
-  const [tag, setTag] = useState('');
-  const [projects, setProjects] = useState(initialProjects);
-  const [video, setVideo] = useState({ visible: false, src: '', title: '' });
   const [gallery, setGallery] = useState({ visible: false, title: '', selected: 0 });
   const [galleryIndex, setGalleryIndex] = useState(0);
+
+  const { tag, setTag } = useContext(TagContext);
+  const { setProjects } = useContext(ProjectContext);
 
   const toggleTag = e => {
     let newTag = '';
@@ -28,12 +29,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <GalleryOverlay gallery={gallery} index={galleryIndex} setGallery={setGallery} projects={projects} />
-      <VideoOverlay {...video} setVideo={setVideo} />
-      <Header />
-      <Tags tags={initialTags} tag={tag} toggleTag={toggleTag} />
-      {/* <Projects projects={projects} setVideo={setVideo} softSetGallery={softSetGallery} /> */}
-      <Projects projects={projects} setVideo={setVideo} setGalleryIndex={setGalleryIndex} setGallery={setGallery} />
+      <GalleryOverlay gallery={gallery} index={galleryIndex} setGallery={setGallery} />
+      <VideoContextProvider>
+        <VideoOverlay />
+        <Header />
+        <Tags toggleTag={toggleTag} />
+        <Projects setGalleryIndex={setGalleryIndex} setGallery={setGallery} />
+      </VideoContextProvider>
       <About />
     </div>
   );

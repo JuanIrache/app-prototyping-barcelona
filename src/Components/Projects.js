@@ -1,14 +1,18 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import ReactSwipe from 'react-swipe';
 import Project from './Project';
-
+import ProjectContext from '../contexts/ProjectContext';
+import VideoContext, { withVideoContext } from '../contexts/VideoContext';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const Projects = ({ projects, setVideo, setGalleryIndex, setGallery }) => {
+const Projects = ({ setGalleryIndex, setGallery, setVideo }) => {
+  const { projects } = useContext(ProjectContext);
+  // const { setVideo } = useContext(VideoContext);
+
   const findImages = index => {
     return images.filter(i => {
       const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
@@ -71,4 +75,4 @@ const Projects = ({ projects, setVideo, setGalleryIndex, setGallery }) => {
   );
 };
 
-export default memo(Projects);
+export default memo(withVideoContext(Projects));

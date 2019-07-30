@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import VideoContext from '../contexts/VideoContext';
 import '../style/VideoOverlay.scss';
 
-const VideoOverlay = ({ visible, src, title, setVideo }) => {
+const VideoOverlay = () => {
+  const { video, setVideo } = useContext(VideoContext);
+  const { visible, src, title } = video;
+
   const closeVideo = () => {
     setVideo({ visible: false, src, title });
     setTimeout(() => {

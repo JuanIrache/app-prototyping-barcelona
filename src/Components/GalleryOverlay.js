@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import ReactSwipe from 'react-swipe';
 import GallerySlide from './GallerySlide';
+import ProjectContext from '../contexts/ProjectContext';
 import '../style/GalleryOverlay.scss';
 
 const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const GalleryOverlay = ({ gallery, index, setGallery, projects }) => {
+const GalleryOverlay = ({ gallery, index, setGallery }) => {
   const { visible, title, selected } = gallery;
+  const { projects } = useContext(ProjectContext);
+
   const closeGallery = () => {
     setGallery({ ...gallery, visible: false });
   };
