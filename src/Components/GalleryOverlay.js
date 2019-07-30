@@ -44,35 +44,14 @@ const GalleryOverlay = () => {
     reactSwipeEl.next();
   };
 
-  const style = {
-    container: {
-      overflow: 'hidden',
-      visibility: 'hidden',
-      position: 'relative',
-      height: '100%'
-    },
-    wrapper: {
-      overflow: 'hidden',
-      position: 'relative',
-      height: '100%'
-    },
-    child: {
-      float: 'left',
-      width: '100%',
-      position: 'relative',
-      transitionProperty: 'transform',
-      height: '100%'
-    }
-  };
-
   return (
     <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery}>
-      <ReactSwipe ref={el => (reactSwipeEl = el)} style={style} swipeOptions={{ startSlide: selected, continuous: false }}>
+      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected, continuous: false }}>
         {projectImages
           .slice(1)
           .concat(projectImages[0])
           .map((img, i) => (
-            <div key={img}>
+            <div key={img} className="eachSlide">
               <GallerySlide img={img} images={projectImages.length} i={i} goRight={goRight} goLeft={goLeft} title={title} />
             </div>
           ))}

@@ -1,18 +1,16 @@
 .GallerySlide {
-  z-index: inherit;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   a {
-    z-index: inherit;
     color: white;
     &:hover {
       border: 0;
     }
   }
   i {
-    z-index: inherit;
     text-shadow: 1px 2px 4px black;
     padding: 0 0.2rem;
     font-size: 2rem;
@@ -24,8 +22,7 @@
     }
   }
   img {
-    z-index: inherit;
     max-height: 80vh;
-    max-width: 85vw;
+    max-width: 85%;
   }
 }

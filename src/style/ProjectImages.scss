@@ -6,7 +6,7 @@
     box-shadow: 2px -3px 8px rgba(0, 0, 0, 0.308);
     height: 20vh;
     $between: 0.2rem;
-    min-width: calc(16.5vw - #{$between} - #{$between});
+    min-width: calc(16.66667% - #{$between} - #{$between});
     margin: 0 $between;
     border-radius: 0.5rem;
     background-size: cover;
@@ -14,10 +14,10 @@
     @media (max-width: 767.99px) {
       $between: 0.1rem;
       margin: 0 $between;
-      min-width: calc(25vw - #{$between} - #{$between});
+      min-width: calc(25% - #{$between} - #{$between});
     }
     @media (max-width: 576.99px) {
-      min-width: calc(33.3vw - #{$between} - #{$between});
+      min-width: calc(33.3% - #{$between} - #{$between});
     }
     opacity: 0;
     transition: opacity 0.5s ease;
