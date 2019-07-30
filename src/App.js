@@ -10,7 +10,7 @@ import ProjectContext from './contexts/ProjectContext';
 import VideoContext from './contexts/VideoContext';
 import GalleryContext from './contexts/GalleryContext';
 import initialProjects from './other/projects.json';
-import setListeners from './other/listeners';
+// import setListeners from './other/listeners';
 
 import './App.scss';
 
@@ -28,7 +28,7 @@ const App = () => {
     else setProjects(initialProjects.filter(p => p.tags.includes(newTag)).sort(() => Math.random() - 0.5));
   };
 
-  useEffect(() => setListeners(), []);
+  // useEffect(() => setListeners(), []);
 
   return (
     <div className="App">
