@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, memo } from 'react';
 import ReactSwipe from 'react-swipe';
 import GallerySlide from './GallerySlide';
 import ProjectContext from '../contexts/ProjectContext';
@@ -10,18 +10,18 @@ const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
 const GalleryOverlay = () => {
-  const { gallery, setGallery, galleryIndex } = useContext(GalleryContext);
+  const { gallery, setGallery } = useContext(GalleryContext);
   const { projects } = useContext(ProjectContext);
-  const { visible, title, selected } = gallery;
+  const { visible, title, selected, index } = gallery;
 
   const closeGallery = () => {
     setGallery({ ...gallery, visible: false });
   };
 
-  const findImages = index => {
-    return images.filter(i => {
-      const regex = new RegExp(`/${projects[index].id}\\d+\\.`);
-      return regex.test(i);
+  const findImages = i => {
+    return images.filter(img => {
+      const regex = new RegExp(`/${projects[i].id}\\d+\\.`);
+      return regex.test(img);
     });
   };
 
@@ -32,7 +32,7 @@ const GalleryOverlay = () => {
     fixed.addEventListener('touchmove', e => e.preventDefault(), false);
   }, []);
 
-  const projectImages = findImages(galleryIndex);
+  const projectImages = findImages(index);
 
   const goLeft = e => {
     e.stopPropagation();
@@ -44,9 +44,11 @@ const GalleryOverlay = () => {
     reactSwipeEl.next();
   };
 
+  console.log('rendering', index, visible, selected);
+
   return (
     <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery}>
-      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected, continuous: false }}>
+      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected || 0, continuous: false }}>
         {projectImages
           .slice(1)
           .concat(projectImages[0])
@@ -60,4 +62,4 @@ const GalleryOverlay = () => {
   );
 };
 
-export default GalleryOverlay;
+export default memo(GalleryOverlay);

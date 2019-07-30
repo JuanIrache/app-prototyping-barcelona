@@ -8,7 +8,7 @@ const importAll = r => r.keys().map(r);
 const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
-const Projects = ({ setVideo, setGalleryIndex }) => {
+const Projects = ({ setVideo }) => {
   const { projects } = useContext(ProjectContext);
 
   const findImages = index => {
@@ -45,7 +45,6 @@ const Projects = ({ setVideo, setGalleryIndex }) => {
     checkAndLoad(document.querySelector(`.Projects #Project-${i}`));
     if (i + 1 < projects.length) checkAndLoad(document.querySelector(`.Projects #Project-${i + 1}`));
     if (i > 0) checkAndLoad(document.querySelector(`.Projects #Project-${i - 1}`));
-    setGalleryIndex(i);
   };
 
   //Preload first video

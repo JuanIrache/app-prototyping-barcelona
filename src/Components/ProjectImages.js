@@ -1,21 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import GalleryContext from '../contexts/GalleryContext';
 import '../style/ProjectImages.scss';
 
 const ProjectImages = ({ images, title, i }) => {
-  const { setGallery } = useContext(GalleryContext);
+  const { setGallery, gallery } = useContext(GalleryContext);
 
   const preLoad = images && images.length && i < 2;
   if (preLoad) {
     const img = new Image();
     img.onload = () => {
-      document.querySelectorAll(`#image-${i}`).forEach(e => e.classList.add('visible'));
+      document.querySelectorAll(`.image-${i}`).forEach(e => e.classList.add('visible'));
     };
     img.src = images[i];
   }
 
   const handleSetGallery = idx => {
-    setGallery({ visible: true, selected: idx, title });
+    console.log(title, i, idx);
+
+    setGallery({ ...gallery, title, index: i, selected: idx, visible: true });
   };
 
   return !!images && !!images.length ? (
@@ -26,8 +28,7 @@ const ProjectImages = ({ images, title, i }) => {
         .map((img, idx) => (
           <span
             href="#!"
-            className={`image${!preLoad ? ' visible' : ''}`}
-            id={`image-${i}`}
+            className={`image${!preLoad ? ' visible' : ''} image-${i}`}
             key={img}
             alt={`${title} screenshot`}
             style={preLoad ? { backgroundImage: `url(${img})` } : {}}
