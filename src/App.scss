@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Source+Sans+Pro&display=swap');
 @import './style/colors';
 
 html {
@@ -16,9 +15,9 @@ body {
 }
 
 .App {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   h1 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 3rem;
     margin-bottom: 0;
     padding: 1rem;
@@ -27,13 +26,13 @@ body {
     }
   }
   h2 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Libre Baskerville', serif;
   }
   h3,
   h4,
   h5,
   h6 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 300;
   }
 }

@@ -21,7 +21,7 @@
     }
     &.upper {
       .description {
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 2rem;
         width: 60%;
         text-align: justify;
         .signature {
@@ -33,11 +33,11 @@
         }
       }
       .photo {
-        padding: 4rem 2rem 1rem 2rem;
+        padding: 2rem;
         text-align: center;
         @media (max-width: 767.99px) {
-          margin-top: 3rem;
-          padding-top: 2rem;
+          // margin-top: 3rem;
+          padding-top: 3.5rem;
         }
         img {
           @media (max-width: 767.99px) {

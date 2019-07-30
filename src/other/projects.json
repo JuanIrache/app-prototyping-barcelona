@@ -147,7 +147,7 @@
     "npm": ""
   },
   {
-    "title": "Audio-Assisted Sensory Photography for the Blind",
+    "title": "Audio-Assisted Sensory Photography",
     "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
     "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
     "id": "a3di",
