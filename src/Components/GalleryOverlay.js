@@ -10,9 +10,9 @@ const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
 const images = importAll(ctxt);
 
 const GalleryOverlay = () => {
-  const { gallery, setGallery } = useContext(GalleryContext);
+  const { gallery, setGallery, index } = useContext(GalleryContext);
   const { projects } = useContext(ProjectContext);
-  const { visible, title, selected, index } = gallery;
+  const { visible, title, selected } = gallery;
 
   const closeGallery = () => {
     setGallery({ ...gallery, visible: false });

@@ -17,7 +17,7 @@ const ProjectImages = ({ images, title, i }) => {
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: 1 });
     setImmediate(() => {
-      setGallery({ ...gallery, selected: idx, title, index: i, visible: true });
+      setGallery({ ...gallery, selected: idx, title, visible: true });
     });
   };
 

@@ -17,7 +17,7 @@ const App = () => {
   const { tag, setTag } = useContext(TagContext);
   const { setProjects } = useContext(ProjectContext);
   const { setVideo } = useContext(VideoContext);
-  const { setIndex } = useContext(GalleryContext);
+  const { setGalleryIndex } = useContext(GalleryContext);
 
   const toggleTag = e => {
     let newTag = '';
@@ -33,7 +33,7 @@ const App = () => {
       <VideoOverlay />
       <Header />
       <Tags toggleTag={toggleTag} />
-      <Projects setVideo={setVideo} />
+      <Projects setVideo={setVideo} setGalleryIndex={setGalleryIndex} />
       <About />
     </div>
   );
