@@ -13,7 +13,7 @@ const Projects = () => {
     window.location.href = '#projects'; //Go to the target element.
     window.history.replaceState(null, null, url);
     /////
-    // setProject(projects[i]);
+    setProject(projects[i]);
   };
 
   console.log('render projects');

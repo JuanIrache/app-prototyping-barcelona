@@ -5,7 +5,7 @@
   - Improve implementation of setVideo, setGalleryIndex (still passing props down)
   - Avoid setimmediate hack
 - Transitions
-- Fonts
+- Split gallery, slider and thumb images in folders?
 - memoize more stuff?
 - Optimise loading time
 - Gallery on mobile glitchy

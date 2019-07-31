@@ -1,31 +1,37 @@
 import React, { useEffect } from 'react';
 import '../style/ProjectTitle.scss';
 
-const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRight, i }) => {
-  const preLoad = images && images.length && i < 2;
+const importAll = r => r.keys().map(r);
+const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
+const images = importAll(ctxt);
+
+const findImage = project => {
+  return images.filter(img => {
+    const regex = new RegExp(`/${project.id}\\d+\\.`);
+    return regex.test(img);
+  })[0];
+};
+
+const ProjectTitle = ({ preLoad, existsLeft, existsRight, project, goLeft, goRight }) => {
+  const image = findImage(project);
+
   useEffect(() => {
     if (preLoad) {
       const img = new Image();
-      img.onload = () => {
-        document.querySelector(`#titleBg-${i}`).classList.add('visible');
-      };
-      img.src = images[i];
-      if (img.naturalWidth === 0) document.querySelector(`#titleBg-${i}`).classList.add('visible');
+      img.onload = () => document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
+      img.src = image;
+      if (img.naturalWidth === 0) document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [images]);
+  }, []);
 
   return (
     <div className="ProjectTitle">
-      {// Preload header of first 2 slides, lazy load the res
-      !!images && !!images.length && (
-        <div
-          className={`titleBg${!preLoad ? ' visible' : ''}`}
-          id={`titleBg-${i}`}
-          style={preLoad ? { backgroundImage: `url(${images[0]})` } : {}}
-          data-background={!preLoad ? `url(${images[0]})` : ''}
-        />
-      )}
+      <div
+        id={`ProjectTitle-${project.id}`}
+        className="titleBg"
+        style={preLoad ? { backgroundImage: `url(${image})` } : {}}
+        data-background={!preLoad ? `url(${image})` : ''}
+      />
       <div className="titleContainer">
         {existsLeft ? (
           <a href="#projects">
@@ -56,3 +62,20 @@ const ProjectTitle = ({ images, existsLeft, existsRight, project, goLeft, goRigh
 };
 
 export default ProjectTitle;
+
+//Aqui move to useEffect of project in inner component?
+// Load images
+// const checkAndLoad = proj => {
+//   const loadImg = img => {
+//     if (img) {
+//       if (img.dataset.background) {
+//         img.setAttribute('style', `background-image:${img.dataset.background}`);
+//         delete img.dataset.background;
+//       }
+//     }
+//   };
+//   loadImg(proj.querySelector('.titleBg'));
+//   proj.querySelectorAll('.ProjectImages .image').forEach(loadImg);
+// };
+// checkAndLoad(document.querySelector(`.Projects #Project-${i}`));
+// if (i + 1 < projects.length) checkAndLoad(document.querySelector(`.Projects #Project-${i + 1}`));
