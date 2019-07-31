@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import VideoContext from '../contexts/VideoContext';
 import '../style/ProjectDescription.scss';
 
-const ProjectDescription = ({ project, setVideo }) => {
+const ProjectDescription = ({ project }) => {
+  const { video, setVideo } = useContext(VideoContext);
+
   const handleSetVideo = () => {
-    setVideo({ src: project.youtube, title: project.title, visible: true });
+    setVideo({ ...video, visible: true });
     setTimeout(() => {
       document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     }, 500);

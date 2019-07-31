@@ -20,14 +20,6 @@ const App = () => {
   const { setVideo } = useContext(VideoContext);
   const { setGalleryIndex } = useContext(GalleryContext);
 
-  const toggleTag = e => {
-    let newTag = '';
-    if (e && e.target) newTag = e.target.name !== tag ? e.target.name : '';
-    setTag(newTag);
-    if (!newTag) setProjects(initialProjects);
-    else setProjects(initialProjects.filter(p => p.tags.includes(newTag)).sort(() => Math.random() - 0.5));
-  };
-
   // useEffect(() => setListeners(), []);
 
   return (
@@ -35,8 +27,8 @@ const App = () => {
       <GalleryOverlay />
       <VideoOverlay />
       <Header />
-      <Tags toggleTag={toggleTag} />
-      <Projects setVideo={setVideo} setGalleryIndex={setGalleryIndex} />
+      <Tags />
+      <Projects />
       <About />
     </div>
   );

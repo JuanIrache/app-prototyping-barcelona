@@ -8,6 +8,7 @@
 - Fonts
 - memoize more stuff?
 - Optimise loading time
+- Gallery on mobile glitchy
 - Analytics
 - Improve texts
 - Fewer tags?

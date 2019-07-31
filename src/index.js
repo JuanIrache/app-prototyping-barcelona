@@ -7,14 +7,14 @@ import { VideoContextProvider } from './contexts/VideoContext';
 import { GalleryContextProvider } from './contexts/GalleryContext';
 
 ReactDOM.render(
-  <GalleryContextProvider>
-    <VideoContextProvider>
-      <ProjectContextProvider>
-        <TagContextProvider>
+  <TagContextProvider>
+    <ProjectContextProvider>
+      <VideoContextProvider>
+        <GalleryContextProvider>
           <App />
-        </TagContextProvider>
-      </ProjectContextProvider>
-    </VideoContextProvider>
-  </GalleryContextProvider>,
+        </GalleryContextProvider>
+      </VideoContextProvider>
+    </ProjectContextProvider>
+  </TagContextProvider>,
   document.getElementById('root')
 );

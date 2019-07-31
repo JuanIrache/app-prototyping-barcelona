@@ -6,7 +6,12 @@ const TagContext = createContext();
 
 export const TagContextProvider = ({ children }) => {
   const [tag, setTag] = useState('');
-  return <TagContext.Provider value={{ tags, tag, setTag }}>{children}</TagContext.Provider>;
+  const assignTag = e => {
+    let newTag = '';
+    if (e && e.target && e.target.name !== tag) newTag = e.target.name;
+    setTag(newTag);
+  };
+  return <TagContext.Provider value={{ tags, tag, assignTag }}>{children}</TagContext.Provider>;
 };
 
 export default TagContext;
