@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import SlideContext from '../contexts/SlideContext';
 import '../style/ProjectTitle.scss';
 
 const importAll = r => r.keys().map(r);
@@ -12,11 +13,15 @@ const findImage = project => {
   })[0];
 };
 
-const ProjectTitle = ({ preLoad, existsLeft, existsRight, project, goLeft, goRight, i }) => {
+const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, i }) => {
+  const { slide } = useContext(SlideContext);
+
   const image = findImage(project);
 
+  const load = Math.abs(slide - i) < 2;
+
   useEffect(() => {
-    if (preLoad) {
+    if (load) {
       const img = new Image();
       img.onload = () => document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
       img.src = image;
@@ -26,12 +31,7 @@ const ProjectTitle = ({ preLoad, existsLeft, existsRight, project, goLeft, goRig
 
   return (
     <div className="ProjectTitle">
-      <div
-        id={`ProjectTitle-${project.id}`}
-        className="titleBg"
-        style={preLoad ? { backgroundImage: `url(${image})` } : {}}
-        data-background={!preLoad ? `url(${image})` : ''}
-      />
+      <div id={`ProjectTitle-${project.id}`} className="titleBg" style={load ? { backgroundImage: `url(${image})` } : {}} />
       <div className="titleContainer">
         {existsLeft ? (
           <a href="#projects">
