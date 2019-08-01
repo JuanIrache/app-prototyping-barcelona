@@ -23,11 +23,12 @@ const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, i }) 
   useEffect(() => {
     if (load) {
       const img = new Image();
-      img.onload = () => document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
+      const show = () => document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
+      img.onload = show;
       img.src = image;
-      if (img.naturalWidth === 0) document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
+      if (img.naturalWidth !== 0) show();
     }
-  }, []);
+  }, [slide]);
 
   return (
     <div className="ProjectTitle">
