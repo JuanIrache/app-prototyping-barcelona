@@ -12,7 +12,7 @@ const findImage = project => {
   })[0];
 };
 
-const ProjectTitle = ({ preLoad, existsLeft, existsRight, project, goLeft, goRight }) => {
+const ProjectTitle = ({ preLoad, existsLeft, existsRight, project, goLeft, goRight, i }) => {
   const image = findImage(project);
 
   useEffect(() => {

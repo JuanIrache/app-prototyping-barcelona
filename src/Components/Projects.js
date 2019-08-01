@@ -26,6 +26,7 @@ const Projects = ({ setSlide }) => {
             <Project
               project={p}
               preLoad={i < 2}
+              i={i}
               existsLeft={i > 0}
               existsRight={i + 1 < arr.length}
               goRight={() => reactSwipeEl.next()}
