@@ -4,8 +4,8 @@ import Project from './Project';
 import ProjectContext from '../contexts/ProjectContext';
 import '../style/Projects.scss';
 
-const Projects = () => {
-  const { projects, setProject } = useContext(ProjectContext);
+const Projects = ({ setSlide }) => {
+  const { projects } = useContext(ProjectContext);
 
   const onChangeSlide = i => {
     //Source: https://stackoverflow.com/a/13736194/3362074
@@ -13,10 +13,8 @@ const Projects = () => {
     window.location.href = '#projects'; //Go to the target element.
     window.history.replaceState(null, null, url);
     /////
-    setProject(projects[i]);
+    setSlide(i);
   };
-
-  console.log('render projects');
 
   let reactSwipeEl;
 
