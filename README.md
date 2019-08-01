@@ -1,6 +1,5 @@
 # ToDo
 
-- Locate document/window use and put it in useEffect/ make it handle state
 - Use return in useEffect to unsubscribe from window
 - Animate projects slider on first load? Pause when clicked inside
 - Simplify app with usereducer

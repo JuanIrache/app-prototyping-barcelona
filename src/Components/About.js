@@ -6,11 +6,10 @@ import juan from '../other/juan.jpg';
 const About = () => {
   const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let githubClientId, githubClientSecret;
-    setLoading(true);
     githubClientId = process.env.REACT_APP_GITHUB_ID;
     githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 
