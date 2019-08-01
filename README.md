@@ -1,6 +1,6 @@
 # ToDo
 
-- Simplify app with usereducer and context
+- Simplify app with usereducer
   - Unduplicate initialprojects?
   - Improve implementation of setVideo, setGalleryIndex (still passing props down)
   - Avoid setimmediate hack

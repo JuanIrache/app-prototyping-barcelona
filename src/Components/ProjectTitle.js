@@ -1,23 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style/ProjectTitle.scss';
 
 const findImage = (regex, images) => images.filter(img => regex.test(img))[0];
 
 const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, headerImgs }) => {
   const regex = new RegExp(`/${project.id}\\d+\\.`);
-  const image = findImage(regex, headerImgs);
+  const [image, setImage] = useState({ src: findImage(regex, headerImgs), loaded: false });
+
+  const imgLoaded = () => setImage({ ...image, loaded: true });
 
   useEffect(() => {
     const img = new Image();
-    const show = () => document.querySelector(`#ProjectTitle-${project.id}`).classList.add('visible');
-    img.onload = show;
-    img.src = image;
-    if (img.naturalWidth !== 0) show();
+    img.onload = imgLoaded;
+    img.src = image.src;
+    if (img.naturalWidth !== 0) imgLoaded();
   }, []);
 
   return (
     <div className="ProjectTitle">
-      <div id={`ProjectTitle-${project.id}`} className="titleBg" style={{ backgroundImage: `url(${image})` }} />
+      <div className={`titleBg${image.loaded ? ' visible' : ''}`} style={{ backgroundImage: `url(${image.src})` }} />
       <div className="titleContainer">
         {existsLeft ? (
           <a href="#projects">

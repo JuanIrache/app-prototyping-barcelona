@@ -4,7 +4,16 @@ import '../style/ProjectImages.scss';
 
 const ProjectImages = ({ project, galleryImgs, title }) => {
   const { setGallery, gallery } = useContext(GalleryContext);
-  const [images, setImages] = useState([]);
+  const regex = new RegExp(`/${project.id}\\d+\\.`);
+  const [images, setImages] = useState(
+    galleryImgs
+      .filter(img => regex.test(img))
+      .map(src => {
+        const img = new Image();
+        img.src = src;
+        return { src, img, loaded: img.naturalWidth !== 0 };
+      })
+  );
 
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: 1 });
@@ -13,38 +22,18 @@ const ProjectImages = ({ project, galleryImgs, title }) => {
     });
   };
 
-  useEffect(() => {
-    const regex = new RegExp(`/${project.id}\\d+\\.`);
-    setImages(
-      galleryImgs
-        .filter(img => regex.test(img))
-        .map((src, idx) => {
-          const img = new Image();
-          const show = () => document.querySelector(`.image-${project.id}-${idx}`).classList.add('visible');
-          img.onload = show;
-          setImmediate(() => {
-            img.src = src;
-          });
-          // if (img.naturalWidth !== 0) show();
-          return { src, loaded: false };
-        })
-    );
-  }, []);
-
-  console.log('rendering', project.id);
-
-  // useEffect(,[images]);
+  useEffect(() => setImages(images.map(image => (image.img.naturalWidth === 0 ? image : { ...image, loaded: true }))), [images]);
 
   return (
     <div className="ProjectImages">
-      {images.length &&
+      {!!images.length &&
         images
           .slice(1)
           .concat(images[0])
           .map((img, idx) => (
             <span
               href="#!"
-              className={`image image-${project.id}-${idx}`}
+              className={`image${img.loaded ? ' visible' : ''}`}
               key={img.src}
               alt={`${title} screenshot`}
               style={{ backgroundImage: `url(${img.src})` }}
