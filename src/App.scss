@@ -16,23 +16,15 @@ body {
 
 .App {
   font-family: 'Source Sans Pro', sans-serif;
-  h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 3rem;
-    margin-bottom: 0;
-    padding: 1rem;
-    @media (max-width: 767.99px) {
-      font-size: 2rem;
-    }
-  }
-  h2 {
-    font-family: 'Libre Baskerville', serif;
-  }
+  h1,
+  h2,
   h3,
   h4,
   h5,
   h6 {
     font-family: 'Libre Baskerville', serif;
+  }
+  h6 {
     font-weight: 300;
   }
 }
