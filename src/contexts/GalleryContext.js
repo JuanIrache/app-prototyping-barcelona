@@ -17,11 +17,9 @@ const findImages = project => {
 export const GalleryContextProvider = ({ children }) => {
   const { projects } = useContext(ProjectContext);
   const { slide } = useContext(SlideContext);
-  const project = projects[0];
-  const [gallery, setGallery] = useState({ visible: false, title: '', selected: 1, images: findImages(project) });
+  const [gallery, setGallery] = useState({ visible: false, title: '', selected: 1, images: findImages(projects[0]) });
 
   useEffect(() => {
-    console.log('effect gallery');
     const project = projects[slide];
     setGallery({ images: findImages(project), selected: 1, title: project.title, visible: false });
   }, [slide]);
