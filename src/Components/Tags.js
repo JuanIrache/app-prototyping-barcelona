@@ -1,17 +1,10 @@
 import React, { useContext } from 'react';
 import TagContext from '../contexts/TagContext';
-import GalleryContext from '../contexts/GalleryContext';
 import '../style/Tags.scss';
 
 const Projects = ({ toggleTag }) => {
   const { tag, tags, assignTag } = useContext(TagContext);
-  // const { setGallery, setGalleryIndex } = useContext(GalleryContext);
 
-  // const handleToggleTag = e => {
-  //   setGallery({ visible: false, title: '', selected: 0 });
-  //   setGalleryIndex(0);
-  //   toggleTag(e);
-  // };
   return (
     <div className="Tags">
       <div className="container">

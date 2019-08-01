@@ -1,5 +1,6 @@
 # ToDo
 
+- Fix filtering tags
 - Simplify app with usereducer
   - Unduplicate initialprojects?
   - Improve implementation of setVideo, setGalleryIndex (still passing props down)

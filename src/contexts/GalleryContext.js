@@ -23,6 +23,7 @@ export const GalleryContextProvider = ({ children }) => {
 
   useEffect(() => {
     setGallery({ ...gallery, images: findImages(project) });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project]);
 
   return <GalleryContext.Provider value={{ gallery, setGallery }}>{children}</GalleryContext.Provider>;

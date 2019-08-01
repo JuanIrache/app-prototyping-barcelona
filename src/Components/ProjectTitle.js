@@ -7,13 +7,13 @@ const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, heade
   const regex = new RegExp(`/${project.id}\\d+\\.`);
   const [image, setImage] = useState({ src: findImage(regex, headerImgs), loaded: false });
 
-  const imgLoaded = () => setImage({ ...image, loaded: true });
-
   useEffect(() => {
+    const imgLoaded = () => setImage({ ...image, loaded: true });
     const img = new Image();
     img.onload = imgLoaded;
     img.src = image.src;
     if (img.naturalWidth !== 0) imgLoaded();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

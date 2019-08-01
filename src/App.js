@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Header from './Components/Header';
 import Tags from './Components/Tags';
 import Projects from './Components/Projects';
