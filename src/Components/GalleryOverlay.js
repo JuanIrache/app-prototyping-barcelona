@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, memo } from 'react';
+import React, { useContext, memo } from 'react';
 import ReactSwipe from 'react-swipe';
 import GallerySlide from './GallerySlide';
 import GalleryContext from '../contexts/GalleryContext';
