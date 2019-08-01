@@ -39,15 +39,29 @@
         border: 0;
       }
     }
-    i {
-      text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.425);
-      padding: 0 1rem;
-      font-size: 2rem;
-      @media (max-width: 767.99px) {
-        font-size: 1.3rem;
-      }
+    .chevronContainer {
+      padding: 0;
+      margin: 0 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: $dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &.hidden {
         opacity: 0;
+      }
+      @media (max-width: 767.99px) {
+        margin: 0 0.2rem;
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+      }
+      i {
+        font-size: 2rem;
+        @media (max-width: 767.99px) {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -57,6 +71,7 @@
       text-align: center;
       background-color: #323f4888;
       padding: 1rem;
+      max-width: 80%;
       @media (max-width: 1199.99px) {
         font-size: 3rem;
       }

@@ -1,9 +1,6 @@
 # ToDo
 
-- Blue background behind arrow buttons
-- select tag info above tags
 - Simplify app with usereducer
-  - Unduplicate initialprojects?
   - Improve implementation of setVideo, setGalleryIndex (still passing props down)
   - Avoid setimmediate hack
 - Transitions

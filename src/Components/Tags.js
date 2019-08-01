@@ -7,6 +7,12 @@ const Projects = ({ toggleTag }) => {
 
   return (
     <div className="Tags">
+      <p className="separator">
+        Filter by tag or{' '}
+        <a href="#projects" onClick={() => assignTag('')}>
+          see all projects
+        </a>
+      </p>
       <div className="container">
         {tags.map(t => (
           <h4 key={t} className={`tag${t === tag ? ' active' : ''}`}>
@@ -16,12 +22,6 @@ const Projects = ({ toggleTag }) => {
           </h4>
         ))}
       </div>
-      <p className="separator">
-        Filter by tag or{' '}
-        <a href="#projects" onClick={() => assignTag('')}>
-          see all projects
-        </a>
-      </p>
     </div>
   );
 };

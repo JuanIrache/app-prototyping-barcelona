@@ -21,11 +21,11 @@ const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, heade
       <div className={`titleBg${image.loaded ? ' visible' : ''}`} style={{ backgroundImage: `url(${image.src})` }} />
       <div className="titleContainer">
         {existsLeft ? (
-          <a href="#projects">
+          <a className="chevronContainer" href="#projects">
             <i className="fas fa-chevron-left" onClick={goLeft} title="Previous project" />
           </a>
         ) : (
-          <i className="fas fa-chevron-left hidden" />
+          <span className="chevronContainer hidden" />
         )}
         <h2>
           {project.link ? (
@@ -37,11 +37,11 @@ const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, heade
           )}
         </h2>
         {existsRight ? (
-          <a href="#projects">
+          <a className="chevronContainer" href="#projects">
             <i className="fas fa-chevron-right" onClick={goRight} title="Next project" />
           </a>
         ) : (
-          <i className="fas fa-chevron-right hidden" />
+          <span className="chevronContainer hidden" />
         )}
       </div>
     </div>
