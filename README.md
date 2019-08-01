@@ -1,10 +1,6 @@
 # ToDo
 
-- Use return in useEffect to unsubscribe from window
-- Animate projects slider on first load? Pause when clicked inside
 - Simplify app with usereducer
-  - Improve implementation of setVideo, setGalleryIndex (still passing props down)
-  - Avoid setimmediate hack
 - Transitions
 - Split gallery, slider and thumb images in folders?
 - memoize more stuff?
@@ -12,7 +8,12 @@
 - Analytics
 - Improve texts
 - Spell/grammar check
-
 - Publish
 - Link everywhere
 - Open source
+
+## Maybe
+
+- Improve implementation of setSlide (still passing props down)
+- Animate projects slider on first load? Pause when clicked inside
+- Avoid setimmediate hack
