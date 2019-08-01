@@ -4,6 +4,10 @@ import Project from './Project';
 import ProjectContext from '../contexts/ProjectContext';
 import '../style/Projects.scss';
 
+const importAll = r => r.keys().map(r);
+const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
+const headerImgs = importAll(ctxt);
+
 const Projects = ({ setSlide }) => {
   const { projects } = useContext(ProjectContext);
 
@@ -25,7 +29,7 @@ const Projects = ({ setSlide }) => {
           <div key={p.id}>
             <Project
               project={p}
-              preLoad={i < 2}
+              headerImgs={headerImgs}
               i={i}
               existsLeft={i > 0}
               existsRight={i + 1 < arr.length}

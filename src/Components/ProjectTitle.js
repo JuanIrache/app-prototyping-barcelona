@@ -2,21 +2,17 @@ import React, { useEffect, useContext } from 'react';
 import SlideContext from '../contexts/SlideContext';
 import '../style/ProjectTitle.scss';
 
-const importAll = r => r.keys().map(r);
-const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
-const images = importAll(ctxt);
-
-const findImage = project => {
+const findImage = (project, images) => {
   return images.filter(img => {
     const regex = new RegExp(`/${project.id}\\d+\\.`);
     return regex.test(img);
   })[0];
 };
 
-const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, i }) => {
+const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, i, headerImgs }) => {
   const { slide } = useContext(SlideContext);
 
-  const image = findImage(project);
+  const image = findImage(project, headerImgs);
 
   const load = Math.abs(slide - i) < 2;
 
