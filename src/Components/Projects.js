@@ -30,6 +30,7 @@ const Projects = ({ setSlide }) => {
             <Project
               project={p}
               headerImgs={headerImgs}
+              galleryImgs={headerImgs}
               i={i}
               existsLeft={i > 0}
               existsRight={i + 1 < arr.length}

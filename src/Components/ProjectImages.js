@@ -1,18 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import GalleryContext from '../contexts/GalleryContext';
 import '../style/ProjectImages.scss';
 
-const ProjectImages = ({ images, title, i }) => {
+const ProjectImages = ({ project, galleryImgs, title }) => {
   const { setGallery, gallery } = useContext(GalleryContext);
-
-  const preLoad = images && images.length && i < 2;
-  if (preLoad) {
-    const img = new Image();
-    img.onload = () => {
-      document.querySelectorAll(`.image-${i}`).forEach(e => e.classList.add('visible'));
-    };
-    img.src = images[i];
-  }
+  const [images, setImages] = useState([]);
 
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: 1 });
@@ -21,26 +13,44 @@ const ProjectImages = ({ images, title, i }) => {
     });
   };
 
-  return !!images && !!images.length ? (
+  useEffect(() => {
+    const regex = new RegExp(`/${project.id}\\d+\\.`);
+    setImages(
+      galleryImgs
+        .filter(img => regex.test(img))
+        .map((src, idx) => {
+          const img = new Image();
+          const show = () => document.querySelector(`.image-${project.id}-${idx}`).classList.add('visible');
+          img.onload = show;
+          setImmediate(() => {
+            img.src = src;
+          });
+          // if (img.naturalWidth !== 0) show();
+          return { src, loaded: false };
+        })
+    );
+  }, []);
+
+  console.log('rendering', project.id);
+
+  // useEffect(,[images]);
+
+  return (
     <div className="ProjectImages">
-      {images
-        .slice(1)
-        .concat(images[0])
-        .map((img, idx) => (
-          <span
-            href="#!"
-            className={`image${!preLoad ? ' visible' : ''} image-${i}`}
-            key={img}
-            alt={`${title} screenshot`}
-            style={preLoad ? { backgroundImage: `url(${img})` } : {}}
-            data-background={i > 1 ? `url(${img})` : ''}
-            onClick={() => handleSetGallery(idx)}
-          />
-        ))}
-    </div>
-  ) : (
-    <div className="ProjectImages">
-      <span />
+      {images.length &&
+        images
+          .slice(1)
+          .concat(images[0])
+          .map((img, idx) => (
+            <span
+              href="#!"
+              className={`image image-${project.id}-${idx}`}
+              key={img.src}
+              alt={`${title} screenshot`}
+              style={{ backgroundImage: `url(${img.src})` }}
+              onClick={() => handleSetGallery(idx)}
+            />
+          ))}
     </div>
   );
 };

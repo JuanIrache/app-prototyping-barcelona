@@ -8,7 +8,6 @@
 - Split gallery, slider and thumb images in folders?
 - memoize more stuff?
 - Optimise loading time
-- lazy load the entire slide div if slide is far from showing? (+2)
 - Gallery on mobile glitchy
 - Analytics
 - Improve texts
