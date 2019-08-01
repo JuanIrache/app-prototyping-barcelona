@@ -17,6 +17,7 @@ const ProjectImages = ({ project, galleryImgs }) => {
       img.onload = () => setImages(images.map(image => (img.naturalWidth !== 0 ? { ...image, loaded: true } : image)));
       img.src = image.src;
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
