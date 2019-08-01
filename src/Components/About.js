@@ -39,9 +39,7 @@ const About = () => {
     });
   }, []);
 
-  return loading ? (
-    <div>Loading</div>
-  ) : (
+  return (
     <div className="About">
       <section className="upper">
         <div className="photo">
@@ -66,41 +64,49 @@ const About = () => {
         </div>
       </section>
       <section className="lower">
-        <div className="github">
-          <h4>
-            <a href={user.html_url} target="_blank" rel="noopener noreferrer">
-              On GitHub
-            </a>
-          </h4>
-          <table>
-            <tbody>
-              {repos.map(r => (
-                <tr key={r.id}>
-                  <td>
-                    <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${r.language ? ` (${r.language})` : ''}`}</a>
-                  </td>
-                  <td>
-                    {!!r.stargazers_count && (
-                      <span className="githubStats">
-                        <i className="fas fa-star" />
-                        {r.stargazers_count}
-                      </span>
-                    )}
-                  </td>
-                  <td>
-                    {!!r.forks_count && (
-                      <span className="githubStats">
-                        <i className="fas fa-code-branch" />
-                        {r.forks_count}
-                      </span>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="repos" />
-        </div>
+        {loading ? (
+          <div className="github">
+            <h4>Loading GitHub...</h4>
+          </div>
+        ) : (
+          <div className="github">
+            <h4>
+              <a href={user.html_url} target="_blank" rel="noopener noreferrer">
+                On GitHub
+              </a>
+            </h4>
+
+            <table>
+              <tbody>
+                {repos.map(r => (
+                  <tr key={r.id}>
+                    <td>
+                      <a href={r.html_url} target="_blank" rel="noopener noreferrer">{`${r.name}${
+                        r.language ? ` (${r.language})` : ''
+                      }`}</a>
+                    </td>
+                    <td>
+                      {!!r.stargazers_count && (
+                        <span className="githubStats">
+                          <i className="fas fa-star" />
+                          {r.stargazers_count}
+                        </span>
+                      )}
+                    </td>
+                    <td>
+                      {!!r.forks_count && (
+                        <span className="githubStats">
+                          <i className="fas fa-code-branch" />
+                          {r.forks_count}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
         <div className="mail">
           <h3>
             <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
