@@ -13,13 +13,10 @@ const VideoOverlay = () => {
     }, 500);
   };
 
-  useEffect(() => {
-    const fixed = document.querySelector('.VideoOverlay');
-    fixed.addEventListener('touchmove', e => e.preventDefault(), false);
-  }, []);
+  const preventMove = e => e.preventDefault();
 
   return (
-    <div className={`VideoOverlay${visible ? ' visible' : ''}`} onClick={closeVideo}>
+    <div className={`VideoOverlay${visible ? ' visible' : ''}`} onClick={closeVideo} onTouchMove={preventMove}>
       <iframe
         id="videoPlayer"
         title={title + ' video'}

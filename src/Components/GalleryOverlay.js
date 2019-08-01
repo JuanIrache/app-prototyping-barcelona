@@ -14,11 +14,6 @@ const GalleryOverlay = () => {
 
   let reactSwipeEl;
 
-  useEffect(() => {
-    const fixed = document.querySelector('.GalleryOverlay');
-    fixed.addEventListener('touchmove', e => e.preventDefault(), false);
-  }, []);
-
   const goLeft = e => {
     e.stopPropagation();
     reactSwipeEl.prev();
@@ -29,8 +24,10 @@ const GalleryOverlay = () => {
     reactSwipeEl.next();
   };
 
+  const preventMove = e => e.preventDefault();
+
   return (
-    <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery}>
+    <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery} onTouchMove={preventMove}>
       <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected || 0, continuous: false }}>
         {images
           .slice(1)

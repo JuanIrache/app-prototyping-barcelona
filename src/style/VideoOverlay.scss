@@ -11,6 +11,7 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.5s ease, z-index 0s ease 0.5s;
+  touch-action: none;
   &.visible {
     opacity: 1;
     z-index: 1;
