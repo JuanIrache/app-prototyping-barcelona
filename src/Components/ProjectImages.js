@@ -22,7 +22,18 @@ const ProjectImages = ({ project, galleryImgs, title }) => {
     });
   };
 
-  useEffect(() => setImages(images.map(image => (image.img.naturalWidth === 0 ? image : { ...image, loaded: true }))), [images]);
+  useEffect(() => {
+    const newImages = [];
+    let changes = false;
+    images.forEach(image => {
+      if (image.loaded) newImages.push(image);
+      else if (image.img.naturalWidth !== 0) {
+        changes = true;
+        newImages.push({ src: image.src, loaded: true });
+      } else newImages.push(image);
+    });
+    if (changes) setImages(newImages);
+  }, [images]);
 
   return (
     <div className="ProjectImages">
