@@ -16,10 +16,10 @@ const ProjectImages = ({ project, galleryImgs, title }) => {
   );
 
   const handleSetGallery = idx => {
-    setGallery({ ...gallery, selected: 1 });
-    setImmediate(() => {
-      setGallery({ ...gallery, selected: idx, title, visible: true });
-    });
+    // setGallery({ ...gallery, selected: 1 });
+    // setImmediate(() => {
+    setGallery({ ...gallery, selected: idx, visible: true });
+    // });
   };
 
   useEffect(() => {

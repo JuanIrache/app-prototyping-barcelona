@@ -17,14 +17,14 @@ const findImages = project => {
 export const GalleryContextProvider = ({ children }) => {
   const { projects } = useContext(ProjectContext);
   const { slide } = useContext(SlideContext);
-  const project = projects[slide];
-
-  const [gallery, setGallery] = useState({ visible: false, title: '', selected: 0, images: findImages(project) });
+  const project = projects[0];
+  const [gallery, setGallery] = useState({ visible: false, title: '', selected: 1, images: findImages(project) });
 
   useEffect(() => {
-    setGallery({ ...gallery, images: findImages(project) });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [project]);
+    console.log('effect gallery');
+    const project = projects[slide];
+    setGallery({ images: findImages(project), selected: 1, title: project.title, visible: false });
+  }, [slide]);
 
   return <GalleryContext.Provider value={{ gallery, setGallery }}>{children}</GalleryContext.Provider>;
 };
