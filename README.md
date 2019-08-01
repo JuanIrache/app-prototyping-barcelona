@@ -11,7 +11,6 @@
 - Gallery on mobile glitchy
 - Analytics
 - Improve texts
-- Fewer tags?
 - Spell/grammar check
 
 - Publish
