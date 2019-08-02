@@ -1,6 +1,5 @@
 # ToDo
 
-- Improve texts
 - Spell/grammar check
 - Publish
 - Link everywhere

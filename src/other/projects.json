@@ -20,7 +20,7 @@
       "Webpack",
       "Full Stack"
     ],
-    "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition...",
+    "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition... The data visualizations are made in D3, while some derivative projects used Processing. This is one of the very few, if not the only, implementation of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
     "id": "gte",
     "link": { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
     "links": [
@@ -56,7 +56,7 @@
   {
     "title": "Chinese culture databases",
     "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack", "Full Stack", "APIs"],
-    "description": "Two comprehensive websites and databases about chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona",
+    "description": "Two comprehensive websites and databases about Chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona. They store and classify thousands of books and movies, along with very comprehensive metadata and images. The sites are server-rendered with Express.js, MongoDB and EJS templates, but can also be accessed via a JSON API.",
     "id": "txicc",
     "links": [],
     "github": "",
@@ -79,7 +79,7 @@
       "Front End",
       "APIs"
     ],
-    "description": "Visualization tool for SRT flight logs of DJI drones. Along with modules for creating GUI elements in P5js and interacting with Mapbox's static API",
+    "description": "Visualization tool for SRT flight logs of DJI drones. It supports several devices: Mavic Pro, some Phantoms, Mavic 2... and other common GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (based on HTML canvas). Along with the site, some NPM modules were created and open sourced. They allow to parse the data, create GUI elements in P5js and interact with Mapbox's static API",
     "id": "dji",
     "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
     "links": [
@@ -94,7 +94,7 @@
   {
     "title": "Orbit Simulator",
     "tags": ["Processing", "Android", "Gamification", "Sensors"],
-    "description": "With just the use of your fingers and the accelerometer, you can produce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns",
+    "description": "With just the use of your fingers and the accelerometer, you can reproduce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns. This Android game/sandbox app has been downloaded more than 350,000 times.",
     "id": "os",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.gravity_playground", "title": "Orbit Simulator" },
     "links": [
@@ -108,7 +108,7 @@
   {
     "title": "Starry Analytics",
     "tags": ["JavaScript", "Processing", "APIs", "Data Visualization", "GPS", "Open source", "Front End"],
-    "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions",
+    "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions. With this tool, marketers and clients can visualize the effectiveness of their campaigns or products geographically, while creating beautiful snapshots of their achievements. It was built with P5js (HTML canvas) and Google APIs.",
     "id": "starry",
     "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
     "links": [],
@@ -119,7 +119,7 @@
   {
     "title": "React Examples",
     "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "APIs", "REST", "Gamification", "Webpack", "Front End"],
-    "description": "This is a series of microsites, mini-games and proof of concepts made in React",
+    "description": "This is a series of microsites, mini-games and proof of concepts made in React. They showcase multiple techniques both of \"classic\" (class components) and modern (hooks, context, reducers) React.",
     "id": "react",
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
     "links": [
@@ -138,7 +138,7 @@
   {
     "title": "Octagon. The Flying Squirrel",
     "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
-    "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape",
+    "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape. in this innovative 3D game you control a flying squirrel by turning your phone in all 360 degrees. It uses the accelerometer and gyroscope of smart phones to deduce orientation. It was downloaded more than 20,000 times.",
     "id": "octagon",
     "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
     "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
@@ -149,7 +149,7 @@
   {
     "title": "Audio-Assisted Sensory Photography",
     "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
-    "description": "This proof of concept uses stereo images and depth map computation to help blind people overcome a creative disability: One would think they cannot express things in a visual way",
+    "description": "This proof of concept uses stereo images and depth map computation to help blind people explain their world in images, like the rest of us do. The software converts the two parallel images into a 3D map, which is in turn converted into an audio signal that describes the volumes in front of the user. It was created with the budget stereo (3D) webcam Minoru and the Java version of Processing.",
     "id": "a3di",
     "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
     "links": [],
@@ -160,7 +160,7 @@
   {
     "title": "Creative Coding",
     "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "Front End", "Gamification"],
-    "description": "This is a series of small experiments around coding, data visualization and AI",
+    "description": "This is a series of small experiments around coding, data visualization, algorithms, data structures and AI.",
     "id": "creative",
     "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
     "links": [
@@ -179,7 +179,7 @@
   {
     "title": "Dropped My Phone",
     "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
-    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer",
+    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer.",
     "id": "dmp",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
     "links": [],
@@ -190,7 +190,7 @@
   {
     "title": "App Prototyping Barcelona",
     "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End"],
-    "description": "The website you are looking at. Scroll down for more information and contact details",
+    "description": "The website you are looking at was built with modern React (hooks, context) and Sass (compiled CSS). Scroll down for more information and contact details.",
     "id": "apb",
     "link": null,
     "links": [],
