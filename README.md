@@ -1,6 +1,5 @@
 # ToDo
 
-- smaller images
 - Link everywhere
 
 ## Maybe
