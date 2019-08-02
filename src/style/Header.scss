@@ -12,6 +12,11 @@
     margin: 0;
     padding-bottom: 0.2rem;
     font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.4s;
+    &.show {
+      opacity: 1;
+    }
     @media (max-width: 767.99px) {
       font-size: 2rem;
     }
@@ -19,6 +24,11 @@
   h3 {
     color: $light;
     margin: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease 1s;
+    &.show {
+      opacity: 1;
+    }
     @media (max-width: 767.99px) {
       margin: 0.2rem 0.7rem;
       font-size: 1.1rem;

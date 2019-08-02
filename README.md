@@ -1,6 +1,5 @@
 # ToDo
 
-- Transitions
 - memoize more stuff? / Analyze refreshes and performance
 - Analytics
 - Improve texts
