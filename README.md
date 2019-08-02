@@ -1,7 +1,7 @@
 # ToDo
 
-- Publish
 - Link everywhere
+- Load title of tags before
 
 ## Maybe
 
