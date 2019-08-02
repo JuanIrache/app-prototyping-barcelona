@@ -2,13 +2,13 @@
 
 .ProjectTitle {
   position: relative;
-  height: 50vh;
+  height: 45vh;
   overflow: hidden;
   @media (max-width: 1199.99px) {
-    height: 35vh;
+    height: 30vh;
   }
   @media (max-width: 767.99px) {
-    height: 30vh;
+    height: 25vh;
   }
   .titleBg {
     position: absolute;
