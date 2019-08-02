@@ -1,7 +1,5 @@
 # ToDo
 
-- memoize more stuff? / Analyze refreshes and performance
-- Analytics
 - Improve texts
 - Spell/grammar check
 - Publish
@@ -14,3 +12,4 @@
 - Animate projects slider on first load? Pause when clicked inside
 - Avoid setimmediate hack
 - Simplify state with usereducer
+- memoize components for better performance?
