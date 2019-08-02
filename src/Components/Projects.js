@@ -5,8 +5,11 @@ import ProjectContext from '../contexts/ProjectContext';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
-const ctxt = require.context(`../media/`, false, /\.(png|jpe?g|svg)$/i);
+let ctxt = require.context(`../media/headers/`, false, /\.(png|jpe?g|svg)$/i);
 const headerImgs = importAll(ctxt);
+ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
+const thumbsImgs = importAll(ctxt);
+console.log(ctxt);
 
 const Projects = ({ setSlide }) => {
   const { projects } = useContext(ProjectContext);
@@ -30,7 +33,7 @@ const Projects = ({ setSlide }) => {
             <Project
               project={p}
               headerImgs={headerImgs}
-              galleryImgs={headerImgs}
+              thumbsImgs={thumbsImgs}
               i={i}
               existsLeft={i > 0}
               existsRight={i + 1 < arr.length}

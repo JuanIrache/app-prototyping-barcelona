@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from 'react';
 import GalleryContext from '../contexts/GalleryContext';
 import '../style/ProjectImages.scss';
 
-const ProjectImages = ({ project, galleryImgs }) => {
+const ProjectImages = ({ project, thumbsImgs }) => {
   const { setGallery, gallery } = useContext(GalleryContext);
   const regex = new RegExp(`/${project.id}\\d+\\.`);
-  const [images, setImages] = useState(galleryImgs.filter(img => regex.test(img)).map(src => ({ src, loaded: false })));
+  const [images, setImages] = useState(thumbsImgs.filter(img => regex.test(img)).map(src => ({ src, loaded: false })));
 
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: idx, visible: true });
