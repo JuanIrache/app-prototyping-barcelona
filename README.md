@@ -2,7 +2,6 @@
 
 - Publish
 - Link everywhere
-- Open source
 
 ## Maybe
 
