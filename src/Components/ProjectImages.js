@@ -8,7 +8,7 @@ const ProjectImages = ({ project, thumbsImgs }) => {
   const [images, setImages] = useState(thumbsImgs.filter(img => regex.test(img)).map(src => ({ src, loaded: false })));
 
   const handleSetGallery = idx => {
-    setGallery({ ...gallery, selected: idx, visible: true });
+    setImmediate(() => setGallery({ ...gallery, selected: idx, visible: true, title: project.title }));
   };
 
   useEffect(() => {
