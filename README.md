@@ -1,6 +1,5 @@
 # ToDo
 
-- Spell/grammar check
 - Publish
 - Link everywhere
 - Open source
