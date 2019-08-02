@@ -190,7 +190,7 @@
   {
     "title": "App Prototyping Barcelona",
     "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End"],
-    "description": "",
+    "description": "The website you are looking at was build with modern React (context, hooks) and Sass (compiled CSS). Scroll down for more information and contact details",
     "id": "apb",
     "link": null,
     "links": [],
