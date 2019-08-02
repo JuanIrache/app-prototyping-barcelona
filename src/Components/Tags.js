@@ -1,28 +1,42 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import TagContext from '../contexts/TagContext';
 import '../style/Tags.scss';
 
-const Projects = ({ toggleTag }) => {
+const Projects = () => {
   const { tag, tags, assignTag } = useContext(TagContext);
+  const [showTitle, setShowTitle] = useState(false);
+
+  const handleShowTitle = visible => {
+    console.log(visible);
+
+    if (visible) setShowTitle(true);
+  };
 
   return (
-    <div className="Tags">
-      <p className="separator">
-        Filter by tag or{' '}
-        <a href="#projects" onClick={() => assignTag('')}>
-          see all projects
-        </a>
-      </p>
-      <div className="container">
-        {tags.map(t => (
-          <h4 key={t} className={`tag${t === tag ? ' active' : ''}`}>
-            <a href="#projects" name={t} onClick={assignTag}>
-              {t}
-            </a>
-          </h4>
-        ))}
+    <VisibilitySensor offset={{ bottom: 80 }} onChange={handleShowTitle}>
+      <div className="Tags">
+        <p className={`separator${showTitle ? ' show' : ''}`}>
+          Filter by tag or{' '}
+          <a href="#projects" onClick={() => assignTag('')}>
+            see all projects
+          </a>
+        </p>
+        <div className="container">
+          {tags.map(t => (
+            <VisibilitySensor key={t} offset={{ bottom: 80 }}>
+              {({ isVisible }) => (
+                <h4 className={`tag${t === tag ? ' active' : ''}${isVisible ? ' show' : ''}`}>
+                  <a href="#projects" name={t} onClick={assignTag}>
+                    {t}
+                  </a>
+                </h4>
+              )}
+            </VisibilitySensor>
+          ))}
+        </div>
       </div>
-    </div>
+    </VisibilitySensor>
   );
 };
 
