@@ -9,7 +9,6 @@ let ctxt = require.context(`../media/headers/`, false, /\.(png|jpe?g|svg)$/i);
 const headerImgs = importAll(ctxt);
 ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
 const thumbsImgs = importAll(ctxt);
-console.log(ctxt);
 
 const Projects = ({ setSlide }) => {
   const { projects } = useContext(ProjectContext);

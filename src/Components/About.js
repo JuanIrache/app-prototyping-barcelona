@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../style/About.scss';
-import juan from '../other/juan.jpg';
+import juan from '../media/juan.jpg';
 
 const About = () => {
   const [user, setUser] = useState({});
