@@ -2,9 +2,7 @@
 
 - Simplify app with usereducer
 - Transitions
-- Split gallery, slider and thumb images in folders?
-- memoize more stuff?
-- Optimise loading time
+- memoize more stuff? / Analyze refreshes and performance
 - Analytics
 - Improve texts
 - Spell/grammar check
