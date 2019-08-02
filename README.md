@@ -1,7 +1,7 @@
 # ToDo
 
+- smaller images
 - Link everywhere
-- Load title of tags before
 
 ## Maybe
 
