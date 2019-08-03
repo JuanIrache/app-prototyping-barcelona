@@ -58,7 +58,9 @@ const About = () => {
             sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a
             reality through hard work.
           </p>
-          <p>If you want your idea turned into code, send me an email.</p>
+          <p>
+            If you want your idea turned into code, <a href="mailto:app@prototyping.barcelona">send me an email</a>.
+          </p>
           <p className="signature">Juan Irache</p>
         </div>
       </section>
@@ -108,7 +110,7 @@ const About = () => {
         )}
         <div className="mail">
           <h3>
-            <a href="mailto:juan@tailorandwayne.com">juan@tailorandwayne.com</a>
+            <a href="mailto:app@prototyping.barcelona">app@prototyping.barcelona</a>
           </h3>
         </div>
       </section>

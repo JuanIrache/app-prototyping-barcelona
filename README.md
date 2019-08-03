@@ -1,9 +1,4 @@
-# ToDo
-
-- Some images broken again
-- Link everywhere
-
-## Maybe
+## Maybe To-Do
 
 - Improve implementation of setSlide (still passing props down)
 - Animate projects slider on first load? Pause when clicked inside
