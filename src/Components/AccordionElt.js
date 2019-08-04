@@ -5,13 +5,13 @@ import '../style/AccordionElt.scss';
 
 const findImage = (regex, images) => images.filter(img => regex.test(img))[0];
 
-const AccordionElt = ({ project, headerImgs, i }) => {
+const AccordionElt = ({ project, accordionImgs, i }) => {
   const { setSlide } = useContext(SlideContext);
   const { setInitial } = useContext(ProjectContext);
 
   const regex = new RegExp(`/${project.id}\\d+\\.`);
 
-  const [image, setImage] = useState({ src: findImage(regex, headerImgs), loaded: false });
+  const [image, setImage] = useState({ src: findImage(regex, accordionImgs), loaded: false });
 
   const select = () => {
     setSlide(i);
