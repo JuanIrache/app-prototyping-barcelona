@@ -7,12 +7,16 @@ import VideoOverlay from './Components/VideoOverlay';
 import Accordion from './Components/Accordion';
 import GalleryOverlay from './Components/GalleryOverlay';
 import SlideContext from './contexts/SlideContext';
+import AccordionContext from './contexts/AccordionContext';
+import ProjectContext from './contexts/ProjectContext';
 // import setListeners from './other/listeners';
 
 import './App.scss';
 
 const App = () => {
-  const { setSlide } = useContext(SlideContext);
+  const { slide, setSlide } = useContext(SlideContext);
+  const { accordion } = useContext(AccordionContext);
+  const { projects } = useContext(ProjectContext);
   // useEffect(() => setListeners(), []);
   return (
     <div className="App">
@@ -20,8 +24,7 @@ const App = () => {
       <VideoOverlay />
       <Header />
       <Tags />
-      <Accordion />
-      <Projects setSlide={setSlide} />
+      {accordion && projects.length > 1 ? <Accordion /> : <Projects slide={slide} setSlide={setSlide} />}
       <About />
     </div>
   );

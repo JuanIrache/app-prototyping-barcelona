@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react';
+import React, { memo, useContext, useEffect } from 'react';
 import ReactSwipe from 'react-swipe';
 import Project from './Project';
 import ProjectContext from '../contexts/ProjectContext';
@@ -10,7 +10,7 @@ const headerImgs = importAll(ctxt);
 ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
 const thumbsImgs = importAll(ctxt);
 
-const Projects = ({ setSlide }) => {
+const Projects = ({ slide, setSlide }) => {
   const { projects } = useContext(ProjectContext);
 
   const onChangeSlide = i => {
@@ -21,8 +21,9 @@ const Projects = ({ setSlide }) => {
     /////
     setSlide(i);
   };
-
   let reactSwipeEl;
+
+  useEffect(() => reactSwipeEl.slide(slide, 0), []);
 
   return (
     <section className="Projects" id="projects">
