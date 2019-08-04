@@ -4,6 +4,7 @@ import Tags from './Components/Tags';
 import Projects from './Components/Projects';
 import About from './Components/About';
 import VideoOverlay from './Components/VideoOverlay';
+import Accordion from './Components/Accordion';
 import GalleryOverlay from './Components/GalleryOverlay';
 import SlideContext from './contexts/SlideContext';
 // import setListeners from './other/listeners';
@@ -19,6 +20,7 @@ const App = () => {
       <VideoOverlay />
       <Header />
       <Tags />
+      <Accordion />
       <Projects setSlide={setSlide} />
       <About />
     </div>
