@@ -11,7 +11,7 @@ ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
 const thumbsImgs = importAll(ctxt);
 
 const Projects = ({ setSlide }) => {
-  const { projects } = useContext(ProjectContext);
+  const { projects, initial } = useContext(ProjectContext);
 
   const onChangeSlide = i => {
     //Source: https://stackoverflow.com/a/13736194/3362074
@@ -30,7 +30,7 @@ const Projects = ({ setSlide }) => {
 
   return (
     <section className="Projects" id="projects">
-      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false }}>
+      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false, startSlide: initial }}>
         {projects.map((p, i, arr) => (
           <div key={p.id}>
             <Project

@@ -6,6 +6,7 @@ const ProjectContext = createContext();
 
 export const ProjectContextProvider = ({ children }) => {
   const [projects, setProjects] = useState(initialProjects);
+  const [initial, setInitial] = useState(0);
 
   const { tag } = useContext(TagContext);
 
@@ -14,7 +15,7 @@ export const ProjectContextProvider = ({ children }) => {
     else setProjects(initialProjects);
   }, [tag]);
 
-  return <ProjectContext.Provider value={{ projects, setProjects }}>{children}</ProjectContext.Provider>;
+  return <ProjectContext.Provider value={{ projects, setProjects, initial, setInitial }}>{children}</ProjectContext.Provider>;
 };
 
 export default ProjectContext;
