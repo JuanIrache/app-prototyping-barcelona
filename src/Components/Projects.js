@@ -10,7 +10,7 @@ const headerImgs = importAll(ctxt);
 ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
 const thumbsImgs = importAll(ctxt);
 
-const Projects = ({ slide, setSlide }) => {
+const Projects = ({ setSlide }) => {
   const { projects } = useContext(ProjectContext);
 
   const onChangeSlide = i => {
@@ -23,7 +23,10 @@ const Projects = ({ slide, setSlide }) => {
   };
   let reactSwipeEl;
 
-  useEffect(() => reactSwipeEl.slide(slide, 0), []);
+  useEffect(() => {
+    // reactSwipeEl.slide(slide, 0);
+  }, []);
+  console.log('render projects');
 
   return (
     <section className="Projects" id="projects">

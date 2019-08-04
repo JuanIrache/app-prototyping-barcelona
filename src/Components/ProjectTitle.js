@@ -9,7 +9,7 @@ const ProjectTitle = ({ existsLeft, existsRight, project, goLeft, goRight, heade
 
   useEffect(() => {
     const imgLoaded = () => setImage({ ...image, loaded: true });
-    const img = new Image();
+    let img = new Image();
     img.onload = imgLoaded;
     img.src = image.src;
     if (img.naturalWidth !== 0) imgLoaded();

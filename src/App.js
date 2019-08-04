@@ -18,13 +18,15 @@ const App = () => {
   const { accordion } = useContext(AccordionContext);
   const { projects } = useContext(ProjectContext);
   // useEffect(() => setListeners(), []);
+  console.log('render app');
+
   return (
     <div className="App">
       <GalleryOverlay />
       <VideoOverlay />
       <Header />
       <Tags />
-      {accordion && projects.length > 1 ? <Accordion /> : <Projects slide={slide} setSlide={setSlide} />}
+      {accordion && projects.length > 1 ? <Accordion /> : <Projects setSlide={setSlide} />}
       <About />
     </div>
   );
