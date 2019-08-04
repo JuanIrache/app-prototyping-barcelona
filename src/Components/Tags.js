@@ -1,14 +1,21 @@
 import React, { useContext, useState } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import TagContext from '../contexts/TagContext';
+import ProjectContext from '../contexts/ProjectContext';
 import '../style/Tags.scss';
 
 const Projects = () => {
   const { tag, tags, assignTag } = useContext(TagContext);
+  const { setInitial } = useContext(ProjectContext);
   const [showTitle, setShowTitle] = useState(false);
 
   const handleShowTitle = visible => {
     if (visible) setShowTitle(true);
+  };
+
+  const handleAssignTag = tag => {
+    setInitial(0);
+    assignTag(tag);
   };
 
   return (
@@ -16,7 +23,7 @@ const Projects = () => {
       <div className="Tags">
         <p className={`separator${showTitle ? ' show' : ''}`}>
           Filter by tag or{' '}
-          <a href="#projects" onClick={() => assignTag('')}>
+          <a href="#accordion" onClick={() => handleAssignTag('')}>
             see all projects
           </a>
         </p>
@@ -25,7 +32,7 @@ const Projects = () => {
             <VisibilitySensor key={t} partialVisibility={true} offset={{ bottom: 50 }}>
               {({ isVisible }) => (
                 <h4 className={`tag${t === tag ? ' active' : ''}${isVisible || showTitle ? ' show' : ''}`}>
-                  <a href="#projects" name={t} onClick={assignTag}>
+                  <a href="#accordion" name={t} onClick={handleAssignTag}>
                     {t}
                   </a>
                 </h4>

@@ -26,7 +26,6 @@ const Projects = ({ setSlide }) => {
   useEffect(() => {
     // reactSwipeEl.slide(slide, 0);
   }, []);
-  console.log('render projects');
 
   return (
     <section className="Projects" id="projects">
