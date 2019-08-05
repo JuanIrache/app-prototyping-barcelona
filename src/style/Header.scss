@@ -23,15 +23,21 @@
   }
   h3 {
     color: $light;
-    margin: 1rem;
+    margin: 1rem 0;
+    padding: 0 0.3rem;
     opacity: 0;
     transition: opacity 0.4s ease 1s;
     &.show {
       opacity: 1;
     }
+    @media (max-width: 1199.99px) {
+      span {
+        display: block;
+      }
+    }
     @media (max-width: 767.99px) {
-      margin: 0.2rem 0.7rem;
-      font-size: 1.1rem;
+      margin: 0.2rem 0;
+      font-size: 1rem;
     }
   }
 }
