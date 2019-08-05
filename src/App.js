@@ -23,7 +23,7 @@ const App = () => {
       <VideoOverlay />
       <Header />
       <Tags />
-      {projects.length > 1 ? <Accordion /> : <div className="accordion" />}
+      {projects.length > 1 ? <Accordion /> : <div id="accordion" />}
       <Projects setSlide={setSlide} />
       <About />
     </div>
