@@ -1,9 +1,9 @@
 @import './colors';
 
 .Projects {
+  background-color: rgba(0, 0, 0, 0.171);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.171);
   z-index: 2;
-  background-color: $dark;
   color: $light;
   a {
     color: $gold;
