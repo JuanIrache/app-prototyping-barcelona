@@ -20,7 +20,7 @@
       "Webpack",
       "Full Stack"
     ],
-    "description": "Online service plus a series of complementary tools that allow the average user to extract, visualize and interpret the metadata GoPro cameras record: GPS, accelerometer, gyroscope, face recognition... The data visualizations are based in D3, while some derivative projects use Processing. This is one of the very few, if not the only, implementation of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
+    "description": "Online service and complementary tools for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... The visualizations are based on D3, and derivative projects use Processing. This is one of the very few implementations of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
     "id": "gte",
     "link": { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
     "links": [
@@ -118,7 +118,7 @@
   },
   {
     "title": "React Examples",
-    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "APIs", "REST", "Gamification", "Webpack", "Front End"],
+    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "APIs", "REST", "Gamification", "Webpack", "Front End", "Open Source"],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React. They showcase multiple techniques both of \"classic\" (class components) and modern (hooks, context, reducers) React.",
     "id": "react",
     "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
@@ -159,7 +159,7 @@
   },
   {
     "title": "Creative Coding",
-    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "Front End", "Gamification"],
+    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "Front End", "Gamification", "Open Source"],
     "description": "This is a series of small experiments around coding, data visualization, algorithms, data structures and AI.",
     "id": "creative",
     "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
@@ -179,7 +179,7 @@
   {
     "title": "Dropped My Phone",
     "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
-    "description": "This app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer.",
+    "description": "This cheeky app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer sensor. In a nutshell, when the magnitude of the accelerometer vector approaches 0 g, we know the phone is in free fall. By counting the duration of the fall we will also know its length.",
     "id": "dmp",
     "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
     "links": [],
@@ -189,7 +189,7 @@
   },
   {
     "title": "App Prototyping Barcelona",
-    "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End"],
+    "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End", "Open Source"],
     "description": "The website you are looking at was build with modern React (context, hooks) and Sass (compiled CSS). Scroll down for more information and contact details",
     "id": "apb",
     "link": null,
