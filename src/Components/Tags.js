@@ -19,7 +19,7 @@ const Projects = () => {
   };
 
   return (
-    <VisibilitySensor onChange={handleShowTitle} offset={{ bottom: -100 }}>
+    <VisibilitySensor onChange={handleShowTitle}>
       <div className="Tags">
         <p className={`separator${showTitle ? ' show' : ''}`}>
           Filter by tag or{' '}
@@ -29,7 +29,7 @@ const Projects = () => {
         </p>
         <div className="container">
           {tags.map(t => (
-            <VisibilitySensor key={t} partialVisibility={true} offset={{ bottom: 50 }}>
+            <VisibilitySensor key={t} offset={{ bottom: 100 }}>
               {({ isVisible }) => (
                 <h4 className={`tag${t === tag ? ' active' : ''}${isVisible || showTitle ? ' show' : ''}`}>
                   <a href="#accordion" name={t} onClick={handleAssignTag}>
