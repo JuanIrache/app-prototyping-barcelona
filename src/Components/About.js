@@ -47,19 +47,23 @@ const About = () => {
         <div className="description">
           <p>Hey, I'm Juan.</p>{' '}
           <p>
-            I have been coding apps of one sort or another for {Math.floor(new Date().getFullYear() - 2012)} years now, first as a hobby,
-            then for a living. I started my career in the cinema/video industry, but at some point, while living in Australia, my interest
-            shifted towards creating things with code. Since I was spending most of my spare time developing programs, I decided I might as
-            well do it professionally.
+            I have been coding apps of one sort or another for{' '}
+            {Math.floor(new Date().getFullYear() - 2012)} years now, first as a hobby, then for a
+            living. I started my career in the cinema/video industry, but at some point, while
+            living in Australia, my interest shifted towards creating things with code. Since I was
+            spending most of my spare time developing programs, I decided to study the field
+            seriously and switch careers.
           </p>
           <p>
-            I love translating new ideas into code, especially anything related to interaction with sensors and data visualization. My
-            background outside the IT industry gives me a perspective different from what you usually find among developers. A naivety of
-            sorts, if you will. Most of all, I love the feeling one gets when a concept that seemed almost impossible to build becomes a
-            reality through hard work.
+            I love translating new ideas into code, especially anything related to interaction with
+            sensors and data visualization. My background outside the IT industry gives me a
+            perspective different from what you usually find among developers. A naivety of sorts,
+            if you will. Most of all, I love the feeling one gets when a concept that seemed almost
+            impossible to build becomes a reality through hard work.
           </p>
           <p>
-            If you want your idea turned into code, <a href="mailto:app@prototyping.barcelona">send me an email</a>.
+            If you want your idea turned into code,{' '}
+            <a href="mailto:app@prototyping.barcelona">send me an email</a>.
           </p>
           <p className="signature">Juan Irache</p>
         </div>
