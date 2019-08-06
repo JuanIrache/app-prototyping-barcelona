@@ -94,7 +94,8 @@
       "Open Source",
       "Drones",
       "Front End",
-      "APIs"
+      "APIs",
+      "Node.js"
     ],
     "description": "Visualization tool for SRT flight logs of DJI drones. It supports several devices: Mavic Pro, some Phantoms, Mavic 2... and other common GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (based on HTML canvas). Along with the site, some NPM modules were created and open sourced. They allow to parse the files, create GUI elements in P5js and interact with Mapbox's static API.",
     "id": "dji",
@@ -163,7 +164,8 @@
       "Gamification",
       "Webpack",
       "Front End",
-      "Open Source"
+      "Open Source",
+      "Node.js"
     ],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React. They showcase multiple techniques both of \"classic\" (class components) and modern (hooks, context, reducers) React.",
     "id": "react",
@@ -297,7 +299,16 @@
   },
   {
     "title": "App Prototyping Barcelona",
-    "tags": ["JavaScript", "HTML", "Sass", "React", "Webpack", "Front End", "Open Source"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "Sass",
+      "React",
+      "Webpack",
+      "Front End",
+      "Open Source",
+      "Node.js"
+    ],
     "description": "The website you are looking at was build with modern React (context, hooks) and Sass (compiled CSS). Scroll down for more information and contact details",
     "id": "apb",
     "link": null,
