@@ -1,5 +1,6 @@
 ## Maybe To-Do
 
+- When selecting same tag, current slide disappears
 - Load images based on screen size
 - Handle back button?
 - Improve implementation of setSlide (still passing props down)
