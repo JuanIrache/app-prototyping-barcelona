@@ -13,7 +13,7 @@
       "GPS",
       "Video",
       "Test-Driven Development",
-      "Open source",
+      "Open Source",
       "HTML",
       "Sass",
       "Bootstrap",
@@ -91,7 +91,7 @@
       "GPS",
       "Video",
       "Test-Driven Development",
-      "Open source",
+      "Open Source",
       "Drones",
       "Front End",
       "APIs"
@@ -139,7 +139,7 @@
       "APIs",
       "Data Visualization",
       "GPS",
-      "Open source",
+      "Open Source",
       "Front End"
     ],
     "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions. With this tool, marketers and clients can visualize the effectiveness of their campaigns or products geographically, while creating beautiful snapshots of their achievements. It was built with P5js (HTML canvas) and Google APIs.",
@@ -223,7 +223,7 @@
   },
   {
     "title": "Audio-Assisted Sensory Photography",
-    "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
+    "tags": ["Processing", "Data Visualization", "Open Source", "Video", "3D"],
     "description": "This proof of concept uses stereo images and depth map computation to help blind people explain their world in images, like the rest of us do. The software converts the two parallel images into a 3D map, which is in turn converted into an audio signal that describes the volumes in front of the user. It was created with the budget stereo (3D) webcam Minoru and the Java version of Processing.",
     "id": "a3di",
     "link": {
