@@ -18,11 +18,15 @@
       "Sass",
       "Bootstrap",
       "Webpack",
-      "Full Stack"
+      "Full Stack",
+      "jQuery"
     ],
     "description": "Online service and complementary tools for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... The visualizations are based on D3, and derivative projects use Processing. This is one of the very few implementations of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
     "id": "gte",
-    "link": { "src": "https://tailorandwayne.com/gopro-telemetry-extractor/", "title": "GoPro Telemetry Extractor" },
+    "link": {
+      "src": "https://tailorandwayne.com/gopro-telemetry-extractor/",
+      "title": "GoPro Telemetry Extractor"
+    },
     "links": [
       {
         "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
@@ -55,7 +59,20 @@
   },
   {
     "title": "Chinese culture databases",
-    "tags": ["JavaScript", "HTML", "Sass", "Bootstrap", "Node.js", "Express", "MongoDB", "REST", "Webpack", "Full Stack", "APIs"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "Sass",
+      "Bootstrap",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST",
+      "Webpack",
+      "Full Stack",
+      "APIs",
+      "jQuery"
+    ],
     "description": "Two comprehensive websites and databases about Chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona. They store and classify thousands of books and movies, along with very comprehensive metadata and images. The sites are server-rendered with Express.js, MongoDB and EJS templates, but can also be accessed via a JSON API.",
     "id": "txicc",
     "links": [],
@@ -84,7 +101,10 @@
     "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
     "links": [
       { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy NPM Module" },
-      { "src": "https://www.npmjs.com/package/mapbox_static_helper", "title": "mapbox_static_helper NPM Module" },
+      {
+        "src": "https://www.npmjs.com/package/mapbox_static_helper",
+        "title": "mapbox_static_helper NPM Module"
+      },
       { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui NPM Module" }
     ],
     "github": "https://github.com/JuanIrache/dji-srt-viewer",
@@ -96,10 +116,16 @@
     "tags": ["Processing", "Android", "Gamification", "Sensors"],
     "description": "With just the use of your fingers and the accelerometer, you can reproduce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns. This Android game/sandbox app has been downloaded more than 350,000 times.",
     "id": "os",
-    "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.gravity_playground", "title": "Orbit Simulator" },
+    "link": {
+      "src": "https://play.google.com/store/apps/details?id=processing.test.gravity_playground",
+      "title": "Orbit Simulator"
+    },
     "links": [
       { "src": "https://www.instagram.com/orbitsimulator", "title": "Fan-art gallery" },
-      { "src": "https://www.youtube.com/watch?v=74RotdYL3y4&list=PLgoeWSWqXedLeMwjXC1LAo_5NuIuT4Ccb", "title": "Fan Reviews" }
+      {
+        "src": "https://www.youtube.com/watch?v=74RotdYL3y4&list=PLgoeWSWqXedLeMwjXC1LAo_5NuIuT4Ccb",
+        "title": "Fan Reviews"
+      }
     ],
     "github": "",
     "youtube": "pn6HvwvhSGE",
@@ -107,7 +133,15 @@
   },
   {
     "title": "Starry Analytics",
-    "tags": ["JavaScript", "Processing", "APIs", "Data Visualization", "GPS", "Open source", "Front End"],
+    "tags": [
+      "JavaScript",
+      "Processing",
+      "APIs",
+      "Data Visualization",
+      "GPS",
+      "Open source",
+      "Front End"
+    ],
     "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions. With this tool, marketers and clients can visualize the effectiveness of their campaigns or products geographically, while creating beautiful snapshots of their achievements. It was built with P5js (HTML canvas) and Google APIs.",
     "id": "starry",
     "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
@@ -118,18 +152,51 @@
   },
   {
     "title": "React Examples",
-    "tags": ["JavaScript", "React", "HTML", "CSS", "Material-UI", "APIs", "REST", "Gamification", "Webpack", "Front End", "Open Source"],
+    "tags": [
+      "JavaScript",
+      "React",
+      "HTML",
+      "CSS",
+      "Material-UI",
+      "APIs",
+      "REST",
+      "Gamification",
+      "Webpack",
+      "Front End",
+      "Open Source"
+    ],
     "description": "This is a series of microsites, mini-games and proof of concepts made in React. They showcase multiple techniques both of \"classic\" (class components) and modern (hooks, context, reducers) React.",
     "id": "react",
-    "link": { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/", "title": "Smart Palette Manager" },
+    "link": {
+      "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s24-colors-app/",
+      "title": "Smart Palette Manager"
+    },
     "links": [
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes", "title": "Dad Jokes App" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee", "title": "Yatzee! Dice Game" },
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s19-dad-jokes",
+        "title": "Dad Jokes App"
+      },
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee",
+        "title": "Yatzee! Dice Game"
+      },
       { "src": "https://githubfinder23542352.netlify.com/", "title": "GitHub Finder" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/", "title": "Dog Gallery Concept" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/", "title": "Material-UI Login page" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out", "title": "Lights Out mini-game" },
-      { "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s15-todo-list", "title": "CRUD To-Do List" }
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/",
+        "title": "Dog Gallery Concept"
+      },
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s33-login_page/",
+        "title": "Material-UI Login page"
+      },
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s12-lights-out",
+        "title": "Lights Out mini-game"
+      },
+      {
+        "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s15-todo-list",
+        "title": "CRUD To-Do List"
+      }
     ],
     "github": "https://github.com/JuanIrache/modern-react-bootcamp-exercises/tree/master/s24-colors-app",
     "youtube": "",
@@ -140,8 +207,16 @@
     "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape. in this innovative 3D game you control a flying squirrel by turning your phone in all 360 degrees. It uses the accelerometer and gyroscope of smart phones to deduce orientation. It was downloaded more than 20,000 times.",
     "id": "octagon",
-    "link": { "src": "https://play.google.com/store/apps/details?id=com.irache.octagon", "title": "Octagon. The Flying Squirrel" },
-    "links": [{ "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh", "title": "Fan Reviews" }],
+    "link": {
+      "src": "https://play.google.com/store/apps/details?id=com.irache.octagon",
+      "title": "Octagon. The Flying Squirrel"
+    },
+    "links": [
+      {
+        "src": "https://www.youtube.com/watch?v=C4ac1yQbkK8&list=PLgoeWSWqXedJgUS7sr1TAcevN7FAypJFh",
+        "title": "Fan Reviews"
+      }
+    ],
     "github": "",
     "youtube": "r_p5u_CX9UI",
     "npm": ""
@@ -151,7 +226,10 @@
     "tags": ["Processing", "Data Visualization", "Open source", "Video", "3D"],
     "description": "This proof of concept uses stereo images and depth map computation to help blind people explain their world in images, like the rest of us do. The software converts the two parallel images into a 3D map, which is in turn converted into an audio signal that describes the volumes in front of the user. It was created with the budget stereo (3D) webcam Minoru and the Java version of Processing.",
     "id": "a3di",
-    "link": { "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/", "title": "Write Up" },
+    "link": {
+      "src": "https://tailorandwayne.com/can_blind_people_take_photos_and_record_videos/",
+      "title": "Write Up"
+    },
     "links": [],
     "github": "https://github.com/JuanIrache/a3rDi",
     "youtube": "w3Fl9vFYzts",
@@ -159,18 +237,45 @@
   },
   {
     "title": "Creative Coding",
-    "tags": ["JavaScript", "HTML", "CSS", "Processing", "Data Visualization", "Front End", "Gamification", "Open Source"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Processing",
+      "Data Visualization",
+      "Front End",
+      "Gamification",
+      "Open Source"
+    ],
     "description": "This is a series of small experiments around coding, data visualization, algorithms, data structures and AI.",
     "id": "creative",
     "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
     "links": [
-      { "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth", "title": "Depth First Search Labyrinth" },
-      { "src": "https://juanirache.github.io/coding-fun/color-picking-game", "title": "Color Picking Game" },
-      { "src": "https://juanirache.github.io/coding-fun/travelling-salesman-ai", "title": "Travelling Salesman AI" },
-      { "src": "https://juanirache.github.io/coding-fun/falling-color-squares/", "title": "Falling Color Squares" },
-      { "src": "https://juanirache.github.io/coding-fun/perlin-noise-butterfly", "title": "Perlin Noise Butterfly" },
+      {
+        "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth",
+        "title": "Depth First Search Labyrinth"
+      },
+      {
+        "src": "https://juanirache.github.io/coding-fun/color-picking-game",
+        "title": "Color Picking Game"
+      },
+      {
+        "src": "https://juanirache.github.io/coding-fun/travelling-salesman-ai",
+        "title": "Travelling Salesman AI"
+      },
+      {
+        "src": "https://juanirache.github.io/coding-fun/falling-color-squares/",
+        "title": "Falling Color Squares"
+      },
+      {
+        "src": "https://juanirache.github.io/coding-fun/perlin-noise-butterfly",
+        "title": "Perlin Noise Butterfly"
+      },
       { "src": "https://juanirache.github.io/coding-fun/music-circles", "title": "Music Circles" },
-      { "src": "https://juanirache.github.io/coding-fun/dancing-sliders", "title": "Dancing Sliders" }
+      {
+        "src": "https://juanirache.github.io/coding-fun/dancing-sliders",
+        "title": "Dancing Sliders"
+      }
     ],
     "github": "https://github.com/JuanIrache/coding-fun",
     "youtube": "T9yXVNnxI8g",
@@ -181,7 +286,10 @@
     "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
     "description": "This cheeky app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer sensor. In a nutshell, when the magnitude of the accelerometer vector approaches 0 g, we know the phone is in free fall. By counting the duration of the fall we will also know its length.",
     "id": "dmp",
-    "link": { "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone", "title": "Dropped My Phone" },
+    "link": {
+      "src": "https://play.google.com/store/apps/details?id=processing.test.droppedmyphone",
+      "title": "Dropped My Phone"
+    },
     "links": [],
     "github": "",
     "youtube": "bRqkhVt6VRU",
