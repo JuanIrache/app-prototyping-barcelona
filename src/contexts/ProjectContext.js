@@ -11,11 +11,18 @@ export const ProjectContextProvider = ({ children }) => {
   const { tag } = useContext(TagContext);
 
   useEffect(() => {
-    if (tag.length) setProjects(initialProjects.filter(p => p.tags.includes(tag)).sort(() => Math.random() - 0.5));
+    if (tag.length)
+      setProjects(
+        initialProjects.filter(p => p.tags.includes(tag)).sort(() => Math.random() - 0.5)
+      );
     else setProjects(initialProjects);
   }, [tag]);
 
-  return <ProjectContext.Provider value={{ projects, setProjects, initial, setInitial }}>{children}</ProjectContext.Provider>;
+  return (
+    <ProjectContext.Provider value={{ projects, setProjects, initial, setInitial }}>
+      {children}
+    </ProjectContext.Provider>
+  );
 };
 
 export default ProjectContext;
