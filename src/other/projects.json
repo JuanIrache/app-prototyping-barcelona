@@ -19,7 +19,8 @@
       "Bootstrap",
       "Webpack",
       "Full Stack",
-      "jQuery"
+      "jQuery",
+      "Electron"
     ],
     "description": "Online service and complementary tools for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... The visualizations are based on D3, and derivative projects use Processing. This is one of the very few implementations of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
     "id": "gte",
@@ -30,7 +31,7 @@
     "links": [
       {
         "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
-        "title": "GoPro Metadata Visualization Community"
+        "title": "Metadata Visualization Forum"
       },
       {
         "src": "https://www.npmjs.com/package/gpmf-extract",
@@ -46,11 +47,15 @@
       },
       {
         "src": "https://github.com/JuanIrache/gopro-utils",
-        "title": "GoLang extraction tools (fork)"
+        "title": "GoLang tools (fork)"
       },
       {
         "src": "https://github.com/JuanIrache/gyrocam",
         "title": "Processing sketch: Gyrocam"
+      },
+      {
+        "src": "https://prototyping.barcelona/gopro-telemetry-extractor-premium/",
+        "title": "Premium Windows/macOS App"
       }
     ],
     "github": "https://github.com/JuanIrache/gopro-telemetry",
