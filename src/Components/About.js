@@ -9,9 +9,8 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let githubClientId, githubClientSecret;
+    let githubClientId;
     githubClientId = process.env.REACT_APP_GITHUB_ID;
-    githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 
     let config = {
       headers: {
@@ -20,11 +19,11 @@ const About = () => {
     };
 
     const userData = axios.get(
-      `https://api.github.com/users/juanirache?client_id=${githubClientId}&client_secret=${githubClientSecret}`,
+      `https://api.github.com/users/juanirache?client_id=${githubClientId}`,
       config
     );
     const reposData = axios.get(
-      `https://api.github.com/users/juanirache/repos?per_page=100&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
+      `https://api.github.com/users/juanirache/repos?per_page=100&client_id=${githubClientId}`,
       config
     );
 
