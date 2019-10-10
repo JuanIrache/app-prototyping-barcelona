@@ -23,6 +23,7 @@ const VideoOverlay = () => {
       onClick={closeVideo}
       onTouchMove={preventMove}
     >
+      <div className="closeOverlay">X</div>
       <iframe
         id="videoPlayer"
         title={title + ' video'}

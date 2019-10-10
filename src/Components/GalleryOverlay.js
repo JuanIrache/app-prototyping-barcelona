@@ -41,6 +41,7 @@ const GalleryOverlay = () => {
           .concat(images[0])
           .map((img, i) => (
             <div key={img} className="eachSlide">
+              <div className="closeOverlay">X</div>
               <GallerySlide
                 img={img}
                 images={images.length}
