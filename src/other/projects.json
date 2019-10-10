@@ -20,9 +20,12 @@
       "Webpack",
       "Full Stack",
       "jQuery",
-      "Electron"
+      "Electron",
+      "React",
+      "E-Commerce",
+      "After Effects"
     ],
-    "description": "Online service and complementary tools for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... The visualizations are based on D3, and derivative projects use Processing. This is one of the very few implementations of Adobe's mgJSON format for After Effects. 3,000 files converted per month.",
+    "description": "Online service, desktop app and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000 files converted per month.",
     "id": "gte",
     "link": {
       "src": "https://tailorandwayne.com/gopro-telemetry-extractor/",
@@ -30,20 +33,24 @@
     },
     "links": [
       {
+        "src": "https://prototyping.barcelona/gopro-telemetry-extractor-premium/",
+        "title": "React E-Commerce site"
+      },
+      {
         "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
-        "title": "Metadata Visualization Forum"
+        "title": "Community Forum"
       },
       {
         "src": "https://www.npmjs.com/package/gpmf-extract",
-        "title": "Accessory NPM Package"
+        "title": "Accessory NPM"
       },
       {
         "src": "https://www.npmjs.com/package/d3-svg-to-png",
-        "title": "d3-svg-to-png NPM Package"
+        "title": "d3-svg-to-png NPM"
       },
       {
         "src": "https://www.npmjs.com/package/d3-proportional-ranges",
-        "title": "d3-proportional-ranges NPM Package"
+        "title": "d3-proportional-ranges NPM"
       },
       {
         "src": "https://github.com/JuanIrache/gopro-utils",
@@ -51,15 +58,11 @@
       },
       {
         "src": "https://github.com/JuanIrache/gyrocam",
-        "title": "Processing sketch: Gyrocam"
-      },
-      {
-        "src": "https://prototyping.barcelona/gopro-telemetry-extractor-premium/",
-        "title": "Premium Windows/macOS App"
+        "title": "Gyrocam (Processing)"
       }
     ],
     "github": "https://github.com/JuanIrache/gopro-telemetry",
-    "youtube": "bg8B0Hl_au0",
+    "youtube": "SNBu70wp0q0",
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
   },
   {
@@ -102,16 +105,16 @@
       "APIs",
       "Node.js"
     ],
-    "description": "Visualization tool for SRT flight logs of DJI drones. It supports several devices: Mavic Pro, some Phantoms, Mavic 2... and other common GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (based on HTML canvas). Along with the site, some NPM modules were created and open sourced. They allow to parse the files, create GUI elements in P5js and interact with Mapbox's static API.",
+    "description": "Visualization tool for SRT flight logs of DJI drones. It supports devices like Mavic Pro, Phantoms, Mavic 2... and other GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (HTML canvas). Along with the site, NPM modules were created and open sourced. They allow to parse the files, create GUI elements in P5js and interact with Mapbox's static API.",
     "id": "dji",
     "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
     "links": [
-      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy NPM Module" },
+      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy NPMe" },
       {
         "src": "https://www.npmjs.com/package/mapbox_static_helper",
-        "title": "mapbox_static_helper NPM Module"
+        "title": "mapbox_static_helper NPM"
       },
-      { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui NPM Module" }
+      { "src": "https://www.npmjs.com/package/p5_gui", "title": "p5_gui NPM" }
     ],
     "github": "https://github.com/JuanIrache/dji-srt-viewer",
     "youtube": "",
@@ -119,7 +122,7 @@
   },
   {
     "title": "Orbit Simulator",
-    "tags": ["Processing", "Android", "Gamification", "Sensors"],
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "E-Commerce"],
     "description": "With just the use of your fingers and the accelerometer, you can reproduce the laws of gravity. Pinch a planet and flick some asteroids. Make them orbit, merge and collide. Use physical properties to create mesmerizing patterns. This Android game/sandbox app has been downloaded more than 350,000 times.",
     "id": "os",
     "link": {
@@ -211,7 +214,7 @@
   },
   {
     "title": "Octagon. The Flying Squirrel",
-    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D"],
+    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D", "E-Commerce"],
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape. in this innovative 3D game you control a flying squirrel by turning your phone in all 360 degrees. It uses the accelerometer and gyroscope of smart phones to deduce orientation. It was downloaded more than 20,000 times.",
     "id": "octagon",
     "link": {
