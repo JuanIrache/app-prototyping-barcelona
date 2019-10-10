@@ -27,14 +27,28 @@ const GalleryOverlay = () => {
   const preventMove = e => e.preventDefault();
 
   return (
-    <div className={`GalleryOverlay${visible ? ' visible' : ''}`} onClick={closeGallery} onTouchMove={preventMove}>
-      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ startSlide: selected || 0, continuous: false }}>
+    <div
+      className={`GalleryOverlay${visible ? ' visible' : ''}`}
+      onClick={closeGallery}
+      onTouchMove={preventMove}
+    >
+      <ReactSwipe
+        ref={el => (reactSwipeEl = el)}
+        swipeOptions={{ startSlide: selected || 0, continuous: false }}
+      >
         {images
           .slice(1)
           .concat(images[0])
           .map((img, i) => (
             <div key={img} className="eachSlide">
-              <GallerySlide img={img} images={images.length} i={i} goRight={goRight} goLeft={goLeft} title={title} />
+              <GallerySlide
+                img={img}
+                images={images.length}
+                i={i}
+                goRight={goRight}
+                goLeft={goLeft}
+                title={title}
+              />
             </div>
           ))}
       </ReactSwipe>

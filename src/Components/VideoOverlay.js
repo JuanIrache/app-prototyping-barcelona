@@ -9,14 +9,20 @@ const VideoOverlay = () => {
   const closeVideo = () => {
     setVideo({ visible: false, src, title });
     setTimeout(() => {
-      document.querySelector('#videoPlayer').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      document
+        .querySelector('#videoPlayer')
+        .contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     }, 500);
   };
 
   const preventMove = e => e.preventDefault();
 
   return (
-    <div className={`VideoOverlay${visible ? ' visible' : ''}`} onClick={closeVideo} onTouchMove={preventMove}>
+    <div
+      className={`VideoOverlay${visible ? ' visible' : ''}`}
+      onClick={closeVideo}
+      onTouchMove={preventMove}
+    >
       <iframe
         id="videoPlayer"
         title={title + ' video'}
