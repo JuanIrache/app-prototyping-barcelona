@@ -83,7 +83,16 @@
     ],
     "description": "Two comprehensive websites and databases about Chinese cinema and literature translated into Spanish, for the Autonomous University of Barcelona and the Confucius institute of Barcelona. They store and classify thousands of books and movies, along with very comprehensive metadata and images. The sites are server-rendered with Express.js, MongoDB and EJS templates, but can also be accessed via a JSON API.",
     "id": "txicc",
-    "links": [],
+    "link": {
+      "src": "https://dtieao.uab.cat/txicc/cine/",
+      "title": "Chinese Cinema"
+    },
+    "links": [
+      {
+        "src": "https://dtieao.uab.cat/txicc/lite/",
+        "title": "Chinese Literature"
+      }
+    ],
     "github": "",
     "youtube": "",
     "npm": ""
