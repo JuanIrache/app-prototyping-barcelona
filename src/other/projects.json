@@ -28,12 +28,12 @@
     "description": "Online service, desktop app and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000 files converted per month.",
     "id": "gte",
     "link": {
-      "src": "https://tailorandwayne.com/gopro-telemetry-extractor/",
+      "src": "https://goprotelemetryextractor.com/free",
       "title": "GoPro Telemetry Extractor"
     },
     "links": [
       {
-        "src": "https://prototyping.barcelona/gopro-telemetry-extractor-premium/",
+        "src": "https://goprotelemetryextractor.com",
         "title": "React E-Commerce site"
       },
       {
