@@ -61,6 +61,12 @@ const About = () => {
             impossible to build becomes a reality through hard work.
           </p>
           <p>
+            <strong>
+              App Prototyping Barcelona is about putting the focus on functionality, not just looks.
+              Like having your own technical co-founder
+            </strong>
+          </p>
+          <p>
             If you want your idea turned into code,{' '}
             <a href="mailto:app@prototyping.barcelona">send me an email</a>.
           </p>

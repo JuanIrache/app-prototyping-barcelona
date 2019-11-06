@@ -10,7 +10,7 @@ const Header = () => {
     <header className="Header">
       <h1 className={visible ? 'show' : ''}>App Prototyping Barcelona</h1>
       <h3 className={visible ? 'show' : ''}>
-        <span>Focused on functionality, not just looks.</span> <span>Like having your own technical co-founder</span>
+        <span>Let me create the Minimum Viable Product (MVP) of your next startup</span>
       </h3>
     </header>
   );
