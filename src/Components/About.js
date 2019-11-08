@@ -122,6 +122,17 @@ const About = () => {
             <a href="mailto:app@prototyping.barcelona">app@prototyping.barcelona</a>
           </h3>
         </div>
+        <div className="youtube">
+          <h4>
+            <a
+              href="https://www.youtube.com/channel/UCQFWT-CNgkC8ukhKgHaB4Vw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              On YouTube
+            </a>
+          </h4>
+        </div>
       </section>
     </div>
   );
