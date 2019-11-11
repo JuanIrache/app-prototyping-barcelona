@@ -63,7 +63,7 @@ const About = () => {
           <p>
             <strong>
               App Prototyping Barcelona is about putting the focus on functionality, not just looks.
-              Like having your own technical co-founder
+              Like having your own technical co-founder.
             </strong>
           </p>
           <p>
