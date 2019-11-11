@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm-run-all --sequential build deploy:copy",
-    "deploy:copy": "cp build/* ../public_html/"
+    "deploy:copy": "cp -r build/* ../public_html/"
   },
   "eslintConfig": {
     "extends": "react-app"
