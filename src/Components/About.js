@@ -122,7 +122,7 @@ const About = () => {
             <a href="mailto:app@prototyping.barcelona">app@prototyping.barcelona</a>
           </h3>
         </div>
-        <div className="youtube">
+        <div className="socials">
           <h4>
             <a
               href="https://www.youtube.com/channel/UCQFWT-CNgkC8ukhKgHaB4Vw"
@@ -130,6 +130,11 @@ const About = () => {
               rel="noopener noreferrer"
             >
               On YouTube
+            </a>
+          </h4>
+          <h4>
+            <a href="https://twitter.com/JuanIrache" target="_blank" rel="noopener noreferrer">
+              On Twitter
             </a>
           </h4>
         </div>
