@@ -23,7 +23,8 @@
       "Electron",
       "React",
       "E-Commerce",
-      "After Effects"
+      "After Effects",
+      "MongoDB"
     ],
     "description": "Online service, desktop app and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000 files converted per month.",
     "id": "gte",
@@ -98,7 +99,7 @@
     "npm": ""
   },
   {
-    "title": "DJI SRT Viewer",
+    "title": "DJI Telemetry Tools",
     "tags": [
       "JavaScript",
       "NPM",
@@ -112,13 +113,25 @@
       "Drones",
       "Front End",
       "APIs",
-      "Node.js"
+      "Node.js",
+      "React",
+      "After Effects"
     ],
-    "description": "Visualization tool for SRT flight logs of DJI drones. It supports devices like Mavic Pro, Phantoms, Mavic 2... and other GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (HTML canvas). Along with the site, NPM modules were created and open sourced. They allow to parse the files, create GUI elements in P5js and interact with Mapbox's static API.",
+    "description": "Visualization tools for SRT flight logs of DJI drones. It supports devices like Mavic Pro, Phantoms, Mavic 2... and other GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (HTML canvas). Along with the site, NPM modules were created and open sourced. They can parse the files, create P5js GUI elements and interact with Mapbox's API.",
     "id": "dji",
-    "link": { "src": "https://tailorandwayne.com/dji-srt-viewer/", "title": "DJI SRT Viewer" },
+    "link": {
+      "src": "https://djitelemetryoverlay.com",
+      "title": "DJI Telemetry Overlay"
+    },
     "links": [
-      { "src": "https://www.npmjs.com/package/latlon_to_xy", "title": "latlon_to_xy NPMe" },
+      {
+        "src": "https://djitelemetryoverlay.com/srt-viewer",
+        "title": "DJI SRT Viewer"
+      },
+      {
+        "src": "https://www.npmjs.com/package/latlon_to_xy",
+        "title": "latlon_to_xy NPMe"
+      },
       {
         "src": "https://www.npmjs.com/package/mapbox_static_helper",
         "title": "mapbox_static_helper NPM"
@@ -139,7 +152,10 @@
       "title": "Orbit Simulator"
     },
     "links": [
-      { "src": "https://www.instagram.com/orbitsimulator", "title": "Fan-art gallery" },
+      {
+        "src": "https://www.instagram.com/orbitsimulator",
+        "title": "Fan-art gallery"
+      },
       {
         "src": "https://www.youtube.com/watch?v=74RotdYL3y4&list=PLgoeWSWqXedLeMwjXC1LAo_5NuIuT4Ccb",
         "title": "Fan Reviews"
@@ -162,7 +178,10 @@
     ],
     "description": "Load your Google Analytics data and play with the settings to create the world map of your users sessions. With this tool, marketers and clients can visualize the effectiveness of their campaigns or products geographically, while creating beautiful snapshots of their achievements. It was built with P5js (HTML canvas) and Google APIs.",
     "id": "starry",
-    "link": { "src": "https://tailorandwayne.com/starry-analytics/", "title": "Starry Analytics" },
+    "link": {
+      "src": "https://tailorandwayne.com/starry-analytics/",
+      "title": "Starry Analytics"
+    },
     "links": [],
     "github": "https://github.com/JuanIrache/StarryAnalytics",
     "youtube": "w3-hyALXagU",
@@ -199,7 +218,10 @@
         "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s16-yahtzee",
         "title": "Yatzee! Dice Game"
       },
-      { "src": "https://githubfinder23542352.netlify.com/", "title": "GitHub Finder" },
+      {
+        "src": "https://githubfinder23542352.netlify.com/",
+        "title": "GitHub Finder"
+      },
       {
         "src": "https://juanirache.github.io/modern-react-bootcamp-exercises/s23-dogs/",
         "title": "Dog Gallery Concept"
@@ -223,7 +245,14 @@
   },
   {
     "title": "Octagon. The Flying Squirrel",
-    "tags": ["Processing", "Android", "Gamification", "Sensors", "3D", "E-Commerce"],
+    "tags": [
+      "Processing",
+      "Android",
+      "Gamification",
+      "Sensors",
+      "3D",
+      "E-Commerce"
+    ],
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape. in this innovative 3D game you control a flying squirrel by turning your phone in all 360 degrees. It uses the accelerometer and gyroscope of smart phones to deduce orientation. It was downloaded more than 20,000 times.",
     "id": "octagon",
     "link": {
@@ -268,7 +297,10 @@
     ],
     "description": "This is a series of small experiments around coding, data visualization, algorithms, data structures and AI.",
     "id": "creative",
-    "link": { "src": "https://juanirache.github.io/coding-fun/", "title": "Coding Fun" },
+    "link": {
+      "src": "https://juanirache.github.io/coding-fun/",
+      "title": "Coding Fun"
+    },
     "links": [
       {
         "src": "https://juanirache.github.io/coding-fun/depth-first-search-labyrinth",
@@ -290,7 +322,10 @@
         "src": "https://juanirache.github.io/coding-fun/perlin-noise-butterfly",
         "title": "Perlin Noise Butterfly"
       },
-      { "src": "https://juanirache.github.io/coding-fun/music-circles", "title": "Music Circles" },
+      {
+        "src": "https://juanirache.github.io/coding-fun/music-circles",
+        "title": "Music Circles"
+      },
       {
         "src": "https://juanirache.github.io/coding-fun/dancing-sliders",
         "title": "Dancing Sliders"
@@ -302,7 +337,13 @@
   },
   {
     "title": "Dropped My Phone",
-    "tags": ["Processing", "Android", "Gamification", "Sensors", "Data Visualization"],
+    "tags": [
+      "Processing",
+      "Android",
+      "Gamification",
+      "Sensors",
+      "Data Visualization"
+    ],
     "description": "This cheeky app warns you if you —or someone else— drop your phone. It is also a phone throwing game. It relies on a very simple physics model and the fact that smartphones carry an accelerometer sensor. In a nutshell, when the magnitude of the accelerometer vector approaches 0 g, we know the phone is in free fall. By counting the duration of the fall we will also know its length.",
     "id": "dmp",
     "link": {
