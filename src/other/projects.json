@@ -115,7 +115,9 @@
       "APIs",
       "Node.js",
       "React",
-      "After Effects"
+      "After Effects",
+      "HTML",
+      "Sass"
     ],
     "description": "Visualization tools for SRT flight logs of DJI drones. It supports devices like Mavic Pro, Phantoms, Mavic 2... and other GPS tracking formats such as geoJSON, GPX and KML. The visualization side is built on P5js (HTML canvas). Along with the site, NPM modules were created and open sourced. They can parse the files, create P5js GUI elements and interact with Mapbox's API.",
     "id": "dji",
