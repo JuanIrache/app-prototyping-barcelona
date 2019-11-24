@@ -131,8 +131,12 @@
         "title": "DJI SRT Viewer"
       },
       {
+        "src": "https://djitelemetryoverlay.com/subtitle-extractor",
+        "title": "Subtitle Extractor"
+      },
+      {
         "src": "https://www.npmjs.com/package/latlon_to_xy",
-        "title": "latlon_to_xy NPMe"
+        "title": "latlon_to_xy NPM"
       },
       {
         "src": "https://www.npmjs.com/package/mapbox_static_helper",
