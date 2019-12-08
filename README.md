@@ -1,7 +1,5 @@
 # To-Do
 
-- Fix spacing in bottom drawer
-
 ## Maybe To-Do
 
 - Load images based on screen size
