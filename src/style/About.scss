@@ -54,14 +54,17 @@
       background-color: $dark;
       color: $light;
       flex: 1;
+      padding: 0.5rem 2rem 3rem 2rem;
       a {
         color: $gold;
         &:hover {
           border-bottom: 2px dotted $gold;
         }
       }
+      div {
+        margin: 0.5rem 0.5rem;
+      }
       .github {
-        padding: 0.5rem 2rem 3rem 2rem;
         font-size: 0.9rem;
         @media (max-width: 767.99px) {
           padding: 0.5rem 0.8rem 2rem 0.8rem;
@@ -83,7 +86,7 @@
       .mail {
         text-align: center;
         @media (max-width: 767.99px) {
-          padding: 0.5rem;
+          // padding: 0.5rem;
         }
         h3 {
           a {
@@ -96,7 +99,7 @@
             }
           }
           @media (max-width: 767.99px) {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             font-size: 1rem;
           }
         }
