@@ -11,7 +11,7 @@ const Header = () => {
       <h1 className={visible ? 'show' : ''}>App Prototyping Barcelona</h1>
       <h3 className={visible ? 'show' : ''}>
         <span>
-          Let's create the Minimum Viable Product (MVP) of your next startup
+          Let's create the Minimum Viable Product of your next startup
         </span>
       </h3>
     </header>
