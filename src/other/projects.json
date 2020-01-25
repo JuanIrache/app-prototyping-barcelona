@@ -172,6 +172,30 @@
     "npm": ""
   },
   {
+    "title": "Preguntas Trivia",
+    "tags": [
+      "JavaScript",
+      "NPM",
+      "Express",
+      "Node.js",
+      "HTML",
+      "Sass",
+      "Full Stack",
+      "React",
+      "MongoDB",
+      "REST",
+      "APIs",
+      "Gamification"
+    ],
+    "description": "Trivia question cards web-app. Composed of a CRUD api backend to manage a Mongo database, an admin dashboard made in modern React (hooks, context, reducers...), and a React client side.",
+    "id": "trivia",
+    "link": {
+      "src": "https://preguntastrivia.com/",
+      "title": "Preguntas Trivia (Trivia Questions)"
+    },
+    "links": []
+  },
+  {
     "title": "Starry Analytics",
     "tags": [
       "JavaScript",
