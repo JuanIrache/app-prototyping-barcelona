@@ -5,17 +5,33 @@ import '../style/ProjectImages.scss';
 const ProjectImages = ({ project, thumbsImgs }) => {
   const { setGallery, gallery } = useContext(GalleryContext);
   const regex = new RegExp(`/${project.id}\\d+\\.`);
-  const [images, setImages] = useState(thumbsImgs.filter(img => regex.test(img)).map(src => ({ src, loaded: false })));
+  const [images, setImages] = useState(
+    thumbsImgs
+      .filter(img => regex.test(img))
+      .map(src => ({ src, loaded: false }))
+  );
 
   const handleSetGallery = idx => {
     setGallery({ ...gallery, selected: 2 });
-    setImmediate(() => setGallery({ ...gallery, selected: idx, visible: true, title: project.title }));
+    setImmediate(() =>
+      setGallery({
+        ...gallery,
+        selected: idx,
+        visible: true,
+        title: project.title
+      })
+    );
   };
 
   useEffect(() => {
     images.forEach(image => {
       const img = new Image();
-      img.onload = () => setImages(images.map(image => (img.naturalWidth !== 0 ? { ...image, loaded: true } : image)));
+      img.onload = () =>
+        setImages(
+          images.map(image =>
+            img.naturalWidth !== 0 ? { ...image, loaded: true } : image
+          )
+        );
       img.src = image.src;
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
