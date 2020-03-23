@@ -24,26 +24,27 @@
       "React",
       "E-Commerce",
       "After Effects",
-      "MongoDB"
+      "MongoDB",
+      "Go (golang)"
     ],
     "description": "Online service, desktop app and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000 files converted per month.",
     "id": "gte",
     "link": {
-      "src": "https://goprotelemetryextractor.com/free",
+      "src": "https://goprotelemetryextractor.com",
       "title": "GoPro Telemetry Extractor"
     },
     "links": [
-      {
-        "src": "https://goprotelemetryextractor.com",
-        "title": "React E-Commerce site"
-      },
       {
         "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
         "title": "Community Forum"
       },
       {
+        "src": "https://github.com/JuanIrache/tomgjson",
+        "title": "Motion Graphics JSON (Go)"
+      },
+      {
         "src": "https://www.npmjs.com/package/gpmf-extract",
-        "title": "Accessory NPM"
+        "title": "gpmf-extract NPM"
       },
       {
         "src": "https://www.npmjs.com/package/d3-svg-to-png",
@@ -52,10 +53,6 @@
       {
         "src": "https://www.npmjs.com/package/d3-proportional-ranges",
         "title": "d3-proportional-ranges NPM"
-      },
-      {
-        "src": "https://github.com/JuanIrache/gopro-utils",
-        "title": "GoLang tools (fork)"
       },
       {
         "src": "https://github.com/JuanIrache/gyrocam",
