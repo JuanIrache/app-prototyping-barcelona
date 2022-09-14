@@ -27,17 +27,13 @@
       "MongoDB",
       "Go (golang)"
     ],
-    "description": "Online service, desktop app and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000 files converted per month.",
+    "description": "Online service, desktop apps and After Effects templates for extracting, visualizing and interpreting metadata from GoPro cameras: GPS, accelerometer, gyroscope, face recognition... Visualizations are based on D3, derivative projects use Processing, mgJSON... 3,000+ files converted per month.",
     "id": "gte",
     "link": {
       "src": "https://goprotelemetryextractor.com",
       "title": "GoPro Telemetry Extractor"
     },
     "links": [
-      {
-        "src": "https://community.gopro.com/t5/GoPro-Metadata-Visualization/gp-p/Hero5MetadataVisualisation",
-        "title": "Community Forum"
-      },
       {
         "src": "https://github.com/JuanIrache/tomgjson",
         "title": "Motion Graphics JSON (Go)"
@@ -55,12 +51,16 @@
         "title": "d3-proportional-ranges NPM"
       },
       {
+        "src": "https://www.facebook.com/groups/1141774469939597",
+        "title": "Community Group"
+      },
+      {
         "src": "https://github.com/JuanIrache/gyrocam",
         "title": "Gyrocam (Processing)"
       }
     ],
     "github": "https://github.com/JuanIrache/gopro-telemetry",
-    "youtube": "TAdxsTv4hPU",
+    "youtube": "v96KzJbW_OE",
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
   },
   {
@@ -283,7 +283,7 @@
     "description": "You will not survive the 360º runner without turning your phone upside down! Help Octagon, the flying squirrel, escape. in this innovative 3D game you control a flying squirrel by turning your phone in all 360 degrees. It uses the accelerometer and gyroscope of smart phones to deduce orientation. It was downloaded more than 20,000 times.",
     "id": "octagon",
     "link": {
-      "src": "https://play.google.com/store/apps/details?id=com.irache.octagon",
+      "src": "https://www.amazon.com/Octagon-The-Flying-Squirrel-Free/dp/B00K33UXF6",
       "title": "Octagon. The Flying Squirrel"
     },
     "links": [
