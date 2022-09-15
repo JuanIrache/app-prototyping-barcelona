@@ -1,7 +1,12 @@
 # To-Do
 
+- Add more holo images
+- Compress recent images
+- Update some GTEP images
+
 ## Maybe To-Do
 
+- Reduce number of tags?
 - Load images based on screen size
 - Handle back button?
 - Improve implementation of setSlide (still passing props down)
