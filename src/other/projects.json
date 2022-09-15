@@ -64,6 +64,40 @@
     "npm": "https://www.npmjs.com/package/gopro-telemetry"
   },
   {
+    "title": "Holographic image tools",
+    "tags": [
+      "3D",
+      "JavaScript",
+      "Processing",
+      "Data Visualization",
+      "Video",
+      "Open Source",
+      "After Effects",
+      "Drones",
+      "Front End",
+      "NPM"
+    ],
+    "description": "Libraries, templates and documentation to help users create holographic (light-field) imagery for Looking Glass holographic displays, from both real-world image capture and computer generated graphics.",
+    "id": "lg",
+    "link": {
+      "src": "https://blocks.glass/juan",
+      "title": "Holographic examples"
+    },
+    "links": [
+      {
+        "src": "https://github.com/JuanIrache/looking-glass-after-effects",
+        "title": "After Effects template"
+      },
+      {
+        "src": "https://holographic.earth/",
+        "title": "Holographic.earth"
+      }
+    ],
+    "github": "https://github.com/JuanIrache/p5-holoplay",
+    "youtube": "wn3wKFlgZqE",
+    "npm": "https://www.npmjs.com/package/p5-holoplay"
+  },
+  {
     "title": "Chinese culture databases",
     "tags": [
       "JavaScript",
