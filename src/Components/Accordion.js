@@ -20,7 +20,12 @@ const Accordion = () => {
       {projects.map(
         (project, i) =>
           slide !== i && (
-            <AccordionElt key={project.id} project={project} accordionImgs={accordionImgs} i={i} />
+            <AccordionElt
+              key={project.id}
+              project={project}
+              accordionImgs={accordionImgs}
+              i={i}
+            />
           )
       )}
     </div>

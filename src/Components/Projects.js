@@ -33,7 +33,14 @@ const Projects = ({ setSlide }) => {
 
   return (
     <section className="Projects" id="projects">
-      <ReactSwipe ref={el => (reactSwipeEl = el)} swipeOptions={{ callback: onChangeSlide, continuous: false, startSlide: initial }}>
+      <ReactSwipe
+        ref={el => (reactSwipeEl = el)}
+        swipeOptions={{
+          callback: onChangeSlide,
+          continuous: false,
+          startSlide: initial
+        }}
+      >
         {projects.map((p, i, arr) => (
           <div key={p.id}>
             <Project
