@@ -5,7 +5,11 @@ import SlideContext from '../contexts/SlideContext';
 import '../style/Accordion.scss';
 
 const importAll = r => r.keys().map(r);
-let ctxt = require.context(`../media/accordion/`, false, /\.(png|jpe?g|svg)$/i);
+let ctxt = require.context(
+  `../media/accordion/`,
+  false,
+  /\.(gif|png|jpe?g|svg)$/i
+);
 const accordionImgs = importAll(ctxt);
 
 const Accordion = () => {

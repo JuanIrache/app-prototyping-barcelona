@@ -2,7 +2,11 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import ProjectContext from './ProjectContext';
 import SlideContext from './SlideContext';
 const importAll = r => r.keys().map(r);
-const ctxt = require.context(`../media/gallery/`, false, /\.(png|jpe?g|svg)$/i);
+const ctxt = require.context(
+  `../media/gallery/`,
+  false,
+  /\.(gif|png|jpe?g|svg)$/i
+);
 const images = importAll(ctxt);
 
 const GalleryContext = createContext();

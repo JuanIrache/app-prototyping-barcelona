@@ -5,9 +5,13 @@ import ProjectContext from '../contexts/ProjectContext';
 import '../style/Projects.scss';
 
 const importAll = r => r.keys().map(r);
-let ctxt = require.context(`../media/headers/`, false, /\.(png|jpe?g|svg)$/i);
+let ctxt = require.context(
+  `../media/headers/`,
+  false,
+  /\.(gif|png|jpe?g|svg)$/i
+);
 const headerImgs = importAll(ctxt);
-ctxt = require.context(`../media/thumbs/`, false, /\.(png|jpe?g|svg)$/i);
+ctxt = require.context(`../media/thumbs/`, false, /\.(gif|png|jpe?g|svg)$/i);
 const thumbsImgs = importAll(ctxt);
 
 const Projects = ({ setSlide }) => {
