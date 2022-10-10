@@ -1,7 +1,5 @@
 # To-Do
 
-- Update some GTEP images
-
 ## Maybe To-Do
 
 - Reduce number of tags?
