@@ -1,6 +1,5 @@
 # To-Do
 
-- Add more holo images
 - Compress recent images
 - Update some GTEP images
 
