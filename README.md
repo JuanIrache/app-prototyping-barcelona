@@ -1,6 +1,5 @@
 # To-Do
 
-- Compress recent images
 - Update some GTEP images
 
 ## Maybe To-Do
